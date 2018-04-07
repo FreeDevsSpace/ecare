@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/c"
+    android:padding="10dp"
     tools:context="com.example.administrator.ecare.Pathologist_Registration_Page">
 
     <EditText
@@ -53,7 +54,7 @@
         android:textColor="#000"
         android:textSize="17dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/eTDOB_Pathologist_Registration_Page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,6 +62,7 @@
         android:layout_below="@+id/eTMobile_Number_Pathologist_Registration_Page"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:textSize="17dp"
         android:hint="DD/MM/YYYY"
         android:inputType="date"
         android:textColorHint="#000"
@@ -142,12 +144,15 @@
 
     <Button
         android:id="@+id/btSave_Pathologist_Registration_Page"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="14dp"
         android:text="Save"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:visibility="visible"/>
 
 

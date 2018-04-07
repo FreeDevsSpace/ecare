@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/cc"
     android:visibility="visible"
+    android:padding="15dp"
     tools:context="com.example.administrator.ecare.Patient_Search_Doctor">
 
     <TextView
@@ -90,5 +91,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="28dp"
         android:text="Search"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:visibility="visible" />
 </RelativeLayout>

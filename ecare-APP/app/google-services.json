@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "256117507485",
+    "firebase_url": "https://ecare-b1105.firebaseio.com",
+    "project_id": "ecare-b1105",
+    "storage_bucket": "ecare-b1105.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256117507485:android:ef75c381e2cb6fa1",
+        "android_client_info": {
+          "package_name": "com.example.administrator.ecare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256117507485-teb1dbrpmvchdojkbgqdqntb6o89cdrd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGh8pJsbuZpzUOFAFDeAcYWGxmTAQRJ48"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/c"
     android:visibility="visible"
+    android:padding="10dp"
     tools:context="com.example.administrator.ecare.Registration_Page">
 
     <EditText
@@ -80,7 +81,7 @@
         android:entries="@array/Blood_Group"
         android:visibility="visible"/>
 
-    <EditText
+    <TextView
         android:id="@+id/eTDOB_Registration_Page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -88,6 +89,7 @@
         android:layout_below="@+id/eTMobile_Number_Registration_Page"
         android:layout_marginTop="12dp"
         android:ems="10"
+        android:textSize="17dp"
         android:hint="Date Of Birth(DD/MM/YYYY)"
         android:inputType="date"
         android:textColorHint="#000"
@@ -95,13 +97,15 @@
 
     <Button
         android:id="@+id/bnRegister_Registration_Page"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/eTPassword_Main1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         android:text="Register"
-        android:textColor="#000"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+
         android:visibility="visible"/>
 
     <EditText

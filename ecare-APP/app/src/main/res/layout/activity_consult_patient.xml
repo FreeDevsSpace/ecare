@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/p"
+    android:padding="10dp"
     tools:context="com.example.administrator.ecare.Consult_Patient">
 
     <TextView
@@ -67,12 +68,13 @@
 
     <Button
         android:id="@+id/btSend_Consult_Patient"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/eTMedicine_Consult_Patient"
-        android:layout_marginBottom="30dp"
-        android:layout_marginStart="19dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
+
         android:text="Send" />
 
     <EditText

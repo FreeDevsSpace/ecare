@@ -1,4 +1,4 @@
-#Sat Apr 07 05:02:19 IST 2018
-base.0=C\:\\Users\\Administrator\\AndroidStudioProjects\\eCare\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Sun Apr 08 00:56:51 IST 2018
+base.0=C\:\\Users\\Ki$haN\\Desktop\\ecare-APP\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

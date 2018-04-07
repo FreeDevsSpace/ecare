@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/e"
+    android:padding="15dp"
     tools:context="com.example.administrator.ecare.Patient_Book_Appointment">
 
     <TextView
@@ -53,13 +54,15 @@
 
     <Button
         android:id="@+id/btFind_Appointment_Time_Slot_Patient_Book_Appointment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btSelect_Date_Patient_Book_Appointment"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="29dp"
         android:text="Find Appointment Time Slot"
-        android:textColor="#000"/>
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"/>
 
     <Button
         android:id="@+id/btSelect_Date_Patient_Book_Appointment"
@@ -68,17 +71,24 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/eTDate_Patient_Book_Appointment"
         android:layout_marginEnd="36dp"
+
         android:text="Select Date"
-        android:textColor="#000"/>
+        android:textAlignment="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"/>
 
     <Button
         android:id="@+id/btSave_Patient_Book_Appointment"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/eTDate_Patient_Book_Appointment"
+
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp"
         android:text="Save"
-        android:textColor="#000"/>
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
+       />
 
 </RelativeLayout>
