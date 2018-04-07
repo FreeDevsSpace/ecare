@@ -1828,6 +1828,10 @@
         "source": "C:\\Users\\Ki$haN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\dd27f699f9b62e99cee3ed288a449f2a\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
+        "merged": "C:\\Users\\Ki$haN\\Desktop\\ecare-APP\\app\\build\\intermediates\\res\\merged\\debug\\drawable_takepic.jpg.flat",
+        "source": "C:\\Users\\Ki$haN\\Desktop\\ecare-APP\\app\\src\\main\\res\\drawable\\takepic.jpg"
+    },
+    {
         "merged": "C:\\Users\\Ki$haN\\Desktop\\ecare-APP\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_list_of_search_doctor_to_connect_doctor.xml.flat",
         "source": "C:\\Users\\Ki$haN\\Desktop\\ecare-APP\\app\\src\\main\\res\\layout\\activity_list_of_search_doctor_to_connect_doctor.xml"
     },
