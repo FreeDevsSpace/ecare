@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/m"
+    tools:context="com.example.administrator.ecare.Pathologist_Patient_Report_Upload">
+
+    <TextView
+        android:id="@+id/tVPatient_ID_Pathologist_Patient_Report_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="P_ID :"
+        android:textColor="#000"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/tVUpload_Report_Pathologist_Patient_Report_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVPatient_ID_Pathologist_Patient_Report_Upload"
+        android:layout_marginTop="30dp"
+        android:text="Upload Report Here :"
+        android:textColor="#000"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/tVClickHere_Upload_Report_Pathologist_Patient_Report_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVUpload_Report_Pathologist_Patient_Report_Upload"
+        android:layout_alignBottom="@+id/tVUpload_Report_Pathologist_Patient_Report_Upload"
+        android:layout_marginStart="35dp"
+        android:layout_toEndOf="@+id/tVUpload_Report_Pathologist_Patient_Report_Upload"
+        android:text="Click Here "
+        android:textColor="#00f"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/tVPayment_Pathologist_Patient_Report_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVUpload_Report_Pathologist_Patient_Report_Upload"
+        android:layout_marginTop="104dp"
+        android:text="Payment"
+        android:textColor="#000"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btCash_Pathologist_Patient_Report_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVPayment_Pathologist_Patient_Report_Upload"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="48dp"
+        android:text="By Cash"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btOnline_Pathologist_Patient_Report_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btCash_Pathologist_Patient_Report_Upload"
+        android:layout_alignBottom="@+id/btCash_Pathologist_Patient_Report_Upload"
+        android:layout_alignEnd="@+id/tVClickHere_Upload_Report_Pathologist_Patient_Report_Upload"
+        android:text="Online"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btDone_Pathologist_Patient_Report_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        android:layout_toStartOf="@+id/btOnline_Pathologist_Patient_Report_Upload"
+        android:text="Done"
+        android:textColor="#000"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/m"
+    android:visibility="visible"
+    tools:context="com.example.administrator.ecare.Patient_Profile">
+
+    <ImageView
+        android:id="@+id/IVProfile_icon_Patient_Profile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tVLogOut_Patient_Profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="140dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_profile"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/tVName_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVPatient_ID_Patient_Profile"
+        android:layout_marginTop="16dp"
+        android:text="Name:"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/tVMobile_Number_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tVName_Patient_Profile"
+        android:layout_marginTop="17dp"
+        android:text="Mobile Number:"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/tVDOB_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVMobile_Number_Patient_Profile"
+        android:layout_marginTop="20dp"
+        android:text="Date Of Birth:"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/tVAddress_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVDOB_Patient_Profile"
+        android:layout_below="@+id/tVDOB_Patient_Profile"
+        android:layout_marginTop="20dp"
+        android:text="Address:"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/tVBlood_Group_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tVDOB_Patient_Profile"
+        android:layout_below="@+id/tVAddress_Patient_Profile"
+        android:layout_marginTop="46dp"
+        android:text="Blood Group:"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tVPatient_ID_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/IVProfile_icon_Patient_Profile"
+        android:layout_marginTop="27dp"
+        android:text="ID:"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tVWPatient_ID_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tVName_Patient_Profile"
+        android:layout_alignEnd="@+id/tVName_Patient_Profile"
+        android:text="ID"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tVWPatient_Name_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tVMobile_Number_Patient_Profile"
+        android:layout_toStartOf="@+id/tVWDOB_Patient_Profile"
+        android:text="Name"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tVWMobile_Number_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVMobile_Number_Patient_Profile"
+        android:layout_alignBottom="@+id/tVMobile_Number_Patient_Profile"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/tVMobile_Number_Patient_Profile"
+        android:text="Mobile Number"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tVWDOB_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVDOB_Patient_Profile"
+        android:layout_alignBottom="@+id/tVDOB_Patient_Profile"
+        android:layout_alignStart="@+id/tVWBlood_Group_Patient_Profile"
+        android:text="DOB"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tVWAddress_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tVBlood_Group_Patient_Profile"
+        android:layout_alignStart="@+id/tVWPatient_Name_Patient_Profile"
+        android:text="Address"
+        android:textSize="20dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tVWBlood_Group_Patient_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVBlood_Group_Patient_Profile"
+        android:layout_alignBottom="@+id/tVBlood_Group_Patient_Profile"
+        android:layout_alignStart="@+id/IVProfile_icon_Patient_Profile"
+        android:text="Blood Group"
+        android:textColor="#000"
+        android:textSize="20dp" />
+</RelativeLayout>

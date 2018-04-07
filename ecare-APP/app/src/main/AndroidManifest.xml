@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.ecare">
+
+    <uses-sdk android:minSdkVersion="15"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".app.AppController"
+        android:hardwareAccelerated="false"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main1"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".Registration_Page"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".Doctor_Main"/>
+        <activity android:name=".Pharmacist_Main"/>
+        <activity android:name=".Register_As"/>
+        <activity android:name=".Patient_Main"/>
+        <activity android:name=".Doctor_Registration_Page"/>
+        <activity android:name=".Patient_Profile"/>
+        <activity android:name=".Patient_Search_Doctor"/>
+        <activity android:name=".Patient_Feedback_Rating"/>
+        <activity android:name=".Patient_Search_List_Action"/>
+        <activity android:name=".Patient_Treatment_History"/>
+        <activity android:name=".Patient_Thank_You"/>
+        <activity android:name=".Pathologist_Search_Patient"/>
+        <activity android:name=".Pathologist_Patient_History"/>
+        <activity android:name=".Pathologist_Patient_Report_Upload"/>
+        <activity android:name=".Appointment_list"/>
+        <activity android:name=".Pathologist_Registration_Page"/>
+        <activity android:name=".Pharmacist_Registration_Page"/>
+        <activity android:name=".Doctor_Search_Patient"/>
+        <activity android:name=".Consultation"/>
+        <activity android:name=".Consult_Patient"/>
+        <activity android:name=".View_Appointment_List"/>
+        <activity android:name=".Shedule_For_Today"/>
+        <activity android:name=".Patient_Tretment_From_Doctor"/>
+        <activity android:name=".Connect_To_Other_Doctor"/>
+        <activity android:name=".Search_Doctor_To_Connect"/>
+        <activity android:name=".List_Of_Search_Doctor_To_Connect_Doctor"/>
+        <activity android:name=".Patient_Treatment_With_Connected_Doctor"/>
+        <activity android:name=".Request_To_Connect_Doctor"/>
+        <activity android:name=".Patient_Book_Appointment"/>
+        <activity android:name=".Patient_Online_Consultation"/>
+        <activity android:name=".Pharmacist_Profile"/>
+        <activity android:name=".Pharmacist_Search_Patient"/>
+        <activity android:name=".Pharmacist_Patient_History"/>
+        <activity android:name=".Pharmacist_Patient_Bill_Report_Upload"/>
+        <activity android:name=".Doctor_Profile"/>
+        <activity android:name=".Pathologist_Profile"/>
+        <activity android:name=".Pathologist_Main"/>
+    </application>
+
+</manifest>

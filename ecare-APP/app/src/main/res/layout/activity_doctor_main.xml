@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/d"
+    tools:context="com.example.administrator.ecare.Doctor_Main">
+
+    <ImageView
+        android:id="@+id/IVProfile_Doctor_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="358dp"
+        android:layout_marginRight="200dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/profile_2"/>
+
+    <ImageView
+        android:id="@+id/IVShedule_Doctor_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/IVProfile_Doctor_Main"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/shedule_1"/>
+
+    <ImageView
+        android:id="@+id/IVSearch_Doctor_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/IVShedule_Doctor_Main"
+        android:layout_marginBottom="210dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/search_1"/>
+
+    <ImageView
+        android:id="@+id/IVConsultation_Doctor_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/IVShedule_Doctor_Main"
+        android:layout_below="@+id/IVShedule_Doctor_Main"
+        android:layout_marginBottom="210dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/consultation_11"/>
+
+    <ImageView
+        android:id="@+id/IVAppointment_Doctor_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/IVSearch_Doctor_Main"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="200dp"
+        android:layout_marginTop="160dp"
+        app:srcCompat="@drawable/appointment_2"/>
+
+    <ImageView
+        android:id="@+id/IVHistory_Doctor_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/IVAppointment_Doctor_Main"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="200dp"
+        app:srcCompat="@drawable/history_1"/>
+
+    <TextView
+        android:id="@+id/tVLogOut_Doctor_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="Log Out"
+        android:textColor="#000"
+        android:textSize="17dp"/>
+
+</RelativeLayout>

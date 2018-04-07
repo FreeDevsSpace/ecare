@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/e"
+    tools:context="com.example.administrator.ecare.Patient_Book_Appointment">
+
+    <TextView
+        android:id="@+id/tVPatient_ID_Patient_Book_Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:text="P_ID :"
+        android:textColor="#000"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/tVAppointment_Patient_Book_Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVPatient_ID_Patient_Book_Appointment"
+        android:layout_marginTop="24dp"
+        android:text="Appointment :"
+        android:textColor="#000"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/tVAvailable_Time_Slot_Patient_Book_Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btFind_Appointment_Time_Slot_Patient_Book_Appointment"
+        android:layout_marginTop="26dp"
+        android:text="Available Time Slot :"
+        android:textColor="#000"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/eTDate_Patient_Book_Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVAppointment_Patient_Book_Appointment"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:textColorHint="#000"
+        android:inputType="date"/>
+
+    <Button
+        android:id="@+id/btFind_Appointment_Time_Slot_Patient_Book_Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btSelect_Date_Patient_Book_Appointment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="Find Appointment Time Slot"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btSelect_Date_Patient_Book_Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/eTDate_Patient_Book_Appointment"
+        android:layout_marginEnd="36dp"
+        android:text="Select Date"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btSave_Patient_Book_Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/eTDate_Patient_Book_Appointment"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="Save"
+        android:textColor="#000"/>
+
+</RelativeLayout>

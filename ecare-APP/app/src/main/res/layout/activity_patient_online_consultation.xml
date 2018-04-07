@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/e"
+    tools:context="com.example.administrator.ecare.Patient_Online_Consultation">
+
+
+    <TextView
+        android:id="@+id/tVPatient_ID_Patient_Online_Consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Patient_ID :"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tVDescribe_Issue_In_Details_Patient_Online_Consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVDoctor_ID_Patient_Online_Consultation"
+        android:layout_marginTop="27dp"
+        android:text="Describe Issue in Details :"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/eTDescribe_Issue_In_Details_Patient_Online_Consultation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVDescribe_Issue_In_Details_Patient_Online_Consultation"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Describe Here"
+        android:inputType="textMultiLine"
+        android:textColorHint="#666a6b" />
+
+    <TextView
+        android:id="@+id/tVShare_Additional_Information_Patient_Online_Consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/eTDescribe_Issue_In_Details_Patient_Online_Consultation"
+        android:layout_marginTop="13dp"
+        android:text="Share Additional Information "
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tVTake_Extra_Medicine_Patient_Online_Consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVShare_Additional_Information_Patient_Online_Consultation"
+        android:layout_marginTop="18dp"
+        android:text="(1) Do you take any medicine ?"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/eTTake_Extra_Medicine_Patient_Online_Consultation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVTake_Extra_Medicine_Patient_Online_Consultation"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Write medicine here or if not then write NO "
+        android:inputType="textPersonName"
+        android:textColorHint="#666a6b"
+        android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVAllergy_Patient_Online_Consultation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/eTTake_Extra_Medicine_Patient_Online_Consultation"
+                android:layout_marginTop="25dp"
+                android:text="(2) Do you have any allergies ?"
+                android:textColor="#000"
+                android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/eTAllergy_Patient_Online_Consultation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVAllergy_Patient_Online_Consultation"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="write Allergy name here or if not then write NO"
+        android:inputType="textPersonName"
+        android:textColorHint="#666a6b"
+        android:textSize="15dp" />
+
+
+           <Button
+               android:id="@+id/btProceeds_Patient_Online_Consultation"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="44dp"
+               android:text="Proceeds"/>
+
+    <TextView
+        android:id="@+id/eTPPatient_ID_Patient_Online_Consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_toEndOf="@+id/tVPatient_ID_Patient_Online_Consultation"
+        android:text="PPatient_ID"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tVDoctor_ID_Patient_Online_Consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVPatient_ID_Patient_Online_Consultation"
+        android:layout_marginTop="13dp"
+        android:text="Doctor_ID :"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tVPDoctor_ID_Patient_Online_Consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/eTPPatient_ID_Patient_Online_Consultation"
+        android:layout_alignTop="@+id/tVDoctor_ID_Patient_Online_Consultation"
+        android:text="PDoctor_ID"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

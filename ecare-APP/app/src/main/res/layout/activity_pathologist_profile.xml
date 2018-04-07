@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/k"
+    tools:context="com.example.administrator.ecare.Pathologist_Profile">
+
+    <ImageView
+        android:id="@+id/IVProfile_Icon_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="140dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_profile"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tVLogOut_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/IVProfile_Icon_Pathologist_Profile"
+        android:layout_marginEnd="13dp"
+        android:text="LogOut"
+        android:textColor="#000"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/tVPathologist_ID_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/IVProfile_Icon_Pathologist_Profile"
+        android:layout_marginTop="22dp"
+        android:text="ID:"
+        android:textColor="#000"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/tVName_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVPathologist_ID_Pathologist_Profile"
+        android:layout_marginTop="15dp"
+        android:text="Name:"
+        android:textSize="15dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tVMobile_Number_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVName_Pathologist_Profile"
+        android:layout_marginTop="15dp"
+        android:text="Mobile Number: "
+        android:textSize="15dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tVDOB_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVMobile_Number_Pathologist_Profile"
+        android:layout_marginTop="15dp"
+        android:text="Date Of Birth: "
+        android:textColor="#000"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/tVQualification_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tVDOB_Pathologist_Profile"
+        android:layout_marginTop="15dp"
+        android:text="Qualification:"
+        android:textSize="15dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tVAddress_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVQualification_Pathologist_Profile"
+        android:layout_marginTop="17dp"
+        android:text="Address:"
+        android:textSize="15dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tVBlood_Group_Pathologist_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVAddress_Pathologist_Profile"
+        android:layout_marginTop="50dp"
+        android:text=" Blood Group:"
+        android:textSize="15dp"
+        android:textColor="#000"/>
+</RelativeLayout>

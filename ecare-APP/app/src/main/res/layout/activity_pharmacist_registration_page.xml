@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/e"
+    android:visibility="visible"
+    tools:context="com.example.administrator.ecare.Pharmacist_Registration_Page">
+
+    <EditText
+        android:id="@+id/eTName_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColorHint="#000"/>
+
+    <EditText
+        android:id="@+id/eTMobile_Number_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/eTName_Pharmacist_Registration_Page"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Mobile Number"
+        android:inputType="number"
+        android:textColorHint="#000"/>
+
+    <EditText
+        android:id="@+id/eTEmail_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/SpinnerBlood_Group_Pharmacist_Registration_Page"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Email ID"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000" />
+
+    <TextView
+        android:id="@+id/tVDOB_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/eTDOB_Pharmacist_Registration_Page"
+        android:layout_alignBottom="@+id/eTDOB_Pharmacist_Registration_Page"
+        android:layout_alignParentStart="true"
+        android:text="Date Of Birth : "
+        android:textColor="#000"
+        android:textSize="17dp"/>
+
+    <EditText
+        android:id="@+id/eTDOB_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/eTMobile_Number_Pharmacist_Registration_Page"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="DD/MM/YYYY"
+        android:inputType="date"
+        android:textColorHint="#000"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tVAddress_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVQualification_Pharmacist_Registration_Page"
+        android:layout_marginTop="24dp"
+        android:text="Address : "
+        android:textColor="#000"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:id="@+id/tVQualification_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/eTDOB_Pharmacist_Registration_Page"
+        android:layout_marginTop="14dp"
+        android:text="Qualification :"
+        android:textColor="#000"
+        android:textSize="17dp"/>
+
+    <Button
+        android:id="@+id/btSave_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Save"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tVBlood_Group_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/SpinnerBlood_Group_Pharmacist_Registration_Page"
+        android:layout_alignBottom="@+id/SpinnerBlood_Group_Pharmacist_Registration_Page"
+        android:layout_alignParentStart="true"
+        android:text="Blood Group :"
+        android:textColor="#000"
+        android:textSize="17dp"/>
+
+    <Spinner
+        android:id="@+id/SpinnerBlood_Group_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/eTAddress_Pharmacist_Registration_Page"
+        android:layout_below="@+id/eTAddress_Pharmacist_Registration_Page"
+        android:layout_marginTop="22dp"
+        android:entries="@array/Blood_Group"/>
+
+    <EditText
+        android:id="@+id/eTPassword_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/eTEmail_Pharmacist_Registration_Page"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#000"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/eTAddress_Pharmacist_Registration_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textMultiLine"
+        android:textColorHint="#000" />
+
+    <Spinner
+        android:id="@+id/SpinnerQualification_Pharmacist_Registration_Page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/eTDOB_Pharmacist_Registration_Page"
+        android:layout_alignTop="@+id/tVQualification_Pharmacist_Registration_Page"
+        android:entries="@array/Pharmacist_Qualification" />
+
+
+</RelativeLayout>

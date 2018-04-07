@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/s"
+    tools:context="com.example.administrator.ecare.Patient_Treatment_With_Connected_Doctor">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/btSave_Patient_Treatment_With_Connected_Doctor"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tVPatient_ID_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="P_ID :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVDoctor_ID_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tVReport_Patient_Treatment_With_Connected_Doctor"
+                android:layout_below="@+id/tVPatient_ID_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="15dp"
+                android:text="Doc_ID :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVRefDoctor_ID_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVReport_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="15dp"
+                android:text="Ref. Doc_ID :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVDoctor_Name_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVDoctor_ID_Patient_Treatment_With_Connected_Doctor"
+                android:text="Doctor's Name :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVRefDoctor_Name_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVRefDoctor_ID_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="15dp"
+                android:text="Ref. Doctor Name :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVSymptoms_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVDoctor_Name_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="15dp"
+                android:text="Symptoms :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVMedicine_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVSymptoms_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="24dp"
+                android:text="Medicine :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVReport_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVMedicine_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="15dp"
+                android:text="Report :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVRefDoctor_Suggetion_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVRefDoctor_Name_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="15dp"
+                android:text="Ref. Doctor Suggetion :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVRefReport_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVRefDoctor_Suggetion_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="36dp"
+                android:text="Ref. Report :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tVRefMedicine_Patient_Treatment_With_Connected_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVRefReport_Patient_Treatment_With_Connected_Doctor"
+                android:layout_marginTop="19dp"
+                android:text="Ref Medicine :"
+                android:textColor="#000"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btSave_Patient_Treatment_With_Connected_Doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="27dp"
+        android:text="Save"
+        android:textColor="#000"/>
+
+</RelativeLayout>

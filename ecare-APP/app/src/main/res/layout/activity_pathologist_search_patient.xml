@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/d"
+    android:visibility="visible"
+    tools:context="com.example.administrator.ecare.Pathologist_Search_Patient">
+
+    <TextView
+        android:id="@+id/tVEnter_Patient_ID_Pathologist_Search_Patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="119dp"
+        android:text="Enter Patient ID:"
+        android:textColor="#000"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/eTEnter_Patient_ID_Pathologist_Search_Patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVEnter_Patient_ID_Pathologist_Search_Patient"
+        android:layout_alignBottom="@+id/tVEnter_Patient_ID_Pathologist_Search_Patient"
+        android:layout_alignParentEnd="true"
+        android:ems="10"
+        android:textColorHint="#000"
+        android:inputType="text|number"/>
+
+    <Button
+        android:id="@+id/btContinue_Pathologist_Search_Patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVEnter_Patient_ID_Pathologist_Search_Patient"
+        android:layout_below="@+id/eTEnter_Patient_ID_Pathologist_Search_Patient"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="38dp"
+        android:text="Continue"/>
+
+    <TextView
+        android:id="@+id/tVLogOut_Pathologist_Search_Patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="LogOut"/>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/h"
+    tools:context="com.example.administrator.ecare.Search_Doctor_To_Connect">
+
+    <TextView
+        android:id="@+id/tVCity_Search_Doctor_To_Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="City"
+        android:textColor="#000"
+        android:textSize="20dp"/>
+
+    <Spinner
+        android:id="@+id/SpinnerCity_Search_Doctor_To_Connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tVCity_Search_Doctor_To_Connect"
+        android:layout_marginEnd="145dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tVQualification_Search_Doctor_To_Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVCity_Search_Doctor_To_Connect"
+        android:layout_below="@+id/SpinnerCity_Search_Doctor_To_Connect"
+        android:layout_marginTop="30dp"
+        android:text="Qualification"
+        android:textColor="#000"
+        android:textSize="20dp"/>
+
+    <Spinner
+        android:id="@+id/SpinnerQualification_Search_Doctor_To_Connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/SpinnerCity_Search_Doctor_To_Connect"
+        android:layout_below="@+id/tVQualification_Search_Doctor_To_Connect"
+        android:layout_marginTop="30dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tVSpecialization_Search_Doctor_To_Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVQualification_Search_Doctor_To_Connect"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:text="Specialization"
+        android:textColor="#000"
+        android:textSize="20dp"/>
+
+    <Spinner
+        android:id="@+id/SpinnerSpecialization_Search_Doctor_To_Connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/SpinnerQualification_Search_Doctor_To_Connect"
+        android:layout_below="@+id/tVSpecialization_Search_Doctor_To_Connect"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/btSearch_Search_Doctor_To_Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tVQualification_Search_Doctor_To_Connect"
+        android:layout_below="@+id/SpinnerSpecialization_Search_Doctor_To_Connect"
+        android:layout_marginTop="54dp"
+        android:text="Search"
+        android:textColor="#000"/>
+</RelativeLayout>
