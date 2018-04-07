@@ -117,6 +117,9 @@
         android:layout_marginEnd="23dp"
         android:layout_marginTop="46dp"
         android:text="Submit"
-        android:textColor="#000"/>
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
+        />
 
 </RelativeLayout>

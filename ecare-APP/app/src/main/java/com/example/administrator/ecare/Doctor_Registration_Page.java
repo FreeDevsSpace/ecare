@@ -33,7 +33,8 @@ import java.util.Map;
 public class Doctor_Registration_Page extends AppCompatActivity {
 
     private static final String TAG = Doctor_Registration_Page.class.getSimpleName();
-    EditText name,mobile_number,city,date_of_birth,password,hospital_name,hospital_address,email,fees;
+    EditText name,mobile_number,city,password,hospital_name,hospital_address,email,fees;
+    TextView date_of_birth;
     TextView address,specialization,qualification,workplace;
     Button b1;
     Spinner sp1qualification,sp2specialization,sp3;
@@ -55,7 +56,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
         name=(EditText)findViewById(R.id.eTName_Doctor_Registration_Page);
         mobile_number=(EditText)findViewById(R.id.eTMobile_Number_Doctor_Registration_Page);
         password=(EditText)findViewById(R.id.eTPassword_Doctor_Registration_Page);
-        date_of_birth=(EditText)findViewById(R.id.eTDate_Of_Birth_Doctor_Registration_Page);
+        date_of_birth=(TextView) findViewById(R.id.eTDate_Of_Birth_Doctor_Registration_Page);
         email=(EditText)findViewById(R.id.eTEmail_Doctor_Registration_Page);
         address=(TextView)findViewById(R.id.tVAddress_Doctor_Registration_Page);
         city=(EditText)findViewById(R.id.eTCity_Doctor_Registration_Page);

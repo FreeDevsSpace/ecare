@@ -25,10 +25,13 @@
 
     <Button
         android:id="@+id/btView_Appointment_List_"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="12dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:text="View Appointment List" />
 </RelativeLayout>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/s"
+    android:padding="10dp"
     tools:context="com.example.administrator.ecare.Patient_Tretment_From_Doctor">
     <ScrollView
         android:layout_width="fill_parent"
@@ -190,6 +191,9 @@
         android:id="@+id/btSave_Patient_Tretment_From_Doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:layout_alignEnd="@+id/eTWrite_Suggetions_Patient_Tretment_From_Doctor"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="22dp"

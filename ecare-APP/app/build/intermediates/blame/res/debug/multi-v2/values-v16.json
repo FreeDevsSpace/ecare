@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Administrator\\AndroidStudioProjects\\eCare\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\Ki$haN\\Desktop\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\9100f57847afebc91cff2e63edf21403\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Ki$haN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\dd27f699f9b62e99cee3ed288a449f2a\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

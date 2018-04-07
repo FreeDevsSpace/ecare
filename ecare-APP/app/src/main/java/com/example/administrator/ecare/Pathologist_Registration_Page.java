@@ -33,9 +33,9 @@ import java.util.Map;
 
 public class Pathologist_Registration_Page extends AppCompatActivity {
     private static final String TAG = SQLiteHandler.class.getSimpleName();
-    EditText name,mobile_number,email,dob,address,password;
+    EditText name,mobile_number,email,address,password;
     Spinner spqualification,spblood_group;
-    TextView tvdob,tvqualification,tvaddress,tvblood_group;
+    TextView tvdob,tvqualification,tvaddress,tvblood_group,dob;
     Button save;
     private int mYear, mMonth, mDay;
     private ProgressDialog pDialog;
@@ -50,7 +50,7 @@ public class Pathologist_Registration_Page extends AppCompatActivity {
         name=(EditText)findViewById(R.id.eTName_Pathologist_Registration_Page);
         mobile_number=(EditText)findViewById(R.id.eTMobile_Number_Pathologist_Registration_Page);
         email=(EditText)findViewById(R.id.eTEmail_Pathologist_Registration_Page);
-        dob=(EditText)findViewById(R.id.eTDOB_Pathologist_Registration_Page);
+        dob=(TextView)findViewById(R.id.eTDOB_Pathologist_Registration_Page);
         address=(EditText)findViewById(R.id.eTAddress_Pathologist_Registration_Page);
         password=(EditText)findViewById(R.id.eTPassword_Pathologist_Registration_Page);
         spqualification=(Spinner)findViewById(R.id.SpinnerQualification_Pathologist_Registration_Page);

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dd"
+    android:padding="15dp"
     tools:context="com.example.administrator.ecare.Request_To_Connect_Doctor">
 
     <ImageView
@@ -21,21 +22,30 @@
         android:src="@drawable/user_profile"
         android:visibility="visible" />
 
+
     <Button
         android:id="@+id/btBook_Appointment_Request_To_Connect_Doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="Book Appointment" />
+        android:background="@color/colorPrimary"
+        android:text="Book Appointment"
+        android:textColor="#FFF"
+        android:textSize="10dp" />
+
 
     <Button
         android:id="@+id/btOnline_Consultation_Request_To_Connect_Doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:text="Online Consultation" />
+        android:layout_toEndOf="@+id/IVProfile_Pic_Request_To_Connect_Doctor"
+        android:background="@color/colorPrimary"
+        android:text="Online Consultation"
+        android:textColor="#FFF"
+        android:textSize="10dp" />
+
 
     <TextView
         android:id="@+id/tVName_Request_To_Connect_Doctor"
@@ -107,7 +117,7 @@
         android:gravity="center"
         android:text="PHospital_Name"
         android:textColor="#000"
-        android:textSize="18dp" />
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/tVPHospital_Address_Request_To_Connect_Doctor"
@@ -119,19 +129,20 @@
         android:gravity="center"
         android:text="PHospital_Address"
         android:textColor="#000"
-        android:textSize="18dp" />
+        android:textSize="13dp" />
 
     <TextView
         android:id="@+id/tVFees_Request_To_Connect_Doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tVHospital_Address_Request_To_Connect_Doctor"
-        android:layout_marginTop="30dp"
+        android:layout_above="@+id/btBook_Appointment_Request_To_Connect_Doctor"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="13dp"
+
         android:gravity="center"
         android:text="Fees :"
-        android:textSize="18dp"
-        android:textColor="#000"/>
+        android:textColor="#000"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/tVPFees_Request_To_Connect_Doctor"
@@ -139,7 +150,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tVFees_Request_To_Connect_Doctor"
         android:layout_alignBottom="@+id/tVFees_Request_To_Connect_Doctor"
-        android:layout_alignEnd="@+id/IVProfile_Pic_Request_To_Connect_Doctor"
+        android:layout_alignStart="@+id/btOnline_Consultation_Request_To_Connect_Doctor"
+        android:layout_marginStart="15dp"
         android:gravity="center"
         android:text="PFees"
         android:textColor="#000"
