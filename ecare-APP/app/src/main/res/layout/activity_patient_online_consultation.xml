@@ -106,6 +106,10 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_alignParentBottom="true"
+               android:background="@color/colorPrimary"
+               android:textColor="#FFF"
+               android:textSize="15dp"
+               android:layout_centerHorizontal="true"
                android:layout_marginStart="44dp"
                android:text="Proceeds"/>
 

@@ -32,8 +32,8 @@ import java.util.Map;
 
 public class Pharmacist_Registration_Page extends AppCompatActivity {
     private static final String TAG =Pharmacist_Registration_Page.class.getSimpleName();
-    TextView tvdob, tvaddress, tvqualification, tvblood_group;
-    EditText name, mobile_number, email, dob, password,address;
+    TextView tvdob, tvaddress, tvqualification, tvblood_group ,dob;
+    EditText name, mobile_number, email, password,address;
     Spinner spblood_group,spqualification;
     Button save;
     private int mYear, mMonth, mDay;
@@ -54,7 +54,7 @@ public class Pharmacist_Registration_Page extends AppCompatActivity {
         name = (EditText) findViewById(R.id.eTName_Pharmacist_Registration_Page);
         mobile_number = (EditText) findViewById(R.id.eTMobile_Number_Pharmacist_Registration_Page);
         email = (EditText) findViewById(R.id.eTEmail_Pharmacist_Registration_Page);
-        dob = (EditText) findViewById(R.id.eTDOB_Pharmacist_Registration_Page);
+        dob = (TextView) findViewById(R.id.eTDOB_Pharmacist_Registration_Page);
         password = (EditText) findViewById(R.id.eTPassword_Pharmacist_Registration_Page);
         address=(EditText)findViewById(R.id.eTAddress_Pharmacist_Registration_Page);
         spblood_group = (Spinner)  findViewById(R.id.SpinnerBlood_Group_Pharmacist_Registration_Page);

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/s"
+    android:padding="15dp"
     tools:context="com.example.administrator.ecare.Patient_Treatment_With_Connected_Doctor">
 
     <ScrollView
@@ -147,6 +148,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="27dp"
         android:text="Save"
-        android:textColor="#000"/>
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"/>
 
 </RelativeLayout>

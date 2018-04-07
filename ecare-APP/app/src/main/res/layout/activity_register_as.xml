@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/c"
     android:visibility="visible"
+    android:padding="10dp"
     tools:context="com.example.administrator.ecare.Register_As">
     <TextView
         android:id="@+id/tVRegister_As"
@@ -27,8 +28,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/tVRegister_As"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="100dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:layout_marginTop="40dp"
         android:text="Patient"
         android:visibility="visible"/>
@@ -38,8 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btPatient"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="100dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:layout_marginTop="40dp"
         android:text="Doctor"
         android:visibility="visible"/>
@@ -50,8 +53,9 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/btDoctor"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="100dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:text="Pathologist"
         android:visibility="visible"/>
     <Button
@@ -61,8 +65,9 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/btPathologist"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="100dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:text="Pharmacist"
         android:visibility="visible"/>
 </RelativeLayout>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/m"
+    android:padding="10dp"
     tools:context="com.example.administrator.ecare.Pathologist_Patient_Report_Upload">
 
     <TextView
@@ -59,8 +60,11 @@
         android:layout_below="@+id/tVPayment_Pathologist_Patient_Report_Upload"
         android:layout_marginStart="31dp"
         android:layout_marginTop="48dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:text="By Cash"
-        android:textColor="#000"/>
+        />
 
     <Button
         android:id="@+id/btOnline_Pathologist_Patient_Report_Upload"
@@ -70,17 +74,21 @@
         android:layout_alignBottom="@+id/btCash_Pathologist_Patient_Report_Upload"
         android:layout_alignEnd="@+id/tVClickHere_Upload_Report_Pathologist_Patient_Report_Upload"
         android:text="Online"
-        android:textColor="#000"/>
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"/>
 
     <Button
         android:id="@+id/btDone_Pathologist_Patient_Report_Upload"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="21dp"
-        android:layout_toStartOf="@+id/btOnline_Pathologist_Patient_Report_Upload"
+
         android:text="Done"
-        android:textColor="#000"/>
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"/>
 
 
 </RelativeLayout>

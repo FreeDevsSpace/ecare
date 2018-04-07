@@ -37,7 +37,7 @@ public class Registration_Page extends AppCompatActivity {
     EditText MN;
     EditText C;
     EditText A;
-    EditText Date_Of_Birth;
+    TextView Date_Of_Birth;
     EditText Psw;
     EditText E;
     TextView tv1, tv2;
@@ -60,7 +60,7 @@ public class Registration_Page extends AppCompatActivity {
         A = (EditText) findViewById(R.id.eTAddress_Registration_Page);
         Psw = (EditText) findViewById(R.id.eTPassword_Main1);
         //  RPsw = (EditText) findViewById(R.id.eTRE_Write_Password_Registration_Page);
-        Date_Of_Birth = (EditText) findViewById(R.id.eTDOB_Registration_Page);
+        Date_Of_Birth = (TextView) findViewById(R.id.eTDOB_Registration_Page);
         E = (EditText) findViewById(R.id.eTEmail_Registration_Page);
         tv1 = (TextView) findViewById(R.id.tVAddress_Registration_Page);
         tv2 = (TextView) findViewById(R.id.tVBlood_Group_Registration_Page);
