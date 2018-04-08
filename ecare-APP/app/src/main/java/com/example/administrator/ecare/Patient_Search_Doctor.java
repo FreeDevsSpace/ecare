@@ -219,6 +219,8 @@ public class Patient_Search_Doctor extends AppCompatActivity {
 
 
     private void loadSpinnerCityData() {
+                pDialog.setMessage("Loding Cities...");
+                pDialog.show();
                 String tag_string_req = "req_getcity";
                 //   RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, AppConfig.URL_GETCITY, new Response.Listener<String>() {
@@ -238,7 +240,9 @@ public class Patient_Search_Doctor extends AppCompatActivity {
                             spinner_city.setAdapter(new ArrayAdapter<String>(Patient_Search_Doctor.this, android.R.layout.simple_spinner_dropdown_item, CityName));
                         } catch (JSONException e) {
                             e.printStackTrace();
-                        }  //simple_spinner_dropdown_item
+                        }
+                pDialog.hide();
+                        //simple_spinner_dropdown_item
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -253,7 +257,10 @@ public class Patient_Search_Doctor extends AppCompatActivity {
 
 
             private void loadSpinnerQualificatonData() {
-                String tag_string_req = "req_getcity";
+                pDialog.setMessage("Loding Qualifications...");
+                pDialog.show();
+
+                String tag_string_req = "req_getQualification";
                 //   RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, AppConfig.URL_GETQUALIFICATION, new Response.Listener<String>() {
                     @Override
@@ -273,7 +280,9 @@ public class Patient_Search_Doctor extends AppCompatActivity {
                             spinner_qualification.setAdapter(new ArrayAdapter<String>(Patient_Search_Doctor.this, android.R.layout.simple_spinner_dropdown_item, QualificationName));
                         } catch (JSONException e) {
                             e.printStackTrace();
-                        }  //simple_spinner_dropdown_item
+                        }
+                        pDialog.hide();
+                        //simple_spinner_dropdown_item
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -288,7 +297,10 @@ public class Patient_Search_Doctor extends AppCompatActivity {
 
 
             private void loadSpinnerSpecializationData() {
-                String tag_string_req = "req_getcity";
+
+                pDialog.setMessage("Loding Specializations...");
+                pDialog.show();
+                String tag_string_req = "req_Specialization";
                 //   RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, AppConfig.URL_GETSPECIALIZATION, new Response.Listener<String>() {
                     @Override
@@ -308,6 +320,7 @@ public class Patient_Search_Doctor extends AppCompatActivity {
                             spinner_specialization.setAdapter(new ArrayAdapter<String>(Patient_Search_Doctor.this, android.R.layout.simple_spinner_dropdown_item, SpecializationName));
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            pDialog.hide();
                         }  //simple_spinner_dropdown_item
                     }
                 }, new Response.ErrorListener() {

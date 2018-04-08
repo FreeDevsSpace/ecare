@@ -21,12 +21,12 @@ public class Patient_Main extends AppCompatActivity {
     TextView logout;
     private SQLiteHandler db;
     private SessionManager session;
-    private ProgressDialog pDialog;
+    //private ProgressDialog pDialog;
     // Progress dialog
 
-    ArrayList<String> CityName;
-    ArrayList<String> QualificationName;
-    ArrayList<String> SpecializationName;
+    //ArrayList<String> CityName;
+    //ArrayList<String> QualificationName;
+    //ArrayList<String> SpecializationName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +38,8 @@ public class Patient_Main extends AppCompatActivity {
         history = (ImageView) findViewById(R.id.IVHistory_Patient_Main);
         logout = (TextView) findViewById(R.id.tVLogOut_Patient_Main);
 
-        pDialog = new ProgressDialog(this);
-        pDialog.setCancelable(false);
+        //pDialog = new ProgressDialog(this);
+        //pDialog.setCancelable(false);
 
 
         db = new SQLiteHandler(getApplicationContext());
@@ -82,7 +82,7 @@ public class Patient_Main extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pDialog.setMessage("Loading data ...");
+                //pDialog.setMessage("Loading data ...");
                 //  showDialog();
                 Intent i2 = new Intent(Patient_Main.this, Patient_Search_Doctor.class);
                 startActivity(i2);
@@ -119,7 +119,7 @@ public class Patient_Main extends AppCompatActivity {
         finish();
     }
 
-    private void showDialog() {
+    /*private void showDialog() {
         if (!pDialog.isShowing())
             pDialog.show();
     }
@@ -127,6 +127,6 @@ public class Patient_Main extends AppCompatActivity {
     private void hideDialog() {
         if (pDialog.isShowing())
             pDialog.dismiss();
-    }
+    }*/
 
 }
