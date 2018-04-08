@@ -4,7 +4,7 @@ public class AppConfig {
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Server user login url
-		public static String URL_LOGIN = "http://192.168.43.186/ecare/ecare-API/login.php";
+	public static String URL_LOGIN = "http://192.168.43.186/ecare/ecare-API/login.php";
 
 	// Server user register url
 	public static String URL_REGISTER ="http://192.168.43.186/ecare/ecare-API/register.php";
@@ -17,6 +17,7 @@ public class AppConfig {
 	public static String URL_GETSEARCH_DETAILS = "http://192.168.43.186/ecare/ecare-API/getsearch_details.php";
 	public static  String URL_CONSULTATION="http://192.168.43.186/ecare/ecare-API/consultation.php";
 	public static  String URL_DOCREGISTER="http://192.168.43.186/ecare/ecare-API/dregistration.php";
+
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// Server user login url
