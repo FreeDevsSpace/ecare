@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 07, 2018 at 08:47 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.1.14
+-- Host: localhost
+-- Generation Time: Apr 08, 2018 at 03:21 AM
+-- Server version: 10.1.22-MariaDB
+-- PHP Version: 7.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,15 +35,18 @@ CREATE TABLE `consultation` (
   `Problem` varchar(500) DEFAULT NULL,
   `Additional_Info_Medicine` varchar(200) DEFAULT NULL,
   `Additional_Info_Allergy` varchar(200) DEFAULT NULL,
-  `Suggetion` varchar(300) DEFAULT NULL
+  `Suggetion` varchar(300) DEFAULT NULL,
+  `Status` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `consultation`
 --
 
-INSERT INTO `consultation` (`Consultation_ID`, `Patient_ID`, `Doctor_ID`, `Problem`, `Additional_Info_Medicine`, `Additional_Info_Allergy`, `Suggetion`) VALUES
-(1, 1, 1, 'Stavanger', 'vgh', 'Norway', '');
+INSERT INTO `consultation` (`Consultation_ID`, `Patient_ID`, `Doctor_ID`, `Problem`, `Additional_Info_Medicine`, `Additional_Info_Allergy`, `Suggetion`, `Status`) VALUES
+(1, 1, 1, 'Stavanger', 'vgh', 'Norway', 'okokok', 1),
+(4, 1, 6, 'Acne', 'Yes', 'Yes', '', 0),
+(5, 1, 6, 'Hii', 'Hy', 'No', '', 0);
 
 -- --------------------------------------------------------
 
@@ -214,32 +217,27 @@ ALTER TABLE `pharmacist_registration`
 -- AUTO_INCREMENT for table `consultation`
 --
 ALTER TABLE `consultation`
-  MODIFY `Consultation_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `Consultation_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `doctor_registration`
 --
 ALTER TABLE `doctor_registration`
   MODIFY `Doctor_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
 --
 -- AUTO_INCREMENT for table `pathologist_registration`
 --
 ALTER TABLE `pathologist_registration`
   MODIFY `Pathologist_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `patient_registration`
 --
 ALTER TABLE `patient_registration`
   MODIFY `Patient_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `pharmacist_registration`
 --
 ALTER TABLE `pharmacist_registration`
-  MODIFY `Pharmacist_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-COMMIT;
+  MODIFY `Pharmacist_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
