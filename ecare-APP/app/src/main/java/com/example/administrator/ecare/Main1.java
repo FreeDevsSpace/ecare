@@ -70,6 +70,7 @@ public class Main1 extends AppCompatActivity {
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to main activity
+            // give if condition to check Sessions and Intent by it
             Intent intent = new Intent(Main1.this, Patient_Main.class);
             startActivity(intent);
             finish();
@@ -119,7 +120,9 @@ public class Main1 extends AppCompatActivity {
                     // Check for error node in json
                     if (!error) {
                             Log.d("okk","Inside erroe if");
-                        //   if(usertype=="Patient"){
+
+                        session.setLogin(true);
+
                         if (usertype.equals("Patient"))
                         {
 

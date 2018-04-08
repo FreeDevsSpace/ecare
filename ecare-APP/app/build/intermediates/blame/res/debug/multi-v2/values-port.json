@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ki$haN\\Desktop\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Ki$haN\\Desktop\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ki$haN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\dd27f699f9b62e99cee3ed288a449f2a\\res\\values-port\\values-port.xml",
+                    "source": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Ki$haN\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\dd27f699f9b62e99cee3ed288a449f2a\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/opt/lampp/htdocs/ecare/ecare-APP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/home/venom/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-beta1.aar/d3663a8a7ebe36dd5ce2de4f57a3585a/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -24,7 +24,7 @@ if(isset($_POST['Consultation_ID']) && isset($_POST['Suggetion']) )
 	$Consultation_ID=$_POST['Consultation_ID'];
 	$Suggetion=$_POST['Suggetion'];
 
-	$sql = "UPDATE consultation SET Suggetion=".$Suggetion.", Status=1 WHERE Consultation_ID=".$Consultation_ID;
+	$sql = "UPDATE consultation SET Suggetion='".$Suggetion."', Status=1 WHERE Consultation_ID=".$Consultation_ID;
 
 
     $result = mysqli_query($con,$sql);
