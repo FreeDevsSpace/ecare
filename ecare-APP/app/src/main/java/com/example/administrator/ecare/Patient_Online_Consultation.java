@@ -22,6 +22,9 @@ import com.example.administrator.ecare.helper.SQLiteHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Patient_Online_Consultation extends AppCompatActivity {
     private static final String TAG = Patient_Online_Consultation.class.getSimpleName();
     TextView p_id, basic_info, take_medicine, any_allergy, describe_issue,ppatient_id,doctor_id,pdoctor_id;
@@ -53,7 +56,7 @@ public class Patient_Online_Consultation extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         final String did=b.getString("Doctor_ID");
-        String pid = b.getString("Patient_ID");
+       final String pid = b.getString("Patient_ID");
         ppatient_id.setText(pid);
         pdoctor_id.setText(did);
         db = new SQLiteHandler(getApplicationContext());
@@ -118,7 +121,22 @@ public class Patient_Online_Consultation extends AppCompatActivity {
                         error.getMessage(), Toast.LENGTH_LONG).show();
                 hideDialog();
             }
-        });
+        }){
+
+            @Override
+            protected Map<String, String> getParams() {
+                // Posting parameters to login url
+                Map<String, String> params = new HashMap<>();
+                params.put("Patient_ID", Patient_ID);
+                params.put("Doctor_ID", Doctor_ID);
+                params.put("Problem", Problem);
+                params.put("Additional_Info_Medicine", Medicine);
+                params.put("Additional_Info_Allergy", Allergy);
+
+                return params;
+            }
+
+        };
 
 
         AppController.getInstance().addToRequestQueue(tag_string_req,strReq );

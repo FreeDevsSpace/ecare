@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.example.administrator.ecare.helper.SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
+import java.util.HashMap;
+
 public class Doctor_Main extends AppCompatActivity {
     ImageView profile,shedule,search,consultation,appointment,history;
     TextView logout;
@@ -54,8 +56,13 @@ public class Doctor_Main extends AppCompatActivity {
         consultation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                HashMap<String, String> doctor_registration = db.getDoctorDetails();
                 Intent i2 = new Intent(Doctor_Main.this,Consultation.class);
+                String Doctor_ID = doctor_registration.get("Doctor_ID");
+                i2.putExtra("Doctor_ID",Doctor_ID);
                 startActivity(i2);
+                finish();
+
             }
         });
 
