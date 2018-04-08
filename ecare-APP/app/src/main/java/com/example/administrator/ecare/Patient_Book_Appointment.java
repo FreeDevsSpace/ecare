@@ -7,18 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.administrator.ecare.R;
 
 import java.util.Calendar;
 
 public class Patient_Book_Appointment extends AppCompatActivity {
-    TextView p_id, appointment, available_time_slot;
-    Button save, select_date, find_available_time_slot;
-    EditText date;
+    TextView p_id, appointment, choose_time,selected_date;
+    Button save,select_date;
+    private Spinner spinner1;
+
 
     private int mYear, mMonth, mDay;
 
@@ -26,15 +25,16 @@ public class Patient_Book_Appointment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_book_appointment);
+        appointment=(TextView)findViewById(R.id.tVAppointment_Patient_Book_Appointment);
         p_id = (TextView) findViewById(R.id.tVPatient_ID_Patient_Book_Appointment);
-        appointment = (TextView) findViewById(R.id.tVAppointment_Patient_Book_Appointment);
-        available_time_slot = (TextView) findViewById(R.id.tVAvailable_Time_Slot_Patient_Book_Appointment);
+        selected_date = (TextView) findViewById(R.id.eTDate_Patient_Book_Appointment);
+        choose_time = (TextView) findViewById(R.id.edt_appointment_time);
+        spinner1 = (Spinner) findViewById(R.id.spinner1);
 
-        date = (EditText) findViewById(R.id.eTDate_Patient_Book_Appointment);
+
 
         save = (Button) findViewById(R.id.btSave_Patient_Book_Appointment);
-        select_date = (Button) findViewById(R.id.btSelect_Date_Patient_Book_Appointment);
-        find_available_time_slot = (Button) findViewById(R.id.btFind_Appointment_Time_Slot_Patient_Book_Appointment);
+        select_date=(Button)findViewById(R.id.btSelect_Date_Patient_Book_Appointment);
 
         select_date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +55,7 @@ public class Patient_Book_Appointment extends AppCompatActivity {
                                     public void onDateSet(DatePicker view, int year,
                                                           int monthOfYear, int dayOfMonth) {
 
-                                        date.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                                        selected_date.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
                                     }
                                 }, mYear, mMonth, mDay);

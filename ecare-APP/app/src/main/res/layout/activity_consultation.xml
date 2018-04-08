@@ -7,12 +7,21 @@
     android:background="@drawable/d"
     tools:context="com.example.administrator.ecare.Consultation">
 
+    <TextView
+        android:id="@+id/tVError_Consultation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="12dp" />
+
     <ListView
         android:id="@+id/ListView_Consultation"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tVError_Consultation"
+        android:layout_marginTop="17dp"
         android:scrollbars="vertical"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 </RelativeLayout>
