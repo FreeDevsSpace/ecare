@@ -22,8 +22,6 @@ class CustomAdapter1  extends BaseAdapter {
         this.patientnameList = patientnameArray.toArray(new String[0]);
         this.problemList=problemArray.toArray(new String[0]);
 
-
-
     }
     @Override
     public int getCount() {
@@ -37,7 +35,7 @@ class CustomAdapter1  extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
@@ -58,6 +56,5 @@ class CustomAdapter1  extends BaseAdapter {
 
         return view;
     }
-
 
 }

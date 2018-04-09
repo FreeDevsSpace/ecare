@@ -8,7 +8,6 @@ import android.util.Log;
 public class SessionManager {
 	// LogCat tag
 	private static String TAG = SessionManager.class.getSimpleName();
-	private String userType;
 
 	// Shared Preferences
 	SharedPreferences pref;
@@ -23,6 +22,7 @@ public class SessionManager {
 	private static final String PREF_NAME = "AndroidHiveLogin"; ///AndroidHiveLogin   AndroidHivePref
 	
 	private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
+	private static final String KEY_USER_TYPE = "userType";
 
 	public SessionManager(Context context) {
 		this._context = context;
@@ -30,29 +30,24 @@ public class SessionManager {
 		editor = pref.edit();
 	}
 
-	public void setLogin(boolean isLoggedIn,String userType) {
+	public void setLogin(boolean isLoggedIn, String userType) {
 
 		editor.putBoolean(KEY_IS_LOGGED_IN, isLoggedIn);
-		this.userType=userType;
-
+		editor.putString(KEY_USER_TYPE, userType);
 		// commit changes
 		editor.commit();
-
 		Log.d(TAG, "User login session modified!");
 	}
 
-	public String getUserType() {
-
-
-	return 	this.userType;
-	}
-
-
-
-
+    public String getUserType()
+	{
+		return pref.getString(KEY_USER_TYPE,"");
+    }
+	
 	public boolean isLoggedIn(){
 		return pref.getBoolean(KEY_IS_LOGGED_IN, false);
 	}
+
 	public boolean isLoggedOut()
 	{
 		return false;

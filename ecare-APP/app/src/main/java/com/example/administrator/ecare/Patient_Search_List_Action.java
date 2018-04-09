@@ -98,6 +98,7 @@ public class Patient_Search_List_Action extends AppCompatActivity {
               //  Object item = adapterView.getItemAtPosition(i);
               //  Log.d("ok hiiiiii", item.toString());
 
+
                 long v = adapterView.getItemIdAtPosition(i);
 
                 Log.d("ok hiiiiii", Long.toString(v));

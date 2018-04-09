@@ -29,6 +29,13 @@
                 android:textSize="18dp" />
 
             <TextView
+                android:id="@+id/tVConsult_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
+
+            <TextView
                 android:id="@+id/tVProblem_Consult_Patient"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

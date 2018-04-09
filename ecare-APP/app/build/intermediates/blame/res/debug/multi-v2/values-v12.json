@@ -1,10 +1,26 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Administrator\\AndroidStudioProjects\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
+            "outputFile": "/opt/lampp/htdocs/ecare/ecare-APP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v12/values-v12.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\9100f57847afebc91cff2e63edf21403\\res\\values-v12\\values-v12.xml",
+                    "source": "/home/venom/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-beta1.aar/d3663a8a7ebe36dd5ce2de4f57a3585a/res/values-v12/values-v12.xml",
+                    "from": {
+                        "startLines": "2,5,8,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,279,479,598",
+                        "endLines": "4,7,8,9",
+                        "endColumns": "12,12,118,94",
+                        "endOffsets": "274,474,593,688"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Administrator\\AndroidStudioProjects\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
+            "map": [
+                {
+                    "source": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\9100f57847afebc91cff2e63edf21403\\res\\values-v12\\values-v12.xml",
                     "from": {
                         "startLines": "2,5,8,9",
                         "startColumns": "4,4,4,4",

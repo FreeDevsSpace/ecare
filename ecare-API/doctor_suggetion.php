@@ -10,7 +10,7 @@ require_once 'include/Config.php';
   {
    		echo "Failed to connect to MySQL: " . mysqli_connect_error();
    		$response["error"] = TRUE;
-   		$response["message"] = "Failed to connect to MySQL Database";
+   		$response["error_msg"] = "Failed to connect to MySQL Database";
    		echo json_encode($response);
   } 
 
@@ -33,13 +33,13 @@ if(isset($_POST['Consultation_ID']) && isset($_POST['Suggetion']) && isset($_POS
 	if ($result)
 	{
 		$response["error"] = FALSE;
-   		$response["message"] = "Record updated successfully";
+   		$response["error_msg"] = "Record updated successfully";
    		echo json_encode($response);
    	}
 	else
 	{
 		$response["error"] = TRUE;
-   		$response["message"] = "Error updating record: " . $con->error;
+   		$response["error_msg"] = "Error updating record: " . $con->error;
    		echo json_encode($response);
 	}
 

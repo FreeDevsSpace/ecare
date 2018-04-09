@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class Consult_Patient extends AppCompatActivity {
     private static final String TAG = Consult_Patient.class.getSimpleName();
-    TextView patient_id,problem,suggetion,medicine,ppatient_id,pproblem;
+    TextView patient_id,problem,suggetion,medicine,ppatient_id,pproblem,Consultation_ID;
     EditText write_suggetion, prescribe_medicine;
     Button send;
     private ProgressDialog pDialog;
@@ -42,8 +42,8 @@ public class Consult_Patient extends AppCompatActivity {
         suggetion=(TextView)findViewById(R.id.tVSuggetion_Consult_Patient);
       //  medicine=(TextView)findViewById(R.id.tVMedicine_Consult_Patient);
         ppatient_id=(TextView)findViewById(R.id.tVPPatient_ID_Consult_Patient);
-        pproblem=(TextView)findViewById(R.id.tVPProble_Consult_Patient);
-
+        pproblem=(TextView)findViewById(R.id.tVConsult_ID);
+        Consultation_ID=(TextView)findViewById(R.id.tVPProble_Consult_Patient);
         write_suggetion=(EditText)findViewById(R.id.eTSuggetion_Consult_Patient);
         prescribe_medicine=(EditText)findViewById(R.id.eTMedicine_Consult_Patient);
 
@@ -53,7 +53,7 @@ public class Consult_Patient extends AppCompatActivity {
         pDialog.setCancelable(false);
         Bundle b= getIntent().getExtras();
 
-        final String cid=b.get("cid").toString();
+        final String cid =b.get("cid").toString();
         String pid= b.get("pid").toString();
         String pname= b.get("pname").toString();
         String did= b.get("did").toString();
@@ -64,17 +64,22 @@ public class Consult_Patient extends AppCompatActivity {
 
        ppatient_id.setText(pid);
        pproblem.setText(problem);
+       Consultation_ID.setText(cid);
+
+
        send.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
 
                String Patient_ID =ppatient_id .getText().toString();
+               String Consult_ID =Consultation_ID.getText().toString();
                String Problem = pproblem.getText().toString();
                String Suggetion = write_suggetion.getText().toString();
                String Medicine =prescribe_medicine.getText().toString();
 
-               if (!Patient_ID.isEmpty() &&!Problem.isEmpty() &&!Problem.isEmpty() && !Suggetion.isEmpty() && !Medicine.isEmpty()) {
-                   consultpatient(Patient_ID,Problem,Suggetion, Medicine);
+
+               if (!Suggetion.isEmpty() && !Medicine.isEmpty()) {
+                   consultpatient(Patient_ID,Consult_ID,Problem,Suggetion, Medicine);
                } else {
 
                    Toast.makeText(getApplicationContext(),
@@ -87,7 +92,7 @@ public class Consult_Patient extends AppCompatActivity {
 
     }
 
-    private void consultpatient(final String Patient_ID, final String Problem, final String Suggetion,final String Medicine) {
+    private void consultpatient(final String Patient_ID,final String Consult_ID, final String Problem, final String Suggetion,final String Medicine) {
         String tag_string_req = "req_consultation";
 
         pDialog.setMessage("Send Consultation ...");
@@ -104,17 +109,20 @@ public class Consult_Patient extends AppCompatActivity {
                     JSONObject jObj = new JSONObject(response);
 
                     boolean error = jObj.getBoolean("error");
+                    String msg = jObj.getString("error_msg");
+
                     if (!error) {
 
-                        Toast.makeText(Consult_Patient.this, "Consultation is send", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Consult_Patient.this, msg, Toast.LENGTH_SHORT).show();
 
-                        Intent i = new Intent(Consult_Patient.this, Consultation.class);
+                        Intent i = new Intent(Consult_Patient.this, Doctor_Main.class);
                         startActivity(i);
                         finish();
-                    }else {
+                    }
+                    else
+                    {
                         String errorMsg = jObj.getString("error_msg");
-                        Toast.makeText(getApplicationContext(),
-                                errorMsg, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),errorMsg, Toast.LENGTH_LONG).show();
                     }
 
                 } catch (JSONException e) {
@@ -136,8 +144,7 @@ public class Consult_Patient extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting parameters to login url
                 Map<String, String> params = new HashMap<>();
-                params.put("Patient_ID", Patient_ID);
-                params.put("Problem", Problem);
+                params.put("Consultation_ID",Consult_ID);
                 params.put("Suggetion", Suggetion);
                 params.put("Prescribe_Medicine", Medicine);
 
@@ -158,4 +165,14 @@ public class Consult_Patient extends AppCompatActivity {
             pDialog.dismiss();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent i = new Intent(Consult_Patient.this, Doctor_Main.class);
+        startActivity(i);
+        finish();
+
+
+    }
 }

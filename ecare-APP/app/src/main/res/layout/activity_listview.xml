@@ -2,18 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="10dp">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="22dp">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/IVProfile_ListView"
         android:layout_width="100dp"
@@ -23,7 +14,7 @@
     <TextView
         android:id="@+id/tVName_ListView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_marginStart="22dp"
         android:layout_marginTop="14dp"
@@ -31,7 +22,7 @@
         android:layout_weight="1"
         android:text="Full Name"
         android:textColor="#000"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tVQualification_ListView"
@@ -42,7 +33,7 @@
         android:layout_marginBottom="15dp"
         android:text="Qualification"
         android:textColor="#260891"
-        android:textSize="15dp"/>
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/tVFees_ListView"
@@ -50,25 +41,20 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tVQualification_ListView"
         android:layout_alignBottom="@+id/tVQualification_ListView"
-        android:layout_marginStart="66dp"
-        android:layout_toEndOf="@+id/tVName_ListView"
+        android:layout_marginEnd="13dp"
+        android:layout_toStartOf="@+id/tVFees_Value_ListView"
         android:text="Fees:"
         android:textColor="#000"
-        android:textSize="15dp"/>
+        android:textSize="15dp" />
 
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tVFees_Value_ListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tVFees_ListView"
-            android:layout_alignBottom="@+id/tVFees_ListView"
-            android:layout_alignEnd="@+id/tVFees_ListView"
-            android:text="Fees Value"
-            android:textColor="#960c6c"
-            android:textSize="15dp" />
-    </ScrollView>>
-
+    <TextView
+        android:id="@+id/tVFees_Value_ListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tVFees_ListView"
+        android:layout_alignParentEnd="true"
+        android:text="FeesValue"
+        android:textColor="#960c6c"
+        android:textSize="15dp" />
 
 </RelativeLayout>

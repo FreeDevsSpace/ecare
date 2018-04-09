@@ -197,10 +197,8 @@ Psw.requestFocus();
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
-// User successfully stored in MySQL
-                        // Now store the user in sqlite
-                        //   String Patient_ID = jObj.getString("Patient_ID");
 
+                        // User successfully stored in MySQL
                         JSONObject pharmacist_registration = jObj.getJSONObject("pharmacist_registration");
                         String Full_Name= pharmacist_registration.getString("Full_Name");
                         String Mobile_Number = pharmacist_registration.getString("Mobile_Number");
@@ -212,8 +210,7 @@ Psw.requestFocus();
                         String Password = pharmacist_registration.getString("Password");
 
 
-                      //  db.addPharmacist(Full_Name,Mobile_Number,DOB,Email,Qualification,Address,Blood_Group,Password);
-                        db.addPharmacist(Full_Name,Mobile_Number,DOB,Email,Qualification,Address,Blood_Group,Password);
+                       db.addUser(Full_Name,Mobile_Number,DOB,Email,Qualification,Address,Blood_Group,Password);
 
                         Toast.makeText(Pharmacist_Registration_Page.this, "User successfully registered. Try login now!",Toast.LENGTH_SHORT).show();
 

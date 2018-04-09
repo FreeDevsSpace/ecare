@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,18 +15,13 @@ import com.example.administrator.ecare.helper.SessionManager;
 import java.util.HashMap;
 
 public class Patient_Main extends AppCompatActivity {
-    //  private TextView id,Name, mobile_number,dob,address,blood_group;
 
     ImageView history, profile, search;
     TextView logout,tvprofile,tvsearch,tvhistory;
     private Patient_SQLiteHandler db;
     private SessionManager session;
-    //private ProgressDialog pDialog;
-    // Progress dialog
+    private ProgressDialog pDialog;
 
-    //ArrayList<String> CityName;
-    //ArrayList<String> QualificationName;
-    //ArrayList<String> SpecializationName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +36,8 @@ public class Patient_Main extends AppCompatActivity {
         tvsearch=(TextView)findViewById(R.id.tVSearch_Patient_Main);
         tvhistory=(TextView)findViewById(R.id.tVHistory_Patient_Main);
 
-        //pDialog = new ProgressDialog(this);
-        //pDialog.setCancelable(false);
+        pDialog = new ProgressDialog(this);
+        pDialog.setCancelable(false);
 
 
         db = new Patient_SQLiteHandler(getApplicationContext());
@@ -51,7 +47,7 @@ public class Patient_Main extends AppCompatActivity {
 
        if (!session.isLoggedIn()) {
             logoutUser();
-        }
+       }
 
 
         profile.setOnClickListener(new View.OnClickListener() {
@@ -112,17 +108,17 @@ public class Patient_Main extends AppCompatActivity {
     }
 
     private void logoutUser() {
-        session.setLogin(false);
-
-//       db.deleteUsers();
-
+        session.setLogin(false,"");
+        String status = String.valueOf(session.isLoggedOut());
+        Log.d("Logged Out..." , status);
+        db.deleteUsers();
         // Launching the login activity
         Intent intent = new Intent(Patient_Main.this, Main1.class);
         startActivity(intent);
         finish();
     }
 
-    /*private void showDialog() {
+    private void showDialog() {
         if (!pDialog.isShowing())
             pDialog.show();
     }
@@ -130,6 +126,6 @@ public class Patient_Main extends AppCompatActivity {
     private void hideDialog() {
         if (pDialog.isShowing())
             pDialog.dismiss();
-    }*/
+    }
 
 }

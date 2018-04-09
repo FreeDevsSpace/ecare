@@ -4,23 +4,23 @@ public class AppConfig {
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Server user login url
-	public static String URL_LOGIN = "http://192.168.43.164/ecare/ecare-API/login.php";
+	public static String URL_LOGIN = "http://192.168.43.186/ecare/ecare-API/login.php";
 
 	// Server user register url
-	public static String URL_REGISTER ="http://192.168.43.164/ecare/ecare-API/register.php";
-	public static String URL_PATHOLOGISTREGISTER ="http://192.168.43.164/ecare/ecare-API/pathologist_registration.php";
-	public static String URL_PHARMACISTREGISTER ="http://192.168.43.164/ecare/ecare-API/pharmacist_registration.php";
+	public static String URL_REGISTER ="http://192.168.43.186/ecare/ecare-API/register.php";
+	public static String URL_PATHOLOGISTREGISTER ="http://192.168.43.186/ecare/ecare-API/pathologist_registration.php";
+	public static String URL_PHARMACISTREGISTER ="http://192.168.43.186/ecare/ecare-API/pharmacist_registration.php";
 
-	public static String URL_GETCITY = "http://192.168.43.164/ecare/ecare-API/getcity.php";
-	public static String URL_GETQUALIFICATION = "http://192.168.43.164/ecare/ecare-API/getqualification.php";
-	public static String URL_GETSPECIALIZATION = "http://192.168.43.164/ecare/ecare-API/getspecialization.php";
-	public static String URL_GETSEARCH_DETAILS = "http://192.168.43.164/ecare/ecare-API/getsearch_details.php";
-	public static  String URL_CONSULTATION="http://192.168.43.164/ecare/ecare-API/consultation.php";
+	public static String URL_GETCITY = "http://192.168.43.186/ecare/ecare-API/getcity.php";
+	public static String URL_GETQUALIFICATION = "http://192.168.43.186/ecare/ecare-API/getqualification.php";
+	public static String URL_GETSPECIALIZATION = "http://192.168.43.186/ecare/ecare-API/getspecialization.php";
+	public static String URL_GETSEARCH_DETAILS = "http://192.168.43.186/ecare/ecare-API/getsearch_details.php";
+	public static  String URL_CONSULTATION="http://192.168.43.186/ecare/ecare-API/consultation.php";
 
-	public static  String URL_DOCTOR_CONSULTATION="http://192.168.43.164/ecare/ecare-API/doctor_consultation.php";
-	public static  String URL_DOCTOR_SUGGETION="http://192.168.43.164/ecare/ecare-API/doctor_suggetion.php";
+	public static  String URL_DOCTOR_CONSULTATION="http://192.168.43.186/ecare/ecare-API/doctor_consultation.php";
+	public static  String URL_DOCTOR_SUGGETION="http://192.168.43.186/ecare/ecare-API/doctor_suggetion.php";
 
-	public static  String URL_DOCREGISTER="http://192.168.43.164/ecare/ecare-API/dregistration.php";
+	public static  String URL_DOCREGISTER="http://192.168.43.186/ecare/ecare-API/dregistration.php";
 
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////

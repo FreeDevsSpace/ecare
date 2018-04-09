@@ -195,7 +195,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
                        // db1.addDoctor(Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
                          //       Qualification, Specialization, Hospital_Name, Hospital_Address,Fees);
 
-                        db1.addDoctor(Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
+                        db1.addUser(Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
                                 Qualification, Specialization, Hospital_Name, Hospital_Address,Fees);
                         Toast.makeText(Doctor_Registration_Page.this, "User successfully registered. Try login now!", Toast.LENGTH_SHORT).show();
 
@@ -263,25 +263,3 @@ public class Doctor_Registration_Page extends AppCompatActivity {
             pDialog.dismiss();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

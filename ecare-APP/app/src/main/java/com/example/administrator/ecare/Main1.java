@@ -33,8 +33,8 @@ public class Main1 extends AppCompatActivity {
     private static final String TAG = Main1.class.getSimpleName();
     private static EditText email, password;
     private Button login_button;
-    private static TextView attempt, forgot_Password;
-    //   int attempt_counter = 3;
+
+
     TextView t1;
     private ProgressDialog pDialog;
     private SessionManager session;
@@ -51,8 +51,6 @@ public class Main1 extends AppCompatActivity {
         t1 = (TextView) findViewById(R.id.tVNew_Account_Main1);
         email = (EditText) findViewById(R.id.eTID_Main1);
         password = (EditText) findViewById(R.id.eTPassword_Main1);
-      //  attempt = (TextView) findViewById(R.id.tVAttempt_Main1);
-      //  forgot_Password = (TextView) findViewById(R.id.tVForget_Password_Main1);
         login_button = (Button) findViewById(R.id.btLog_In_Main1);
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -77,14 +75,35 @@ public class Main1 extends AppCompatActivity {
         });
 
         // Check if user is already logged in or not
-       if (session.isLoggedIn()) {
-
-                    Intent intent = new Intent(Main1.this, Patient_Main.class);
-                    startActivity(intent);
-                    finish();
+    if (session.isLoggedIn()) {
 
 
+        if(session.getUserType().equals("Patient"))
+        {
+            Intent intent = new Intent(Main1.this, Patient_Main.class);
+            startActivity(intent);
+            finish();
         }
+        else if(session.getUserType().equals("Doctor"))
+        {
+            Intent intent = new Intent(Main1.this, Doctor_Main.class);
+            startActivity(intent);
+            finish();
+        }
+        else if(session.getUserType().equals("Pathologist"))
+        {
+            Intent intent = new Intent(Main1.this, Pathologist_Main.class);
+            startActivity(intent);
+            finish();
+        }
+        else if(session.getUserType().equals("Pharmacist"))
+        {
+            Intent intent = new Intent(Main1.this, Pharmacist_Main.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
 
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,12 +143,12 @@ public class Main1 extends AppCompatActivity {
                 try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
-                    String usertype=jObj.getString("USER_TYPE");
+                    String usertype = jObj.getString("USER_TYPE");
 
                     // Check for error node in json
                     if (!error) {
 
-                        session.setLogin(true);
+                        session.setLogin(true,usertype);
 
                         if (usertype.equals("Patient"))
                         {
@@ -162,7 +181,7 @@ public class Main1 extends AppCompatActivity {
                                 String Hospital_Address = doctor_registration.getString("Hospital_Address");
                                 String Fees = doctor_registration.getString("Fees");
 
-                            doctorSqLiteHandler.addUser(Full_Name,Mobile_Number,DOB,Address,City,Email,Password,Qualification,Specialization,Hospital_Name,Hospital_Address,Fees);
+                                doctorSqLiteHandler.addUser(Full_Name,Mobile_Number,DOB,Address,City,Email,Password,Qualification,Specialization,Hospital_Name,Hospital_Address,Fees);
                                 Intent  intent2  = new Intent(Main1.this, Doctor_Main.class);
                                 startActivity(intent2);
                                 finish();

@@ -26,14 +26,12 @@ public class Doctor_SQLiteHandler extends SQLiteOpenHelper {
 	private static final int DATABASE_VERSION = 1;
 
 	// Database Name
-	private static final String DATABASE_NAME = "ecare";
+	private static final String DATABASE_NAME = "ecare_doctor";
 
 	// Login table name
 	//private static final String TABLE_USER = "patient_registration";
 
 	private static final String TABLE_DOCTOR = "doctor_registration";
-	private static final String TABLE_PATHOLOGIST = "pathologist_registration";
-	private static final String TABLE_PHARMACIST = "pharmacist_registration";
 
 
 
@@ -104,6 +102,8 @@ public class Doctor_SQLiteHandler extends SQLiteOpenHelper {
 
 	public void addUser( String Full_Name, String Mobile_Number, String DOB, String Address,String City,
 						String Email,String Password, String Qualification,String Specialization,String Hospital_Name,String Hospital_Address,String Fees) {
+
+
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();

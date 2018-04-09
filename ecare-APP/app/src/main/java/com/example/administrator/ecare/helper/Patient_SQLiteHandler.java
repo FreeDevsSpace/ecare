@@ -24,7 +24,7 @@ public class Patient_SQLiteHandler extends SQLiteOpenHelper {
 	private static final int DATABASE_VERSION = 1;
 
 	// Database Name
-	private static final String DATABASE_NAME = "ecare";
+	private static final String DATABASE_NAME = "ecare_patient";
 
 	// Login table name
 	private static final String TABLE_USER = "patient_registration";

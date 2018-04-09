@@ -1,10 +1,26 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Administrator\\AndroidStudioProjects\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "outputFile": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Administrator\\AndroidStudioProjects\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\9100f57847afebc91cff2e63edf21403\\res\\values-v17\\values-v17.xml",
+                    "source": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\9100f57847afebc91cff2e63edf21403\\res\\values-v17\\values-v17.xml",
+                    "from": {
+                        "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,228,456,614,764,936,1164,1406,1577,1751,1920,2193,2393,2597",
+                        "endLines": "4,8,11,14,17,21,25,28,31,34,38,41,45,49",
+                        "endColumns": "12,12,12,12,12,12,12,12,12,12,12,12,12,12",
+                        "endOffsets": "223,451,609,759,931,1159,1401,1572,1746,1915,2188,2388,2592,2921"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/opt/lampp/htdocs/ecare/ecare-APP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
+            "map": [
+                {
+                    "source": "/home/venom/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-beta1.aar/d3663a8a7ebe36dd5ce2de4f57a3585a/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

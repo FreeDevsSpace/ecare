@@ -65,11 +65,7 @@ public class Doctor_Main extends AppCompatActivity {
 
         if (!session.isLoggedIn()) {
             logoutUser();
-                }
-
-            // Fetching user details from SQLite
-//        HashMap<String, String> doctor_registration = db.getDoctorDetails();
-
+        }
 
             profile.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -83,15 +79,12 @@ public class Doctor_Main extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    HashMap<String, String> doctor_registration = db.getDoctorDetails();
-                  //  Intent i2 = null;//new Intent(Doctor_Main.this, Consultation.class);
+                    HashMap<String, String> doctor_registration = db.getUserDetails();
+
                     String Doctor_ID = doctor_registration.get("Doctor_ID");
                     Log.d("okk1", "before getid");
-                                getid(Doctor_ID);
-                //    i2.putExtra("Doctor_ID", Doctor_ID);
-                  //  Intent i2 = new Intent(Doctor_Main.this, Consultation.class);
-                    //startActivity(i2);
-                    //finish();
+                    getid(Doctor_ID);
+
                 }
             });
 
@@ -215,9 +208,10 @@ public class Doctor_Main extends AppCompatActivity {
 
 
     private void logoutUser() {
-                session.setLogin(false);
-
-       db.deleteDoctor();
+                session.setLogin(false,"");
+                String status = String.valueOf(session.isLoggedOut());
+                Log.d("Doctor Logged Out..." , status);
+                db.deleteUsers();
                 // Launching the login activity
                 Intent intent = new Intent(Doctor_Main.this, Main1.class);
                 startActivity(intent);

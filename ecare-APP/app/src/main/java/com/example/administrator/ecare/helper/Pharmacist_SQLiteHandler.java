@@ -25,7 +25,7 @@ public class Pharmacist_SQLiteHandler extends SQLiteOpenHelper {
 	private static final int DATABASE_VERSION = 1;
 
 	// Database Name
-	private static final String DATABASE_NAME = "ecare";
+	private static final String DATABASE_NAME = "ecare_pharmacist";
 
 	// Login table name
 
@@ -140,7 +140,7 @@ public class Pharmacist_SQLiteHandler extends SQLiteOpenHelper {
 		}
 		cursor.close();
 		db.close();
-// return user
+	// return user
 		Log.d(TAG, "Fetching user from Sqlite: " + pharmacist_registration.toString());
 
 		return pharmacist_registration;

@@ -154,22 +154,18 @@ Psw.requestFocus();
                 String Address = address.getText().toString();
                 String Blood_Group = spblood_group.getSelectedItem().toString();
                 String Password = password.getText().toString();
-// String Re_Password = RPsw.getText().toString().trim();
-                registerPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
 
-
-         /*       if (!Full_Name.isEmpty() && !Mobile_Number.isEmpty() && !DOB.isEmpty() && !Email.isEmpty() && !Qualification.isEmpty()
+                if (!Full_Name.isEmpty() && !Mobile_Number.isEmpty() && !DOB.isEmpty() && !Email.isEmpty() && !Qualification.isEmpty()
                         && !Address.isEmpty() &&  !Blood_Group.isEmpty() && !Password.isEmpty())
                 {
                     registerPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
 
-                } else {
+                }
+                else {
 
                     Toast.makeText(getApplicationContext(),
                             "Please enter your details!", Toast.LENGTH_LONG).show();
-                }*/
-// Link to Login Screen
-
+                }
             }
 
         });
@@ -196,9 +192,8 @@ Psw.requestFocus();
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
                     if (!error) {
-// User successfully stored in MySQL
+                        // User successfully stored in MySQL
                         // Now store the user in sqlite
-                        //   String Patient_ID = jObj.getString("Patient_ID");
 
                         JSONObject pathologist_registration = jObj.getJSONObject("pathologist_registration");
                         String Full_Name= pathologist_registration.getString("Full_Name");
@@ -210,8 +205,7 @@ Psw.requestFocus();
                         String Email = pathologist_registration.getString("Email");
                         String Password = pathologist_registration.getString("Password");
 
-                     //   db.addPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
-                        db.addPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
+                        db.addUser(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
 
                         Toast.makeText(Pathologist_Registration_Page.this, "User successfully registered. Try login now!",Toast.LENGTH_SHORT).show();
 
@@ -221,7 +215,7 @@ Psw.requestFocus();
 
                     } else {
 
-// Error occurred in registration. Get the error
+                        // Error occurred in registration. Get the error
                         // message
                         String errorMsg = jObj.getString("error_msg");
                         Toast.makeText(getApplicationContext(),errorMsg, Toast.LENGTH_LONG).show();
@@ -273,10 +267,3 @@ Psw.requestFocus();
             pDialog.dismiss();
     }
 }
-
-
-
-
-
-
-

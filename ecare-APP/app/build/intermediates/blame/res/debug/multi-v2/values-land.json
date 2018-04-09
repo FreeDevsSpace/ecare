@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Administrator\\AndroidStudioProjects\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "/opt/lampp/htdocs/ecare/ecare-APP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.0.0-beta1.aar\\02259f4355bef39d3cec763f6ad74d31\\res\\values-land\\values-land.xml",
+                    "source": "/home/venom/.gradle/caches/transforms-1/files-1.1/design-26.0.0-beta1.aar/07c546e66e55f18423efa210dac09786/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\9100f57847afebc91cff2e63edf21403\\res\\values-land\\values-land.xml",
+                    "source": "/home/venom/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0-beta1.aar/d3663a8a7ebe36dd5ce2de4f57a3585a/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Administrator\\AndroidStudioProjects\\ecare-APP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.0.0-beta1.aar\\02259f4355bef39d3cec763f6ad74d31\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "505"
+                    }
+                },
+                {
+                    "source": "/opt/lampp/htdocs/ecare/ecare-APP/C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0-beta1.aar\\9100f57847afebc91cff2e63edf21403\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

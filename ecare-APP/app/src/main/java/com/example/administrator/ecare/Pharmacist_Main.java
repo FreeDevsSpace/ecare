@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -40,11 +41,9 @@ public class Pharmacist_Main extends AppCompatActivity {
         // session manager
         session = new SessionManager(getApplicationContext());
 
-           /*   if (!session.isLoggedIn()) {
+        if (!session.isLoggedIn()) {
             logoutUser();
-        } */
-
-
+        }
 
 
         profile.setOnClickListener(new View.OnClickListener() {
@@ -80,9 +79,11 @@ public class Pharmacist_Main extends AppCompatActivity {
     }
 
     private void logoutUser() {
-        session.setLogin(false);
 
-//        db.deletePharmacist();
+        session.setLogin(false,"");
+        String status = String.valueOf(session.isLoggedOut());
+        Log.d("Pharma Logged Out..." , status);
+        db.deleteUsers();
         Intent i4= new Intent(Pharmacist_Main.this,Main1.class);
         startActivity(i4);
 
