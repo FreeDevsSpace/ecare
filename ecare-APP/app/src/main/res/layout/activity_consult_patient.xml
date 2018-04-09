@@ -4,111 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/p"
     android:padding="10dp"
     tools:context="com.example.administrator.ecare.Consult_Patient">
 
-    <TextView
-        android:id="@+id/tVPatient_ID_Consult_Patient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="22dp"
-        android:text="Patient_ID : "
-        android:textColor="#000"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/tVProblem_Consult_Patient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tVPatient_ID_Consult_Patient"
-        android:layout_marginTop="36dp"
-        android:text="Problem :"
-        android:textColor="#000"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/tVSuggetion_Consult_Patient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tVProblem_Consult_Patient"
-        android:layout_below="@+id/tVProblem_Consult_Patient"
-        android:layout_marginTop="81dp"
-        android:text="Suggetion :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <EditText
-        android:id="@+id/eTSuggetion_Consult_Patient"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVSuggetion_Consult_Patient"
-        android:layout_alignBottom="@+id/tVSuggetion_Consult_Patient"
-        android:layout_marginStart="21dp"
-        android:layout_toEndOf="@+id/tVPatient_ID_Consult_Patient"
-        android:ems="10"
-        android:hint="Write Suggetion Here"
-        android:inputType="textMultiLine"
-        android:textColorHint="#000"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/tVMedicine_Consult_Patient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btSend_Consult_Patient"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="67dp"
-        android:text="Medicine :"
-        android:textColor="#000"
-        android:textSize="18dp" />
-
-    <Button
-        android:id="@+id/btSend_Consult_Patient"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
-        android:textColor="#FFF"
-        android:textSize="15dp"
+        android:layout_alignParentStart="true">
 
-        android:text="Send" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/eTMedicine_Consult_Patient"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVMedicine_Consult_Patient"
-        android:layout_alignBottom="@+id/tVMedicine_Consult_Patient"
-        android:layout_alignStart="@+id/eTSuggetion_Consult_Patient"
-        android:ems="10"
-        android:hint="Precribe Meicine"
-        android:inputType="textMultiLine"
-        android:textColorHint="#000"
-        android:textSize="18dp" />
+            <TextView
+                android:id="@+id/tVPatient_ID_Consult_Patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="22dp"
+                android:text="Patient_ID : "
+                android:textColor="#000"
+                android:textSize="18dp" />
 
-    <TextView
-        android:id="@+id/tVPPatient_ID_Consult_Patient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tVPatient_ID_Consult_Patient"
-        android:layout_alignStart="@+id/eTSuggetion_Consult_Patient"
-        android:text="PPatient_ID"
-        android:textSize="18dp"
-        android:textColor="#000"/>
+            <TextView
+                android:id="@+id/tVProblem_Consult_Patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVPatient_ID_Consult_Patient"
+                android:layout_marginBottom="36dp"
+                android:layout_marginTop="36dp"
+                android:text="Problem :"
+                android:textColor="#000"
+                android:textSize="18dp" />
 
-    <TextView
-        android:id="@+id/tVPProble_Consult_Patient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVProblem_Consult_Patient"
-        android:layout_alignBottom="@+id/tVProblem_Consult_Patient"
-        android:layout_toEndOf="@+id/tVPatient_ID_Consult_Patient"
-        android:text="PProblem"
-        android:textColor="#000"
-        android:textSize="18dp" />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/etsuggetion_consult_patient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tVProblem_Consult_Patient">
+
+                <AutoCompleteTextView
+                    android:id="@+id/eTSuggetion_Consult_Patient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tVProblem_Consult_Patient"
+                    android:layout_marginBottom="36dp"
+                    android:layout_marginTop="36dp"
+                    android:ems="10"
+                    android:hint="Write Suggetion Here"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btSend_Consult_Patient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="81dp"
+                android:layout_marginTop="36dp"
+                android:background="@color/colorPrimary"
+                android:text="Send"
+                android:textColor="#FFF"
+                android:textSize="15dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/etmedicine_consult_patient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etsuggetion_consult_patient">
+
+                <AutoCompleteTextView
+                    android:id="@+id/eTMedicine_Consult_Patient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tVSuggetion_Consult_Patient"
+                    android:layout_marginBottom="81dp"
+                    android:ems="10"
+                    android:hint="Precribe Meicine"
+                    android:inputType="textMultiLine"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tVPPatient_ID_Consult_Patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tVPatient_ID_Consult_Patient"
+                android:layout_alignBottom="@+id/tVPatient_ID_Consult_Patient"
+                android:layout_marginStart="13dp"
+                android:layout_toEndOf="@+id/tVPatient_ID_Consult_Patient"
+                android:text="PPatient_ID"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tVPProble_Consult_Patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tVProblem_Consult_Patient"
+                android:layout_alignBottom="@+id/tVProblem_Consult_Patient"
+                android:layout_toEndOf="@+id/tVPatient_ID_Consult_Patient"
+                android:text="PProblem"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

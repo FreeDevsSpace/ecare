@@ -5,14 +5,14 @@ $db = new DB_Functions();
 // json response array
 $response = array("error" => FALSE);
 
-if((isset($_POST['Full_Name'])) && isset($_POST['Mobile_Number']) && isset($_POST['DOB']) && isset($_POST['Address']) && isset($_POST['Email']) && isset($_POST['Blood_Group']) && isset($_POST['Password'])) { 
+if((isset($_POST['Full_Name'])) && isset($_POST['Mobile_Number']) && isset($_POST['DOB']) && isset($_POST['Email']) && isset($_POST['Address'])  && isset($_POST['Blood_Group']) && isset($_POST['Password'])) { 
 
     // receiving the post params
     $Full_Name = $_POST['Full_Name'];
     $Mobile_Number=$_POST['Mobile_Number'];
     $DOB=$_POST['DOB'];
+     $Email = $_POST['Email'];
     $Address=$_POST['Address'];
-    $Email = $_POST['Email'];
     $Blood_Group=$_POST['Blood_Group'];
     $Password = $_POST['Password'];
     

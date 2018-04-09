@@ -8,7 +8,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.administrator.ecare.helper.SQLiteHandler;
+import com.example.administrator.ecare.helper.Doctor_SQLiteHandler;
+import com.example.administrator.ecare.helper.Patient_SQLiteHandler;
+
 
 import java.util.HashMap;
 
@@ -17,7 +19,8 @@ public class Request_To_Connect_Doctor extends AppCompatActivity {
     Button book_appointment, online_consultation;
     TextView tvname,tvqualification,tvspecialization,tvhospital_name,
             tvhospital_address,tvfees,tvphospital_name,tvphospital_address,tvpfees,qualification1,specialization1;
-    private SQLiteHandler db;
+    private Patient_SQLiteHandler db;
+    private Doctor_SQLiteHandler db1;
 
 
     @Override
@@ -59,7 +62,7 @@ public class Request_To_Connect_Doctor extends AppCompatActivity {
         tvphospital_address.setText(hospital_address);
         tvpfees.setText(fees);
 
-        db = new SQLiteHandler(getApplicationContext());
+        db = new Patient_SQLiteHandler(getApplicationContext());
         book_appointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,12 +74,12 @@ public class Request_To_Connect_Doctor extends AppCompatActivity {
         online_consultation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 HashMap<String, String> patient_registration = db.getUserDetails();
-//                HashMap<String,String> doctor_registration = db.getDoctorDetails();
+            //    HashMap<String,String> doctor_registration = db1.getDoctorDetails();
                Intent i2=new Intent(Request_To_Connect_Doctor.this,Patient_Online_Consultation.class);
                 //String Doctor_ID = doctor_registration.get("Doctor_ID");
-                String Patient_ID = patient_registration.get("Patient_ID");
+               String Patient_ID = patient_registration.get("Patient_ID");
+
                 //i2.putExtra("Doctor_ID",Doctor_ID);
                 i2.putExtra("Patient_ID",Patient_ID);
                 i2.putExtra("Doctor_ID",did);

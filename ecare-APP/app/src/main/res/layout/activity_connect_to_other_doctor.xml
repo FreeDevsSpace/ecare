@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/k"
     android:padding="10dp"
     tools:context="com.example.administrator.ecare.Connect_To_Other_Doctor">
 
@@ -113,24 +112,33 @@
         android:textColor="#000"
         android:textSize="15dp"/>
 
-            <EditText
-                android:id="@+id/eTSuggetion_Connect_To_Other_Doctor"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/etsuggetion_connect_to_doctor"
                 android:layout_alignBaseline="@+id/tVSuggetion_Connect_To_Other_Doctor"
                 android:layout_alignBottom="@+id/tVSuggetion_Connect_To_Other_Doctor"
-                android:layout_alignStart="@+id/eTRefReport_Connect_To_Other_Doctor"
-                android:ems="10"
-                android:hint="Write Suggetion"
-                android:inputType="textMultiLine"
-                android:textColorHint="#000"
-                android:textSize="15dp" />
+                android:layout_alignStart="@+id/eTRefReport_Connect_To_Other_Doctor">
+
+                <AutoCompleteTextView
+                    android:id="@+id/eTSuggetion_Connect_To_Other_Doctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tVSuggetion_Connect_To_Other_Doctor"
+                    android:layout_alignBottom="@+id/tVSuggetion_Connect_To_Other_Doctor"
+                    android:layout_alignStart="@+id/eTRefReport_Connect_To_Other_Doctor"
+                    android:ems="10"
+                    android:hint="Write Suggetion"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="#000"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
 
     <EditText
         android:id="@+id/eTRefReport_Connect_To_Other_Doctor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/eTSuggetion_Connect_To_Other_Doctor"
+        android:layout_below="@+id/etsuggetion_connect_to_doctor"
         android:layout_toEndOf="@+id/tVDoctor_Name_Connect_To_Other_Doctor"
         android:ems="10"
         android:hint="Write Report Name"
@@ -172,6 +180,7 @@
         android:textColor="#00f"
         android:textSize="15dp"/>
 
+
             <TextView
         android:id="@+id/tVDoctor_ID_Connect_To_Other_Doctor"
         android:layout_width="wrap_content"
@@ -194,20 +203,24 @@
         android:textColor="#000"
         android:textSize="15dp"/>
 
+            <Button
+                android:id="@+id/btSend_Connect_To_Other_Doctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:text="Send" />
+
+
+
         </RelativeLayout>
 
 
     </ScrollView>
 
-    <Button
-        android:id="@+id/btSend_Connect_To_Other_Doctor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorPrimary"
-        android:textColor="#FFF"
-        android:textSize="15dp"
-        android:text="Send" />
+
 
 </RelativeLayout>

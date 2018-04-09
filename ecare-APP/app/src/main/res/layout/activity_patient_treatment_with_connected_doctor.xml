@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/s"
     android:padding="15dp"
     tools:context="com.example.administrator.ecare.Patient_Treatment_With_Connected_Doctor">
 
@@ -122,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/tVRefDoctor_Suggetion_Patient_Treatment_With_Connected_Doctor"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="15dp"
                 android:text="Ref. Report :"
                 android:textColor="#000"
                 android:textSize="15dp" />
@@ -143,13 +142,13 @@
 
     <Button
         android:id="@+id/btSave_Patient_Treatment_With_Connected_Doctor"
-        android:layout_width="wrap_content"
+        android:layout_width="322dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="27dp"
-        android:text="Save"
+        android:layout_centerHorizontal="true"
         android:background="@color/colorPrimary"
+        android:text="Save"
         android:textColor="#FFF"
-        android:textSize="15dp"/>
+        android:textSize="15dp" />
 
 </RelativeLayout>

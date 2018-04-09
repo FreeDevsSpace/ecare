@@ -19,7 +19,7 @@ public class SessionManager {
 	int PRIVATE_MODE = 0;
 
 	// Shared preferences file name
-	private static final String PREF_NAME = "AndroidHivePref"; ///AndroidHiveLogin
+	private static final String PREF_NAME = "AndroidHiveLogin"; ///AndroidHiveLogin   AndroidHivePref
 	
 	private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
 
@@ -41,5 +41,9 @@ public class SessionManager {
 	
 	public boolean isLoggedIn(){
 		return pref.getBoolean(KEY_IS_LOGGED_IN, false);
+	}
+	public boolean isLoggedOut()
+	{
+		return false;
 	}
 }

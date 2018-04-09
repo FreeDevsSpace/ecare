@@ -22,7 +22,7 @@ public class Doctor_Search_Patient extends AppCompatActivity {
         setContentView(R.layout.activity_doctor_search_patient);
 
         e1=(EditText)findViewById(R.id.eTPatient_ID_Doctor_Search_Patient);
-        t1=(TextView)findViewById(R.id.tVPatient_ID_Doctor_Search_Patient);
+      //  t1=(TextView)findViewById(R.id.tVPatient_ID_Doctor_Search_Patient);
         search=(Button)findViewById(R.id.btContinue_Doctor_Search_Patient);
 
         search.setOnClickListener(new View.OnClickListener() {

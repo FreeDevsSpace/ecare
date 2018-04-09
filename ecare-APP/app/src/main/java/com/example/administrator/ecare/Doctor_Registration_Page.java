@@ -20,7 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.administrator.ecare.app.AppConfig;
 import com.example.administrator.ecare.app.AppController;
-import com.example.administrator.ecare.helper.SQLiteHandler;
+import com.example.administrator.ecare.helper.Doctor_SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
 import org.json.JSONException;
@@ -34,14 +34,14 @@ public class Doctor_Registration_Page extends AppCompatActivity {
 
     private static final String TAG = Doctor_Registration_Page.class.getSimpleName();
     EditText name,mobile_number,city,password,hospital_name,hospital_address,email,fees;
-    TextView date_of_birth;
+    TextView date_of_birth,tvdob;
     TextView address,specialization,qualification,workplace;
     Button b1;
     Spinner sp1qualification,sp2specialization,sp3;
     boolean invalid = false;
     private ProgressDialog pDialog;
     private SessionManager session;
-    private SQLiteHandler db1;
+    private Doctor_SQLiteHandler db1;
 
 
     private int mYear, mMonth, mDay;
@@ -58,10 +58,10 @@ public class Doctor_Registration_Page extends AppCompatActivity {
         password=(EditText)findViewById(R.id.eTPassword_Doctor_Registration_Page);
         date_of_birth=(TextView) findViewById(R.id.eTDate_Of_Birth_Doctor_Registration_Page);
         email=(EditText)findViewById(R.id.eTEmail_Doctor_Registration_Page);
-        address=(TextView)findViewById(R.id.tVAddress_Doctor_Registration_Page);
+      //  address=(TextView)findViewById(R.id.tVAddress_Doctor_Registration_Page);
         city=(EditText)findViewById(R.id.eTCity_Doctor_Registration_Page);
         specialization=(TextView)findViewById(R.id.tVSpecialization_Doctor_Registration_Page);
-        workplace=(TextView)findViewById(R.id.tVWorkplace_Doctor_Registration_Page);
+       // workplace=(TextView)findViewById(R.id.tVWorkplace_Doctor_Registration_Page);
         qualification=(TextView)findViewById(R.id.tVQualification_Doctor_Registration_Page);
         b1=(Button)findViewById(R.id.bnRegister_Doctor_Registration_Page);
         sp1qualification=(Spinner)findViewById(R.id.Spinner_Qualification_Doctor_Registration_Page);
@@ -69,6 +69,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
         hospital_name=(EditText)findViewById(R.id.eTHospital_Name_Doctor_Registration_Page);
         hospital_address=(EditText)findViewById(R.id.eTHospital_Address_Doctor_Registration_page);
         fees=(EditText)findViewById(R.id.eTFees_Doctor_Registration_Page);
+        tvdob=(TextView)findViewById(R.id.tVDOB_Doctor_Registration_Page);
 
 
         date_of_birth.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +109,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
         session = new SessionManager(getApplicationContext());
 
         // SQLite database handler
-        db1 = new SQLiteHandler(getApplicationContext());
+        db1 = new Doctor_SQLiteHandler(getApplicationContext());
 
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
@@ -191,9 +192,11 @@ public class Doctor_Registration_Page extends AppCompatActivity {
                         String Hospital_Address = doctor_registration.getString("Hospital_Address");
                         String Fees = doctor_registration.getString("Fees");
 
+                       // db1.addDoctor(Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
+                         //       Qualification, Specialization, Hospital_Name, Hospital_Address,Fees);
+
                         db1.addDoctor(Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
                                 Qualification, Specialization, Hospital_Name, Hospital_Address,Fees);
-
                         Toast.makeText(Doctor_Registration_Page.this, "User successfully registered. Try login now!", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(Doctor_Registration_Page.this, Main1.class);

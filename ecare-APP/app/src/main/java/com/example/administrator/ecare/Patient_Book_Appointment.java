@@ -16,7 +16,7 @@ import java.util.Calendar;
 public class Patient_Book_Appointment extends AppCompatActivity {
     TextView p_id, appointment, choose_time,selected_date;
     Button save,select_date;
-    private Spinner spinner1;
+    private Spinner spinnertime;
 
 
     private int mYear, mMonth, mDay;
@@ -27,9 +27,9 @@ public class Patient_Book_Appointment extends AppCompatActivity {
         setContentView(R.layout.activity_patient_book_appointment);
         appointment=(TextView)findViewById(R.id.tVAppointment_Patient_Book_Appointment);
         p_id = (TextView) findViewById(R.id.tVPatient_ID_Patient_Book_Appointment);
-        selected_date = (TextView) findViewById(R.id.eTDate_Patient_Book_Appointment);
-        choose_time = (TextView) findViewById(R.id.edt_appointment_time);
-        spinner1 = (Spinner) findViewById(R.id.spinner1);
+        selected_date = (TextView) findViewById(R.id.tVSelect_Date_Patient_Book_Appointment);
+        choose_time = (TextView) findViewById(R.id.tVChoose_Time_Patient_Book_Appointment);
+        spinnertime = (Spinner) findViewById(R.id.spinner_time_Patient_Book_Appointment);
 
 
 

@@ -42,7 +42,7 @@ if((isset($_POST['Full_Name'])) && isset($_POST['Mobile_Number']) && isset($_POS
 			$response["pharmacist_registration"]["Address"] = $pharmacist_registration["Address"];
             $response["pharmacist_registration"]["Blood_Group"] = $pharmacist_registration["Blood_Group"];
             $response["pharmacist_registration"]["Email"] = $pharmacist_registration["Email"];
-            $response["pharmacist_registration"]["Password"] = $pharmacist_registration["Password"];
+            $response["pharmacist_registration"]["Password"] = $pharmacist_registration["PSW"];
             
             echo json_encode($response);
         } else {

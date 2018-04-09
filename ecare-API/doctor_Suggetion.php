@@ -18,13 +18,14 @@ require_once 'include/Config.php';
 // json response array
 $response = array("error" => FALSE);
 
-if(isset($_POST['Consultation_ID']) && isset($_POST['Suggetion']) )
+if(isset($_POST['Consultation_ID']) && isset($_POST['Suggetion']) && isset($_POST['Prescribe_Medicine']) )
 {
 
 	$Consultation_ID=$_POST['Consultation_ID'];
 	$Suggetion=$_POST['Suggetion'];
+    $Prescribe_Medicine=$_POST['Prescribe_Medicine'];
 
-	$sql = "UPDATE consultation SET Suggetion='".$Suggetion."', Status=1 WHERE Consultation_ID=".$Consultation_ID;
+	$sql = "UPDATE consultation SET Suggetion='".$Suggetion."',Prescribe_Medicine='".$Prescribe_Medicine."', Status=1 WHERE Consultation_ID=".$Consultation_ID;
 
 
     $result = mysqli_query($con,$sql);

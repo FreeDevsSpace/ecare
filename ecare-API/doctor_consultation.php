@@ -21,8 +21,8 @@ $response = array("error" => FALSE);
 if(isset($_POST['Doctor_ID']))
 {
   
-  
-    $query = "SELECT * FROM consultation WHERE Doctor_ID";
+  $Doctor_ID= $_POST['Doctor_ID'];
+    $query = "SELECT * FROM consultation WHERE Doctor_ID=".$Doctor_ID;
 
     $result = mysqli_query($con,$query);
     
@@ -42,6 +42,8 @@ if(isset($_POST['Doctor_ID']))
         $response[$name]["Additional_Info_Medicine"]=$row['Additional_Info_Medicine'];
         $response[$name]["Additional_Info_Allergy"]=$row['Additional_Info_Allergy'];
         $response[$name]["Suggetion"]=$row['Suggetion'];
+        $response[$name]["Prescribe_Medicine"]=$row['Prescribe_Medicine'];
+          
 
         $i++;
       }

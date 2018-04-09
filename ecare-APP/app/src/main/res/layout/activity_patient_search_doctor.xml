@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cc"
     android:visibility="visible"
     android:padding="15dp"
     tools:context="com.example.administrator.ecare.Patient_Search_Doctor">
@@ -85,13 +84,12 @@
 
     <Button
         android:id="@+id/btSearch_Patient_Search_Doctor"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/tVQualification_Patient_Search_Doctor"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="28dp"
-        android:text="Search"
+        android:layout_alignParentStart="true"
         android:background="@color/colorPrimary"
+        android:text="Search"
         android:textColor="#FFF"
         android:textSize="15dp"
         android:visibility="visible" />

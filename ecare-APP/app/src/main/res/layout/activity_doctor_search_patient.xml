@@ -4,40 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/i"
     android:padding="10dp"
     tools:context="com.example.administrator.ecare.Doctor_Search_Patient">
 
-    <TextView
-        android:id="@+id/tVPatient_ID_Doctor_Search_Patient"
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp"
-        android:text="Enter Patient ID:"
-        android:textColor="#000"
-        android:textSize="20dp" />
+        android:id="@+id/etpatient_id_doctor_search_patient">
+        <AutoCompleteTextView
+            android:id="@+id/eTPatient_ID_Doctor_Search_Patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Patient ID"
+            android:inputType="number"
+            android:textColorHint="#000"
+            android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/eTPatient_ID_Doctor_Search_Patient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVPatient_ID_Doctor_Search_Patient"
-        android:layout_alignBottom="@+id/tVPatient_ID_Doctor_Search_Patient"
-        android:layout_marginStart="11dp"
-        android:layout_toEndOf="@+id/tVPatient_ID_Doctor_Search_Patient"
-        android:ems="10"
-        android:inputType="number"
-        android:textColorHint="#000"
-        android:textSize="20dp" />
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/btContinue_Doctor_Search_Patient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/eTPatient_ID_Doctor_Search_Patient"
+        android:layout_below="@+id/etpatient_id_doctor_search_patient"
         android:layout_marginTop="41dp"
         android:text="Continue"
         android:background="@color/colorPrimary"

@@ -8,18 +8,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.administrator.ecare.helper.SQLiteHandler;
+import com.example.administrator.ecare.helper.Patient_SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Patient_Main extends AppCompatActivity {
     //  private TextView id,Name, mobile_number,dob,address,blood_group;
 
     ImageView history, profile, search;
-    TextView logout;
-    private SQLiteHandler db;
+    TextView logout,tvprofile,tvsearch,tvhistory;
+    private Patient_SQLiteHandler db;
     private SessionManager session;
     //private ProgressDialog pDialog;
     // Progress dialog
@@ -37,19 +36,22 @@ public class Patient_Main extends AppCompatActivity {
         search = (ImageView) findViewById(R.id.IVSearch_Patient_Main);
         history = (ImageView) findViewById(R.id.IVHistory_Patient_Main);
         logout = (TextView) findViewById(R.id.tVLogOut_Patient_Main);
+        tvprofile=(TextView)findViewById(R.id.tVProfile_Patient_Main);
+        tvsearch=(TextView)findViewById(R.id.tVSearch_Patient_Main);
+        tvhistory=(TextView)findViewById(R.id.tVHistory_Patient_Main);
 
         //pDialog = new ProgressDialog(this);
         //pDialog.setCancelable(false);
 
 
-        db = new SQLiteHandler(getApplicationContext());
+        db = new Patient_SQLiteHandler(getApplicationContext());
 
         // session manager
         session = new SessionManager(getApplicationContext());
 
-    /*   if (!session.isLoggedIn()) {
+       if (!session.isLoggedIn()) {
             logoutUser();
-        } */
+        }
 
 
         profile.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +60,6 @@ public class Patient_Main extends AppCompatActivity {
 
                 // Fetching user details from SQLite
                 HashMap<String, String> patient_registration = db.getUserDetails();
-                Intent i1 = new Intent(Patient_Main.this, Patient_Profile.class);
 
                 String Patient_ID = patient_registration.get("Patient_ID");
                 String Full_name = patient_registration.get("Full_Name");
@@ -66,6 +67,8 @@ public class Patient_Main extends AppCompatActivity {
                 String DOB = patient_registration.get("DOB");
                 String Address = patient_registration.get("Address");
                 String Blood_Group = patient_registration.get("Blood_Group");
+
+                Intent i1 = new Intent(Patient_Main.this, Patient_Profile.class);
 
                 i1.putExtra("Patient_ID", Patient_ID);
                 i1.putExtra("Full_Name", Full_name);
@@ -101,7 +104,7 @@ public class Patient_Main extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                logoutUser();
+               logoutUser();
             }
         });
 
@@ -111,7 +114,7 @@ public class Patient_Main extends AppCompatActivity {
     private void logoutUser() {
         session.setLogin(false);
 
-        db.deleteUsers();
+//       db.deleteUsers();
 
         // Launching the login activity
         Intent intent = new Intent(Patient_Main.this, Main1.class);

@@ -4,27 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/k"
-    android:padding="15dp"
+    android:padding="10dp"
     tools:context="com.example.administrator.ecare.Doctor_Profile">
+
 
     <ImageView
         android:id="@+id/IVProfile_Icon_Doctor_Profile"
-        android:layout_width="138dp"
-        android:layout_height="152dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="140dp"
+        android:layout_marginTop="10dp"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
         android:elevation="10dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/user_profile"
-        android:visibility="visible" />
+        android:src="@drawable/ic_account_circle_3x"
+        android:visibility="visible"/>
 
-
-    <!-- android:src="@drawable/user_profile"
- android:background="@drawable/img"-->
     <TextView
         android:id="@+id/tVLogOut_Doctor_Profile"
         android:layout_width="wrap_content"
@@ -111,28 +109,6 @@
         android:text=" Blood Group:"
         android:textSize="15dp"
         android:textColor="#000"/>
-    <!--
-        <ImageView
-            android:id="@+id/ivComera_activity_doctor_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_alignBottom="@+id/IVProfile_Icon_Doctor_Profile"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="3dp"
-            android:layout_marginEnd="104dp"
-            app:srcCompat="@drawable/camera" />-->
-
-    <ImageButton
-        android:id="@+id/ibcamera_doctor_profile"
-        android:layout_width="51dp"
-        android:layout_height="31dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginTop="124dp"
-        android:adjustViewBounds="false"
-        android:background="@drawable/takepic" />
 
 
 </RelativeLayout>
-

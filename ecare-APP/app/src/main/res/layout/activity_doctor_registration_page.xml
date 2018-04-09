@@ -4,229 +4,289 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/j"
     android:visibility="visible"
-    android:padding="10dp"
+    android:padding="5dp"
     tools:context="com.example.administrator.ecare.Doctor_Registration_Page">
 
 
-    <EditText
-        android:id="@+id/eTName_Doctor_Registration_Page"
-        android:layout_width="270dp"
-        android:layout_height="38dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:ems="10"
-        android:hint="Full Name"
-        android:inputType="textPersonName"
-        android:textColorHint="#000"
-        android:textSize="14dp"
-        android:visibility="visible"/>
-
-    <EditText
-        android:id="@+id/eTMobile_Number_Doctor_Registration_Page"
-        android:layout_width="270dp"
-        android:layout_height="38dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/eTName_Doctor_Registration_Page"
-        android:hint="Mobile Number"
-        android:inputType="number"
-        android:textColorHint="#000"
-        android:textSize="14dp"
-        android:visibility="visible"/>
-
-    <TextView
-        android:id="@+id/tVAddress_Doctor_Registration_Page"
-        android:layout_width="113dp"
-        android:layout_height="38dp"
-        android:layout_alignParentLeft="true"
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bnRegister_Doctor_Registration_Page"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/eTDate_Of_Birth_Doctor_Registration_Page"
-        android:layout_marginTop="18dp"
-        android:text="Address :"
-        android:textColor="#000"
-        android:textSize="14dp"
-        android:visibility="visible"/>
+        android:layout_marginBottom="22dp"
+        tools:ignore="NotSibling">
 
-    <EditText
-        android:id="@+id/eTPassword_Doctor_Registration_Page"
-        android:layout_width="270dp"
-        android:layout_height="38dp"
-        android:layout_alignStart="@+id/Spinner_Qualification_Doctor_Registration_Page"
-        android:layout_below="@+id/eTEmail_Doctor_Registration_Page"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColorHint="#000"
-        android:textSize="14dp"
-        android:visibility="visible" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tVSpecialization_Doctor_Registration_Page"
-        android:layout_width="73dp"
-        android:layout_height="22dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tVQualification_Doctor_Registration_Page"
-        android:layout_marginTop="18dp"
-        android:text="Specialization:"
-        android:textColor="#000"
-        android:textSize="14dp"/>
 
-    <Spinner
-        android:id="@+id/Spinner_Specialization_Doctor_Registration_Page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVSpecialization_Doctor_Registration_Page"
-        android:layout_alignBottom="@+id/tVSpecialization_Doctor_Registration_Page"
-        android:layout_marginStart="11dp"
-        android:layout_toEndOf="@+id/tVSpecialization_Doctor_Registration_Page"
-        android:entries="@array/Specialization"
-        android:textSize="14dp"
-        android:visibility="visible" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etname_doctor_registration_page">
+                <AutoCompleteTextView
+                    android:id="@+id/eTName_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Full Name"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#000"
+                    android:textSize="18sp"
+                    android:visibility="visible"/>
+            </android.support.design.widget.TextInputLayout>
+            <!--android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"-->
 
-    <TextView
-        android:id="@+id/eTDate_Of_Birth_Doctor_Registration_Page"
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/eTMobile_Number_Doctor_Registration_Page"
-        android:ems="10"
-        android:hint="Date Of Birth (DD/MM/YYYY)"
-        android:inputType="date"
-        android:textColorHint="#000"
-        android:textSize="14dp"
-        android:visibility="visible"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etmobilenumber_doctor_registration_page"
+                android:layout_below="@+id/etname_doctor_registration_page">
+                <AutoCompleteTextView
+                    android:id="@+id/eTMobile_Number_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Mobile Number"
+                    android:inputType="number"
+                    android:visibility="visible"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tVQualification_Doctor_Registration_Page"
-        android:layout_width="106dp"
-        android:layout_height="22dp"
-        android:layout_below="@+id/eTPassword_Doctor_Registration_Page"
-        android:layout_marginTop="21dp"
-        android:text="Qualification:"
-        android:textColor="#000000"
-        android:textSize="14dp"/>
+            <TextView
+                android:id="@+id/tVDOB_Doctor_Registration_Page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etmobilenumber_doctor_registration_page"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="BirthDate:"
+                android:textSize="17dp" />
 
-    <TextView
-        android:id="@+id/tVWorkplace_Doctor_Registration_Page"
-        android:layout_width="124dp"
-        android:layout_height="21dp"
-        android:layout_alignBaseline="@+id/eTHospital_Name_Doctor_Registration_Page"
-        android:layout_alignBottom="@+id/eTHospital_Name_Doctor_Registration_Page"
-        android:layout_toStartOf="@+id/eTHospital_Name_Doctor_Registration_Page"
-        android:text="WorkPlace:"
-        android:textColor="#000000"
-        android:textSize="14dp"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etdob_doctor_registration_page"
+                android:layout_below="@+id/tVDOB_Doctor_Registration_Page">
+                <TextView
+                    android:id="@+id/eTDate_Of_Birth_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date Of Birth(DD/MM/YYYY)"
+                    android:inputType="date"
+                    android:visibility="visible"
+                    android:textSize="17dp"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/eTHospital_Name_Doctor_Registration_Page"
-        android:layout_width="270dp"
-        android:layout_height="38dp"
-        android:layout_alignStart="@+id/Spinner_Qualification_Doctor_Registration_Page"
-        android:layout_below="@+id/tVSpecialization_Doctor_Registration_Page"
-        android:ems="10"
-        android:hint="Hospital Name"
-        android:inputType="textPersonName"
-        android:textColorHint="#000"
-        android:textSize="14dp" />
 
-    <EditText
-        android:id="@+id/eTHospital_Address_Doctor_Registration_page"
-        android:layout_width="270dp"
-        android:layout_height="38dp"
-        android:layout_alignEnd="@+id/eTHospital_Name_Doctor_Registration_Page"
-        android:layout_below="@+id/eTHospital_Name_Doctor_Registration_Page"
-        android:ems="10"
-        android:hint="Hospital Address"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        android:textColorHint="#000"
-        android:textSize="14dp"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etpostaladdress_doctor_registration_page"
+                android:layout_below="@+id/etdob_doctor_registration_page">
 
-    <EditText
-        android:id="@+id/eTEmail_Doctor_Registration_Page"
-        android:layout_width="270dp"
-        android:layout_height="38dp"
-        android:layout_alignLeft="@+id/eTCity_Doctor_Registration_Page"
-        android:layout_alignStart="@+id/eTCity_Doctor_Registration_Page"
-        android:layout_below="@+id/eTCity_Doctor_Registration_Page"
-        android:ems="10"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#000"
-        android:textSize="14dp"/>
+                <AutoCompleteTextView
+                    android:id="@+id/eTPostal_Address_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter Address"
+                    android:inputType="textPostalAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/eTCity_Doctor_Registration_Page"
-        android:layout_width="270dp"
-        android:layout_height="38dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/tVAddress_Doctor_Registration_Page"
-        android:layout_marginTop="19dp"
-        android:ems="10"
-        android:hint="City"
-        android:inputType="text"
-        android:textColorHint="#000"
-        android:textSize="14dp"/>
-    <EditText
-        android:id="@+id/eTPostal_Address_Doctor_Registration_Page"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/eTCity_Doctor_Registration_Page"
-        android:layout_below="@+id/eTDate_Of_Birth_Doctor_Registration_Page"
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="textPostalAddress"
-        android:textColorHint="#000"
-        android:textSize="14dp"/>
+            </android.support.design.widget.TextInputLayout>
 
-    <Spinner
-        android:id="@+id/Spinner_Qualification_Doctor_Registration_Page"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/Spinner_Specialization_Doctor_Registration_Page"
-        android:layout_alignTop="@+id/tVQualification_Doctor_Registration_Page"
-        android:entries="@array/Qualification"
-        android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/tVFees_Doctor_Registration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/eTHospital_Address_Doctor_Registration_page"
-        android:text="Fees:"
-        android:textColor="#000"
-        android:textSize="14dp"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etcity_doctor_registration_page"
+                android:layout_below="@+id/etpostaladdress_doctor_registration_page">
+                <AutoCompleteTextView
+                    android:id="@+id/eTCity_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter City"
+                    android:inputType="text"
+                    android:textColorHint="#000"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    />
+            </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/eTFees_Doctor_Registration_Page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVFees_Doctor_Registration"
-        android:layout_alignBottom="@+id/tVFees_Doctor_Registration"
-        android:layout_alignStart="@+id/eTHospital_Address_Doctor_Registration_page"
-        android:ems="10"
-        android:hint="Fees"
-        android:inputType="number"
-        android:textColorHint="#000"
-        android:textSize="14dp"/>
-    <Button
-        android:id="@+id/bnRegister_Doctor_Registration_Page"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etemail_doctor_registration_page"
+                android:layout_below="@+id/etcity_doctor_registration_page">
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Register"
-        android:background="@color/colorPrimary"
-        android:textColor="#FFF"
-        android:textSize="15dp"
+                <AutoCompleteTextView
+                    android:id="@+id/eTEmail_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Email ID"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#000"
+                    android:textSize="18dp"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
 
-        android:visibility="visible"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etpassword_doctor_registration_page"
+                android:layout_below="@+id/etemail_doctor_registration_page">
+
+                <AutoCompleteTextView
+                    android:id="@+id/eTPassword_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    android:textColorHint="#000"
+                    android:visibility="visible" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tVQualification_Doctor_Registration_Page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etpassword_doctor_registration_page"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Qualification:"
+                android:textSize="17dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_qualification_doctor_registration_page"
+                android:layout_below="@+id/tVQualification_Doctor_Registration_Page">
+                <Spinner
+                    android:id="@+id/Spinner_Qualification_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/Qualification"
+                    android:visibility="visible"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tVSpecialization_Doctor_Registration_Page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_qualification_doctor_registration_page"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Specialization:"
+                android:textSize="17dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/spinner_specialization_doctor_registration_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tVSpecialization_Doctor_Registration_Page"
+                android:layout_marginBottom="10dp">
+
+                <Spinner
+                    android:id="@+id/Spinner_Specialization_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/Specialization"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ethopitalname_doctor_registration_page"
+                android:layout_below="@+id/spinner_specialization_doctor_registration_page">
+                <AutoCompleteTextView
+                    android:id="@+id/eTHospital_Name_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Hospital Name"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#000"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ethospitaladdress_doctor_registration_page"
+                android:layout_below="@+id/ethopitalname_doctor_registration_page">
+
+                <AutoCompleteTextView
+                    android:id="@+id/eTHospital_Address_Doctor_Registration_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Hospital Address"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#000"
+                    android:textSize="18sp"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etfees_doctor_registration_page"
+                android:layout_below="@+id/ethospitaladdress_doctor_registration_page">
+                <AutoCompleteTextView
+                    android:id="@+id/eTFees_Doctor_Registration_Page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Fees"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:textColorHint="#000"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/bnRegister_Doctor_Registration_Page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="Register"
+                android:background="@color/colorPrimary"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:visibility="visible"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>
 

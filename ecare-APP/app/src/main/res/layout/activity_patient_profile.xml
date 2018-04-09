@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/m"
     android:visibility="visible"
     android:padding="10dp"
     tools:context="com.example.administrator.ecare.Patient_Profile">
@@ -22,8 +21,9 @@
         android:cropToPadding="true"
         android:elevation="10dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/user_profile"
-        android:visibility="visible"/>
+        android:src="@drawable/ic_account_circle_3x"
+        android:visibility="visible"
+        tools:ignore="UnknownId" />
     <TextView
         android:id="@+id/tVName_Patient_Profile"
         android:layout_width="wrap_content"

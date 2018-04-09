@@ -4,41 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/d"
+    android:visibility="visible"
+    android:padding="10dp"
+    android:paddingTop="30dp"
     tools:context="com.example.administrator.ecare.Pharmacist_Search_Patient">
 
-
-    <TextView
-        android:id="@+id/tVEnter_Patient_ID_Pharmacist_Search_Patient"
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="119dp"
-        android:text="Enter Patient ID:"
-        android:textColor="#000"
-        android:textSize="20dp"/>
+        android:layout_marginTop="30dp"
+        android:id="@+id/etenter_patient_id_pharmacist_search_patient">
+        <AutoCompleteTextView
+            android:id="@+id/eTEnter_Patient_ID_Pharmacist_Search_Patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            android:hint="Enter Patient ID"
+            android:textSize="18sp"
+            android:inputType="text|number"/>
 
-    <EditText
-        android:id="@+id/eTEnter_Patient_ID_Pharmacist_Search_Patient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVEnter_Patient_ID_Pharmacist_Search_Patient"
-        android:layout_alignBottom="@+id/tVEnter_Patient_ID_Pharmacist_Search_Patient"
-        android:layout_alignParentEnd="true"
-        android:ems="10"
-        android:textColorHint="#000"
-        android:inputType="text|number"/>
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/btContinue_Pharmacist_Search_Patient"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tVEnter_Patient_ID_Pharmacist_Search_Patient"
-        android:layout_below="@+id/eTEnter_Patient_ID_Pharmacist_Search_Patient"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="38dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/etenter_patient_id_pharmacist_search_patient"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="15dp"
         android:text="Continue"/>
 
     <TextView

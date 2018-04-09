@@ -19,7 +19,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.administrator.ecare.app.AppConfig;
 import com.example.administrator.ecare.app.AppController;
-import com.example.administrator.ecare.helper.SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
 import org.json.JSONArray;
@@ -38,7 +37,6 @@ public class Patient_Search_Doctor extends AppCompatActivity {
     TextView tv1, tv2, tv3, tv4;
     Spinner spinner_city, spinner_qualification, spinner_specialization;
     Button b1;
-    private SQLiteHandler db;
     private SessionManager session;
 
     private ProgressDialog pDialog;
@@ -68,7 +66,6 @@ public class Patient_Search_Doctor extends AppCompatActivity {
 
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
-        db = new SQLiteHandler(getApplicationContext());
 
 
         b1.setOnClickListener(new View.OnClickListener() {

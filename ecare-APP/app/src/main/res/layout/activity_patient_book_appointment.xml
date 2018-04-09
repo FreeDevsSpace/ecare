@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/e"
     android:padding="15dp"
     tools:context="com.example.administrator.ecare.Patient_Book_Appointment">
 
@@ -41,7 +40,7 @@
         android:textSize="18dp"/>-->
 
     <TextView
-        android:id="@+id/eTDate_Patient_Book_Appointment"
+        android:id="@+id/tVSelect_Date_Patient_Book_Appointment"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:hint="Selected Date Here"
@@ -53,7 +52,7 @@
         android:textColorHint="#000" />
 
     <TextView
-        android:id="@+id/edt_appointment_time"
+        android:id="@+id/tVChoose_Time_Patient_Book_Appointment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -61,17 +60,18 @@
         android:layout_below="@+id/btSelect_Date_Patient_Book_Appointment"
         android:layout_marginTop="35dp"
         android:text="Choose Time :"
+        android:textColor="#000"
         android:textSize="20dp"
         android:textStyle="bold" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinner_time_Patient_Book_Appointment"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
 
-        android:layout_alignBaseline="@+id/edt_appointment_time"
-        android:layout_alignBottom="@+id/edt_appointment_time"
-        android:layout_alignEnd="@+id/eTDate_Patient_Book_Appointment"
+        android:layout_alignBaseline="@+id/tVChoose_Time_Patient_Book_Appointment"
+        android:layout_alignBottom="@+id/tVChoose_Time_Patient_Book_Appointment"
+        android:layout_alignEnd="@+id/tVSelect_Date_Patient_Book_Appointment"
         android:entries="@array/Appointment_Time"
         android:prompt="@array/Appointment_Time" />
 

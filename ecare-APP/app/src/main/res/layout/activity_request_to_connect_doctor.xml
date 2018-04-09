@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dd"
     android:padding="15dp"
     tools:context="com.example.administrator.ecare.Request_To_Connect_Doctor">
 
@@ -22,7 +21,6 @@
         android:src="@drawable/user_profile"
         android:visibility="visible" />
 
-
     <Button
         android:id="@+id/btBook_Appointment_Request_To_Connect_Doctor"
         android:layout_width="wrap_content"
@@ -33,7 +31,6 @@
         android:text="Book Appointment"
         android:textColor="#FFF"
         android:textSize="10dp" />
-
 
     <Button
         android:id="@+id/btOnline_Consultation_Request_To_Connect_Doctor"

@@ -21,7 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.administrator.ecare.app.AppConfig;
 import com.example.administrator.ecare.app.AppController;
-import com.example.administrator.ecare.helper.SQLiteHandler;
+import com.example.administrator.ecare.helper.Pathologist_SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
 import org.json.JSONException;
@@ -32,7 +32,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Pathologist_Registration_Page extends AppCompatActivity {
-    private static final String TAG = SQLiteHandler.class.getSimpleName();
+    private static final String TAG = Pathologist_SQLiteHandler.class.getSimpleName();
     EditText name,mobile_number,email,address,password;
     Spinner spqualification,spblood_group;
     TextView tvdob,tvqualification,tvaddress,tvblood_group,dob;
@@ -40,7 +40,7 @@ public class Pathologist_Registration_Page extends AppCompatActivity {
     private int mYear, mMonth, mDay;
     private ProgressDialog pDialog;
     private SessionManager session;
-    private SQLiteHandler db;
+    private Pathologist_SQLiteHandler db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +57,8 @@ public class Pathologist_Registration_Page extends AppCompatActivity {
         spblood_group=(Spinner)findViewById(R.id.SpinnerBlood_Group_Pathologist_Registration_Page);
         tvdob=(TextView)findViewById(R.id.tVDOB_Pathologist_Registration_Page);
         tvqualification=(TextView)findViewById(R.id.tVQualification_Pathologist_Registration_Page);
-        tvaddress=(TextView)findViewById(R.id.tVAddress_Pathologist_Registration_Page);
-        tvblood_group=(TextView)findViewById(R.id.tVBlood_Group_Pathologist_Registration_Page);
+     //   tvaddress=(TextView)findViewById(R.id.tVAddress_Pathologist_Registration_Page);
+        tvblood_group=(TextView)findViewById(R.id.tVBloodGroup_Pathologist_Registration_Page);
         save=(Button)findViewById(R.id.btSave_Pathologist_Registration_Page);
 
         // Progress dialog
@@ -69,7 +69,7 @@ public class Pathologist_Registration_Page extends AppCompatActivity {
         session = new SessionManager(getApplicationContext());
 
 // SQLite database handler
-        db= new SQLiteHandler(getApplicationContext());
+        db= new Pathologist_SQLiteHandler(getApplicationContext());
 
 
 // Check if user is already logged in or not
@@ -208,8 +208,9 @@ Psw.requestFocus();
                         String Address = pathologist_registration.getString("Address");
                         String Blood_Group = pathologist_registration.getString("Blood_Group");
                         String Email = pathologist_registration.getString("Email");
-                        String Password = pathologist_registration.getString("PSW");
+                        String Password = pathologist_registration.getString("Password");
 
+                     //   db.addPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
                         db.addPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
 
                         Toast.makeText(Pathologist_Registration_Page.this, "User successfully registered. Try login now!",Toast.LENGTH_SHORT).show();

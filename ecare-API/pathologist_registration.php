@@ -43,7 +43,7 @@ if((isset($_POST['Full_Name'])) && isset($_POST['Mobile_Number']) && isset($_POS
 			$response["pathologist_registration"]["Address"] = $pathologist_registration["Address"];
             $response["pathologist_registration"]["Blood_Group"] = $pathologist_registration["Blood_Group"];
             $response["pathologist_registration"]["Email"] = $pathologist_registration["Email"];
-            $response["pathologist_registration"]["Password"] = $pathologist_registration["Password"];
+            $response["pathologist_registration"]["Password"] = $pathologist_registration["PSW"];
             
             echo json_encode($response);
         } else {

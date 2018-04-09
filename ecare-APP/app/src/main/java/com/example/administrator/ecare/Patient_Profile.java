@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.administrator.ecare.helper.SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
 import java.io.Serializable;
@@ -16,12 +15,6 @@ public class Patient_Profile extends AppCompatActivity {
     TextView tvname, tvmobile_number, tvDOB, tvaddress, tvblood_group, tvpatient_id;
     TextView wname,wmobile_number,wdob,waddress,wblood_group,wpatient_id;
     ImageView iv1;
-
-    private SessionManager session;
-
-    private SQLiteHandler db;
-
-    private Serializable hashMap;
 
 
     private ProgressDialog pDialog;

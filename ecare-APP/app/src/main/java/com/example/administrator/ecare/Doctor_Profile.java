@@ -50,7 +50,7 @@ public class Doctor_Profile extends AppCompatActivity {
         tv8 = (TextView) findViewById(R.id.tVBlood_Group_Doctor_Profile);
         tv9 = (TextView) findViewById(R.id.tVDoctor_ID_Doctor_Profile);
         iv1 = (ImageView) findViewById(R.id.IVProfile_Icon_Doctor_Profile);
-        ib_camera = (ImageButton) findViewById(R.id.ibcamera_doctor_profile);
+      //  ib_camera = (ImageButton) findViewById(R.id.ibcamera_doctor_profile);
 
 
 

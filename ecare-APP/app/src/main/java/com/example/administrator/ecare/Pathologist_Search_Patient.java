@@ -18,7 +18,7 @@ public class Pathologist_Search_Patient extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pathologist_search_patient);
 
-        tv1=(TextView)findViewById(R.id.tVEnter_Patient_ID_Pathologist_Search_Patient);
+      //  tv1=(TextView)findViewById(R.id.tVEnter_Patient_ID_Pathologist_Search_Patient);
         tv2=(TextView)findViewById(R.id.tVLogOut_Pathologist_Search_Patient);
         et1=(EditText)findViewById(R.id.eTEnter_Patient_ID_Pathologist_Search_Patient);
         b1=(Button)findViewById(R.id.btContinue_Pathologist_Search_Patient);

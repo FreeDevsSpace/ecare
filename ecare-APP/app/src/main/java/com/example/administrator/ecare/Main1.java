@@ -17,7 +17,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.administrator.ecare.app.AppConfig;
 import com.example.administrator.ecare.app.AppController;
-import com.example.administrator.ecare.helper.SQLiteHandler;
+import com.example.administrator.ecare.helper.Doctor_SQLiteHandler;
+import com.example.administrator.ecare.helper.Pathologist_SQLiteHandler;
+import com.example.administrator.ecare.helper.Patient_SQLiteHandler;
+import com.example.administrator.ecare.helper.Pharmacist_SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
 import org.json.JSONException;
@@ -35,7 +38,10 @@ public class Main1 extends AppCompatActivity {
     TextView t1;
     private ProgressDialog pDialog;
     private SessionManager session;
-    private SQLiteHandler db;
+    private Pharmacist_SQLiteHandler pharmacistsqLiteHandler;
+    private Patient_SQLiteHandler patientsqLiteHandler;
+    private Doctor_SQLiteHandler doctorSqLiteHandler;
+    private Pathologist_SQLiteHandler pathologistSqLiteHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,7 +59,11 @@ public class Main1 extends AppCompatActivity {
         pDialog.setCancelable(false);
 
         // SQLite database handler
-        db = new SQLiteHandler(getApplicationContext());
+
+        pharmacistsqLiteHandler = new Pharmacist_SQLiteHandler(getApplicationContext());
+        patientsqLiteHandler = new Patient_SQLiteHandler(getApplicationContext());
+        doctorSqLiteHandler = new Doctor_SQLiteHandler(getApplicationContext());
+        pathologistSqLiteHandler = new Pathologist_SQLiteHandler(getApplicationContext());
 
         // Session manager
         session = new SessionManager(getApplicationContext());
@@ -66,15 +76,41 @@ public class Main1 extends AppCompatActivity {
             }
         });
 
-
         // Check if user is already logged in or not
-        if (session.isLoggedIn()) {
-            // User is already logged in. Take him to main activity
-            // give if condition to check Sessions and Intent by it
-            Intent intent = new Intent(Main1.this, Patient_Main.class);
-            startActivity(intent);
-            finish();
+    /*   if (session.isLoggedIn()) {
+
+                    Intent intent = new Intent(Main1.this, Patient_Main.class);
+                    startActivity(intent);
+                    finish();
+
+
         }
+       /* if (session.isLoggedIn()) {
+
+            if (session.equals(patientsqLiteHandler)) {
+                Intent intent = new Intent(Main1.this, Patient_Main.class);
+                startActivity(intent);
+                finish();
+            } else if (session.equals(doctorSqLiteHandler)) {
+                Intent intent = new Intent(Main1.this, Doctor_Main.class);
+                startActivity(intent);
+                finish();
+
+            } else if (session.equals(pathologistSqLiteHandler)) {
+                Intent intent = new Intent(Main1.this, Pathologist_Main.class);
+                startActivity(intent);
+                finish();
+            } else if (session.equals(pharmacistsqLiteHandler)) {
+                Intent intent = new Intent(Main1.this, Pharmacist_Main.class);
+                startActivity(intent);
+                finish();
+            }
+        }else {
+                Toast.makeText(Main1.this, "Please Login now", Toast.LENGTH_LONG).show();
+            } */
+
+
+
 
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,14 +155,11 @@ public class Main1 extends AppCompatActivity {
 
                     // Check for error node in json
                     if (!error) {
-                            Log.d("okk","Inside erroe if");
 
                         session.setLogin(true);
 
                         if (usertype.equals("Patient"))
                         {
-
-                                Log.d("oh","inside if");
                                 JSONObject patient_registration = jObj.getJSONObject("patient_registration");
                                 String Full_Name= patient_registration.getString("Full_Name");
                                 String Mobile_Number = patient_registration.getString("Mobile_Number");
@@ -136,7 +169,7 @@ public class Main1 extends AppCompatActivity {
                                 String Blood_Group = patient_registration.getString("Blood_Group");
                                 String Password = patient_registration.getString("PSW");
 
-                                db.addUser(Full_Name, Mobile_Number, DOB, Email, Address, Blood_Group, Password);
+                                patientsqLiteHandler.addUser(Full_Name, Mobile_Number, DOB, Email, Address, Blood_Group, Password);
                                 Intent   intent1 = new Intent(Main1.this, Patient_Main.class);
                                 startActivity(intent1);
                                 finish();
@@ -156,7 +189,7 @@ public class Main1 extends AppCompatActivity {
                                 String Hospital_Address = doctor_registration.getString("Hospital_Address");
                                 String Fees = doctor_registration.getString("Fees");
 
-                                db.addDoctor(Full_Name,Mobile_Number,DOB,Address,City,Email,Password,Qualification,Specialization,Hospital_Name,Hospital_Address,Fees);
+                            doctorSqLiteHandler.addDoctor(Full_Name,Mobile_Number,DOB,Address,City,Email,Password,Qualification,Specialization,Hospital_Name,Hospital_Address,Fees);
                                 Intent  intent2  = new Intent(Main1.this, Doctor_Main.class);
                                 startActivity(intent2);
                                 finish();
@@ -172,7 +205,7 @@ public class Main1 extends AppCompatActivity {
                                 String Email = pathologist_registration.getString("Email");
                                 String Password = pathologist_registration.getString("Password");
 
-                                db.addPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
+                                pathologistSqLiteHandler.addPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
                                 Intent  intent3  = new Intent(Main1.this, Pathologist_Main.class);
                                 startActivity(intent3);
                                 finish();
@@ -189,7 +222,7 @@ public class Main1 extends AppCompatActivity {
                                 String Email = pharmacist_registration.getString("Email");
                                 String Password = pharmacist_registration.getString("Password");
 
-                                db.addPharmacist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
+                                pharmacistsqLiteHandler.addPharmacist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
                                 Intent  intent4  = new Intent(Main1.this, Pharmacist_Main.class);
                                 startActivity(intent4);
                                 finish();

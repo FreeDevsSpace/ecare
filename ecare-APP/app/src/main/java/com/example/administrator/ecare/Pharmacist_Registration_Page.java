@@ -20,7 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.administrator.ecare.app.AppConfig;
 import com.example.administrator.ecare.app.AppController;
-import com.example.administrator.ecare.helper.SQLiteHandler;
+import com.example.administrator.ecare.helper.Pharmacist_SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
 import org.json.JSONException;
@@ -39,7 +39,7 @@ public class Pharmacist_Registration_Page extends AppCompatActivity {
     private int mYear, mMonth, mDay;
     private ProgressDialog pDialog;
     private SessionManager session;
-    private SQLiteHandler db;
+    private Pharmacist_SQLiteHandler db;
 
 
     @Override
@@ -48,7 +48,7 @@ public class Pharmacist_Registration_Page extends AppCompatActivity {
         setContentView(R.layout.activity_pharmacist_registration_page);
 
         tvdob = (TextView) findViewById(R.id.tVDOB_Pharmacist_Registration_Page);
-        tvaddress = (TextView) findViewById(R.id.tVAddress_Pharmacist_Registration_Page);
+     //   tvaddress = (TextView) findViewById(R.id.tVAddress_Pharmacist_Registration_Page);
         tvqualification = (TextView) findViewById(R.id.tVQualification_Pharmacist_Registration_Page);
         tvblood_group = (TextView) findViewById(R.id.tVBlood_Group_Pharmacist_Registration_Page);
         name = (EditText) findViewById(R.id.eTName_Pharmacist_Registration_Page);
@@ -69,7 +69,7 @@ public class Pharmacist_Registration_Page extends AppCompatActivity {
         session = new SessionManager(getApplicationContext());
 
 // SQLite database handler
-        db= new SQLiteHandler(getApplicationContext());
+        db= new Pharmacist_SQLiteHandler(getApplicationContext());
 
         dob.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -209,8 +209,10 @@ Psw.requestFocus();
                         String Qualification = pharmacist_registration.getString("Qualification");
                         String Address = pharmacist_registration.getString("Address");
                         String Blood_Group = pharmacist_registration.getString("Blood_Group");
-                        String Password = pharmacist_registration.getString("PSW");
+                        String Password = pharmacist_registration.getString("Password");
 
+
+                      //  db.addPharmacist(Full_Name,Mobile_Number,DOB,Email,Qualification,Address,Blood_Group,Password);
                         db.addPharmacist(Full_Name,Mobile_Number,DOB,Email,Qualification,Address,Blood_Group,Password);
 
                         Toast.makeText(Pharmacist_Registration_Page.this, "User successfully registered. Try login now!",Toast.LENGTH_SHORT).show();

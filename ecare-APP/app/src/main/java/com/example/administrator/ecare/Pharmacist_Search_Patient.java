@@ -18,7 +18,7 @@ public class Pharmacist_Search_Patient extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pharmacist_search_patient);
-        tv1=(TextView)findViewById(R.id.tVEnter_Patient_ID_Pharmacist_Search_Patient);
+      //  tv1=(TextView)findViewById(R.id.tVEnter_Patient_ID_Pharmacist_Search_Patient);
         tv2=(TextView)findViewById(R.id.tVLogOut_Pharmacist_Search_Patient);
         et1=(EditText)findViewById(R.id.eTEnter_Patient_ID_Pharmacist_Search_Patient);
         b1=(Button)findViewById(R.id.btContinue_Pharmacist_Search_Patient);

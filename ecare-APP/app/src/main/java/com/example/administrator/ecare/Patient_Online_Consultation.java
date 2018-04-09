@@ -17,7 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.administrator.ecare.app.AppConfig;
 import com.example.administrator.ecare.app.AppController;
-import com.example.administrator.ecare.helper.SQLiteHandler;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,17 +31,17 @@ public class Patient_Online_Consultation extends AppCompatActivity {
     Button proceed;
     EditText issue, medicine, allergy;
     private ProgressDialog pDialog;
-    private SQLiteHandler db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_online_consultation);
         p_id = (TextView) findViewById(R.id.tVPatient_ID_Patient_Online_Consultation);
-        basic_info = (TextView) findViewById(R.id.tVDescribe_Issue_In_Details_Patient_Online_Consultation);
+     //   basic_info = (TextView) findViewById(R.id.tVDescribe_Issue_In_Details_Patient_Online_Consultation);
         take_medicine = (TextView) findViewById(R.id.tVTake_Extra_Medicine_Patient_Online_Consultation);
         any_allergy = (TextView) findViewById(R.id.tVAllergy_Patient_Online_Consultation);
-        describe_issue = (TextView) findViewById(R.id.tVDescribe_Issue_In_Details_Patient_Online_Consultation);
+       // describe_issue = (TextView) findViewById(R.id.tVDescribe_Issue_In_Details_Patient_Online_Consultation);
         ppatient_id = (TextView) findViewById(R.id.eTPPatient_ID_Patient_Online_Consultation);
         issue = (EditText) findViewById(R.id.eTDescribe_Issue_In_Details_Patient_Online_Consultation);
         medicine = (EditText) findViewById(R.id.eTTake_Extra_Medicine_Patient_Online_Consultation);
@@ -56,10 +56,9 @@ public class Patient_Online_Consultation extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         final String did=b.getString("Doctor_ID");
-       final String pid = b.getString("Patient_ID");
+        final String pid = b.getString("Patient_ID");
         ppatient_id.setText(pid);
         pdoctor_id.setText(did);
-        db = new SQLiteHandler(getApplicationContext());
 
 
         proceed.setOnClickListener(new View.OnClickListener() {

@@ -26,7 +26,8 @@ public class Consultation extends AppCompatActivity {
         simpleList=(ListView)findViewById(R.id.ListView_Consultation);
         tv1=(TextView)findViewById(R.id.tVError_Consultation);
 
-
+        Bundle bundle = getIntent().getExtras();
+        String value = bundle.getString("data");
 
         final ArrayList<String> cid_Array = new ArrayList<String>();
         final ArrayList<String> pid_Array = new ArrayList<String>();
@@ -38,12 +39,10 @@ public class Consultation extends AppCompatActivity {
         final ArrayList<String> suggetionArray = new ArrayList<String>();
 
 
-        Bundle bundle = getIntent().getExtras();
-        String doctor_id = bundle.getString("Doctor_ID");
 
         try {
 
-            JSONObject jsonObject = new JSONObject(doctor_id);
+            JSONObject jsonObject = new JSONObject(value);
 
 
 

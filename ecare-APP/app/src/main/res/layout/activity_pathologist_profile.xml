@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/k"
     tools:context="com.example.administrator.ecare.Pathologist_Profile">
 
     <ImageView
@@ -19,7 +18,7 @@
         android:cropToPadding="true"
         android:elevation="10dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/user_profile"
+        android:src="@drawable/ic_account_circle_3x"
         android:visibility="visible"/>
 
     <TextView

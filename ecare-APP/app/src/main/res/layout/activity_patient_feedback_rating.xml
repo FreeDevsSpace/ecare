@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/l"
     android:visibility="visible"
     tools:context="com.example.administrator.ecare.Patient_Feedback_Rating">
 
     <TextView
         android:id="@+id/tVRating_Recommendation_Patient_Feedback_Rating"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
         android:layout_weight="1"
         android:text="Would you recommend us to somebody else??"
         android:textColor="#000"
         android:textSize="20dp"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 
     <RadioGroup
         android:id="@+id/rGRecommendation_to_Somebody_else_Patient_Feedback_Rating"
@@ -28,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/RBYes_Patient_Feedback_Rating"
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:layout_marginLeft="60dp"
             android:checked="false"
             android:text="Yes"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
         <RadioButton
             android:id="@+id/RBNot_Sure_Patient_Feedback_Rating"
             android:layout_width="wrap_content"
@@ -46,6 +46,7 @@
             android:checked="false"
             android:text="Not Sure"
             android:textSize="20dp"/>
+
         <RadioButton
             android:id="@+id/RBNo_Patient_Feedback_Rating"
             android:layout_width="wrap_content"
@@ -54,51 +55,51 @@
             android:layout_marginLeft="30dp"
             android:checked="false"
             android:text="No"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/tVRate_Our_Service_Patient_Feedback_Rating"
-        android:layout_width="wrap_content"
+        android:layout_width="303dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/rBSatr_Rate_Our_Service_Patient_Feedback_Rating"
-        android:layout_below="@+id/rGRecommendation_to_Somebody_else_Patient_Feedback_Rating"
-        android:layout_marginTop="30dp"
+        android:layout_above="@+id/rBSatr_Rate_Our_Service_Patient_Feedback_Rating"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-208dp"
         android:text="Rate Our Services"
         android:textColor="#000"
         android:textSize="18dp"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 
     <RatingBar
         android:id="@+id/rBSatr_Rate_Our_Service_Patient_Feedback_Rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tVRating_Recommendation_Patient_Feedback_Rating"
-        android:layout_below="@+id/tVRate_Our_Service_Patient_Feedback_Rating"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="23dp"
-        android:visibility="visible"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="208dp"
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/tVFeedback_Patient_Feedback_Rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/eTFeedback_Write_Patient_Feedback_Rating"
-        android:layout_below="@+id/rBSatr_Rate_Our_Service_Patient_Feedback_Rating"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
+        android:layout_above="@+id/eTFeedback_Write_Patient_Feedback_Rating"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="99dp"
         android:text="Feedback:"
         android:textColor="#000"
         android:textSize="20dp"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 
     <EditText
         android:id="@+id/eTFeedback_Write_Patient_Feedback_Rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/rBSatr_Rate_Our_Service_Patient_Feedback_Rating"
-        android:layout_below="@+id/tVFeedback_Patient_Feedback_Rating"
-        android:layout_marginStart="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="141dp"
+        android:layout_marginStart="73dp"
         android:ems="10"
         android:hint="Give Suggetions to improve our services ..."
         android:inputType="textMultiLine"
@@ -106,20 +107,17 @@
         android:selectAllOnFocus="false"
         android:textColor="#000"
         android:textSize="15dp"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/btSubmit_Patient_Feedback_Rating"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/eTFeedback_Write_Patient_Feedback_Rating"
-        android:layout_below="@+id/eTFeedback_Write_Patient_Feedback_Rating"
-        android:layout_marginEnd="23dp"
-        android:layout_marginTop="46dp"
-        android:text="Submit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:background="@color/colorPrimary"
+        android:text="Submit"
         android:textColor="#FFF"
-        android:textSize="15dp"
-        />
+        android:textSize="15dp" />
 
 </RelativeLayout>

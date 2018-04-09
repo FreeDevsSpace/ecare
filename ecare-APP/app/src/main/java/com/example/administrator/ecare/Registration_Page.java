@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -20,7 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.administrator.ecare.app.AppConfig;
 import com.example.administrator.ecare.app.AppController;
-import com.example.administrator.ecare.helper.SQLiteHandler;
+import com.example.administrator.ecare.helper.Patient_SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
 import org.json.JSONException;
@@ -40,13 +41,13 @@ public class Registration_Page extends AppCompatActivity {
     TextView Date_Of_Birth;
     EditText Psw;
     EditText E;
-    TextView tv1, tv2;
+    TextView bloodgroup,dob;
     Button b1;
     Spinner  BG;
     private int mYear, mMonth, mDay;
     private ProgressDialog pDialog;
     private SessionManager session;
-    private SQLiteHandler db;
+    private Patient_SQLiteHandler db;
 
 
     @Override
@@ -62,11 +63,12 @@ public class Registration_Page extends AppCompatActivity {
         //  RPsw = (EditText) findViewById(R.id.eTRE_Write_Password_Registration_Page);
         Date_Of_Birth = (TextView) findViewById(R.id.eTDOB_Registration_Page);
         E = (EditText) findViewById(R.id.eTEmail_Registration_Page);
-        tv1 = (TextView) findViewById(R.id.tVAddress_Registration_Page);
-        tv2 = (TextView) findViewById(R.id.tVBlood_Group_Registration_Page);
+     //   tv1 = (TextView) findViewById(R.id.tVAddress_Registration_Page);
+        bloodgroup = (TextView) findViewById(R.id.tVBlood_Group_Registration_Page);
         b1 = (Button) findViewById(R.id.bnRegister_Registration_Page);
         //  sp1 = (Spinner) findViewById(R.id.SpinnerName_Start_Registration_Page);
         BG = (Spinner) findViewById(R.id.Spinner_Blood_Group_Registration_Page);
+        dob=(TextView)findViewById(R.id.tVDOB_Registration_Page);
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -76,7 +78,7 @@ public class Registration_Page extends AppCompatActivity {
         session = new SessionManager(getApplicationContext());
 
         // SQLite database handler
-        db = new SQLiteHandler(getApplicationContext());
+        db = new Patient_SQLiteHandler(getApplicationContext());
 
 
         // Check if user is already logged in or not
@@ -218,6 +220,7 @@ public class Registration_Page extends AppCompatActivity {
                         String Password = patient_registration.getString("PSW");
 
                         db.addUser(Full_Name,Mobile_Number,DOB,Email,Address,Blood_Group,Password);
+
 
                         Toast.makeText(Registration_Page.this, "User successfully registered. Try login now!", Toast.LENGTH_SHORT).show();
 

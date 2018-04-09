@@ -29,9 +29,10 @@ if((isset($_POST['Patient_ID'])) &&(isset($_POST['Doctor_ID'])) &&(isset($_POST[
     $Additional_Info_Medicine=$_POST['Additional_Info_Medicine'];
     $Additional_Info_Allergy=$_POST['Additional_Info_Allergy'];
     $Suggetion='';
+    $Prescribe_Medicine ='';
    
   //INSERT INTO consultation (Patient_ID,Problem,Additional_Info_Medicine,Additional_Info_Allergy) VALUES (1234,ghvhg,hv h,ghhg)
-    $query = "INSERT INTO consultation(Patient_ID,Doctor_ID,Problem,Additional_Info_Medicine,Additional_Info_Allergy,Suggetion) VALUES ('$Patient_ID','$Doctor_ID','$Problem','$Additional_Info_Medicine','$Additional_Info_Allergy','$Suggetion')";
+    $query = "INSERT INTO consultation(Patient_ID,Doctor_ID,Problem,Additional_Info_Medicine,Additional_Info_Allergy,Suggetion,Prescribe_Medicine) VALUES ('$Patient_ID','$Doctor_ID','$Problem','$Additional_Info_Medicine','$Additional_Info_Allergy','$Suggetion','$Prescribe_Medicine')";
 
     $result = mysqli_query($con,$query);
     

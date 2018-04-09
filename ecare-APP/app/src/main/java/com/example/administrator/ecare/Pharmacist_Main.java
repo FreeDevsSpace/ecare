@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.administrator.ecare.helper.SQLiteHandler;
+import com.example.administrator.ecare.helper.Pharmacist_SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
 public class Pharmacist_Main extends AppCompatActivity {
     ImageView profile,search_patient,patient_history;
-    TextView logout;
-    private SQLiteHandler db;
+    TextView logout,tvprofile,tvhistory,tvsearch;
+    private Pharmacist_SQLiteHandler db;
     private SessionManager session;
     private ProgressDialog pDialog;
     // Progress dialog
@@ -28,11 +28,14 @@ public class Pharmacist_Main extends AppCompatActivity {
         search_patient=(ImageView)findViewById(R.id.IVSearch_Pharmacist_Main);
         patient_history=(ImageView)findViewById(R.id.IVHistory_Pharmacist_Main);
         logout=(TextView)findViewById(R.id.tVLogout_Pharmacist_Main);
+        tvhistory=(TextView)findViewById(R.id.tVHistory_Pharmacist_Main);
+        tvprofile=(TextView)findViewById(R.id.tVProfile_Pharmacist_Main);
+        tvsearch=(TextView)findViewById(R.id.tVSearch_Pharmacist_Main);
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
 
 
-        db = new SQLiteHandler(getApplicationContext());
+        db = new Pharmacist_SQLiteHandler(getApplicationContext());
 
         // session manager
         session = new SessionManager(getApplicationContext());

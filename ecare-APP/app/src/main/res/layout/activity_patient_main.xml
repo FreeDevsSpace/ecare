@@ -10,34 +10,29 @@
 
     <ImageView
         android:id="@+id/IVProfile_Patient_Main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tVLogOut_Patient_Main"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="400dp"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/profile_2"/>
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/ic_account_circle_3x" />
 
     <ImageView
         android:id="@+id/IVSearch_Patient_Main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/IVProfile_Patient_Main"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="220dp"
-        android:layout_marginTop="200dp"
-        app:srcCompat="@drawable/search_1"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignStart="@+id/IVProfile_Patient_Main"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_search_3x" />
 
     <ImageView
         android:id="@+id/IVHistory_Patient_Main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/IVSearch_Patient_Main"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="140dp"
-        android:layout_marginTop="200dp"
-        app:srcCompat="@drawable/history_1" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignStart="@+id/IVSearch_Patient_Main"
+        android:layout_below="@+id/tVSearch_Patient_Main"
+        android:layout_marginTop="28dp"
+        app:srcCompat="@drawable/ic_history_3x" />
 
     <TextView
         android:id="@+id/tVLogOut_Patient_Main"
@@ -47,7 +42,43 @@
         android:layout_alignParentTop="true"
         android:text="Log  Out"
         android:textColor="#000"
-        android:textSize="18dp"/>
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVProfile_Patient_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IVProfile_Patient_Main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
+        android:text="Profile"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tVSearch_Patient_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVHistory_Patient_Main"
+        android:layout_below="@+id/IVSearch_Patient_Main"
+        android:text="Search"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tVHistory_Patient_Main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/IVHistory_Patient_Main"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="History" />
 
 
 </RelativeLayout>
