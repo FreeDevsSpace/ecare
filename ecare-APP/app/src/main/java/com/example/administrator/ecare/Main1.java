@@ -77,7 +77,7 @@ public class Main1 extends AppCompatActivity {
         });
 
         // Check if user is already logged in or not
-    /*   if (session.isLoggedIn()) {
+       if (session.isLoggedIn()) {
 
                     Intent intent = new Intent(Main1.this, Patient_Main.class);
                     startActivity(intent);
@@ -85,32 +85,6 @@ public class Main1 extends AppCompatActivity {
 
 
         }
-       /* if (session.isLoggedIn()) {
-
-            if (session.equals(patientsqLiteHandler)) {
-                Intent intent = new Intent(Main1.this, Patient_Main.class);
-                startActivity(intent);
-                finish();
-            } else if (session.equals(doctorSqLiteHandler)) {
-                Intent intent = new Intent(Main1.this, Doctor_Main.class);
-                startActivity(intent);
-                finish();
-
-            } else if (session.equals(pathologistSqLiteHandler)) {
-                Intent intent = new Intent(Main1.this, Pathologist_Main.class);
-                startActivity(intent);
-                finish();
-            } else if (session.equals(pharmacistsqLiteHandler)) {
-                Intent intent = new Intent(Main1.this, Pharmacist_Main.class);
-                startActivity(intent);
-                finish();
-            }
-        }else {
-                Toast.makeText(Main1.this, "Please Login now", Toast.LENGTH_LONG).show();
-            } */
-
-
-
 
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,7 +124,6 @@ public class Main1 extends AppCompatActivity {
                 try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
-                 //   String usertype=jObj.getString("USER_TYPE");
                     String usertype=jObj.getString("USER_TYPE");
 
                     // Check for error node in json
@@ -189,7 +162,7 @@ public class Main1 extends AppCompatActivity {
                                 String Hospital_Address = doctor_registration.getString("Hospital_Address");
                                 String Fees = doctor_registration.getString("Fees");
 
-                            doctorSqLiteHandler.addDoctor(Full_Name,Mobile_Number,DOB,Address,City,Email,Password,Qualification,Specialization,Hospital_Name,Hospital_Address,Fees);
+                            doctorSqLiteHandler.addUser(Full_Name,Mobile_Number,DOB,Address,City,Email,Password,Qualification,Specialization,Hospital_Name,Hospital_Address,Fees);
                                 Intent  intent2  = new Intent(Main1.this, Doctor_Main.class);
                                 startActivity(intent2);
                                 finish();
@@ -205,7 +178,7 @@ public class Main1 extends AppCompatActivity {
                                 String Email = pathologist_registration.getString("Email");
                                 String Password = pathologist_registration.getString("Password");
 
-                                pathologistSqLiteHandler.addPathologist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
+                                pathologistSqLiteHandler.addUser(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
                                 Intent  intent3  = new Intent(Main1.this, Pathologist_Main.class);
                                 startActivity(intent3);
                                 finish();
@@ -222,7 +195,7 @@ public class Main1 extends AppCompatActivity {
                                 String Email = pharmacist_registration.getString("Email");
                                 String Password = pharmacist_registration.getString("Password");
 
-                                pharmacistsqLiteHandler.addPharmacist(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
+                                pharmacistsqLiteHandler.addUser(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
                                 Intent  intent4  = new Intent(Main1.this, Pharmacist_Main.class);
                                 startActivity(intent4);
                                 finish();

@@ -8,6 +8,7 @@ import android.util.Log;
 public class SessionManager {
 	// LogCat tag
 	private static String TAG = SessionManager.class.getSimpleName();
+	private String userType;
 
 	// Shared Preferences
 	SharedPreferences pref;
@@ -29,16 +30,26 @@ public class SessionManager {
 		editor = pref.edit();
 	}
 
-	public void setLogin(boolean isLoggedIn) {
+	public void setLogin(boolean isLoggedIn,String userType) {
 
 		editor.putBoolean(KEY_IS_LOGGED_IN, isLoggedIn);
+		this.userType=userType;
 
 		// commit changes
 		editor.commit();
 
 		Log.d(TAG, "User login session modified!");
 	}
-	
+
+	public String getUserType() {
+
+
+	return 	this.userType;
+	}
+
+
+
+
 	public boolean isLoggedIn(){
 		return pref.getBoolean(KEY_IS_LOGGED_IN, false);
 	}
