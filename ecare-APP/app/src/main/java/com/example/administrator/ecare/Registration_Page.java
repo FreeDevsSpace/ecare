@@ -208,9 +208,10 @@ public class Registration_Page extends AppCompatActivity {
                     if (!error) {
                         // User successfully stored in MySQL
                         // Now store the user in sqlite
-                     //   String Patient_ID = jObj.getString("Patient_ID");
+
 
                         JSONObject patient_registration = jObj.getJSONObject("patient_registration");
+                        String Patient_ID = jObj.getString("Patient_ID");
                         String Full_Name= patient_registration.getString("Full_Name");
                         String Mobile_Number = patient_registration.getString("Mobile_Number");
                         String DOB = patient_registration.getString("DOB");
@@ -219,7 +220,7 @@ public class Registration_Page extends AppCompatActivity {
                         String Blood_Group = patient_registration.getString("Blood_Group");
                         String Password = patient_registration.getString("PSW");
 
-                        db.addUser(Full_Name,Mobile_Number,DOB,Email,Address,Blood_Group,Password);
+                        db.addUser(Patient_ID,Full_Name,Mobile_Number,DOB,Email,Address,Blood_Group,Password);
 
 
                         Toast.makeText(Registration_Page.this, "User successfully registered. Try login now!", Toast.LENGTH_SHORT).show();

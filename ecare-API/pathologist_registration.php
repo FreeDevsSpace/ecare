@@ -35,7 +35,7 @@ if((isset($_POST['Full_Name'])) && isset($_POST['Mobile_Number']) && isset($_POS
             // user stored successfully 
         
             $response["error"] = FALSE;
-            //$response["Pathologist_ID"] = $pathologist_registration["Pathologist_ID"];
+            $response["Pathologist_ID"] = $pathologist_registration["Pathologist_ID"];
             $response["pathologist_registration"]["Full_Name"] = $pathologist_registration["Full_Name"];
             $response["pathologist_registration"]["Mobile_Number"] = $pathologist_registration["Mobile_Number"];
             $response["pathologist_registration"]["DOB"] = $pathologist_registration["DOB"];

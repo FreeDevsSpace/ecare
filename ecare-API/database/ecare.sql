@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 09, 2018 at 10:15 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.1.14
+-- Host: localhost
+-- Generation Time: Apr 10, 2018 at 11:47 PM
+-- Server version: 10.1.22-MariaDB
+-- PHP Version: 7.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -49,7 +49,11 @@ INSERT INTO `consultation` (`Consultation_ID`, `Patient_ID`, `Doctor_ID`, `Probl
 (5, 1, 1, 'Hii', 'Hy', 'No', '', '', 1),
 (6, 1, 8, 'hayauajfatailshgaiah', 'hsyaiaj', 'jayaiba', '', NULL, 0),
 (7, 1, 8, 'skin disease', 'no', 'no', '', NULL, 0),
-(8, 1, 8, 'skin disease', 'no', 'no', '', '', 0);
+(8, 1, 8, 'skin disease', 'no', 'no', '', '', 0),
+(9, 1, 6, 'Ok ok ', 'Ok ok ', 'Ok ok ', 'Ok ok ok', 'Ok ok ok', 1),
+(10, 1, 7, 'Ok2', 'Ok2', 'Ok2', '', NULL, 0),
+(11, 1, 8, 'Ok3', 'Ok3', 'Ok3', '', NULL, 0),
+(12, 3, 12, 'Demo', 'Demo', 'Demo', 'Ok working ', 'Ok working ', 1);
 
 -- --------------------------------------------------------
 
@@ -230,32 +234,27 @@ ALTER TABLE `pharmacist_registration`
 -- AUTO_INCREMENT for table `consultation`
 --
 ALTER TABLE `consultation`
-  MODIFY `Consultation_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
+  MODIFY `Consultation_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `doctor_registration`
 --
 ALTER TABLE `doctor_registration`
   MODIFY `Doctor_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
 -- AUTO_INCREMENT for table `pathologist_registration`
 --
 ALTER TABLE `pathologist_registration`
   MODIFY `Pathologist_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `patient_registration`
 --
 ALTER TABLE `patient_registration`
   MODIFY `Patient_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `pharmacist_registration`
 --
 ALTER TABLE `pharmacist_registration`
-  MODIFY `Pharmacist_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-COMMIT;
+  MODIFY `Pharmacist_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

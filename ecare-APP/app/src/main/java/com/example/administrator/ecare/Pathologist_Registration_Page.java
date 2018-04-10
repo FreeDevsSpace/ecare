@@ -196,6 +196,7 @@ Psw.requestFocus();
                         // Now store the user in sqlite
 
                         JSONObject pathologist_registration = jObj.getJSONObject("pathologist_registration");
+                        String Pathologist_ID = pathologist_registration.getString("Pathologist_ID");
                         String Full_Name= pathologist_registration.getString("Full_Name");
                         String Mobile_Number = pathologist_registration.getString("Mobile_Number");
                         String DOB = pathologist_registration.getString("DOB");
@@ -205,7 +206,7 @@ Psw.requestFocus();
                         String Email = pathologist_registration.getString("Email");
                         String Password = pathologist_registration.getString("Password");
 
-                        db.addUser(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
+                        db.addUser(Pathologist_ID,Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
 
                         Toast.makeText(Pathologist_Registration_Page.this, "User successfully registered. Try login now!",Toast.LENGTH_SHORT).show();
 

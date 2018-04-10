@@ -24,11 +24,11 @@ public final class R {
         public static final int save_image_matrix = 0x7f090115;
         public static final int save_non_transition_alpha = 0x7f090116;
         public static final int save_scale_type = 0x7f090117;
-        public static final int transition_current_scene = 0x7f0901f9;
-        public static final int transition_layout_save = 0x7f0901fa;
-        public static final int transition_position = 0x7f0901fb;
-        public static final int transition_scene_layoutid_cache = 0x7f0901fc;
-        public static final int transition_transform = 0x7f0901fd;
+        public static final int transition_current_scene = 0x7f0901fa;
+        public static final int transition_layout_save = 0x7f0901fb;
+        public static final int transition_position = 0x7f0901fc;
+        public static final int transition_scene_layoutid_cache = 0x7f0901fd;
+        public static final int transition_transform = 0x7f0901fe;
     }
     public static final class styleable {
         public static final int[] FontFamily = { 0x7f04009a, 0x7f04009b, 0x7f04009c, 0x7f04009d };

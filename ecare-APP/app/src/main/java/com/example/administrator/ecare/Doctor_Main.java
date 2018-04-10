@@ -32,6 +32,7 @@ public class Doctor_Main extends AppCompatActivity {
     private Doctor_SQLiteHandler db;
     private SessionManager session;
     private ProgressDialog pDialog;
+    private String Doctor_ID;
 
 
     @Override
@@ -81,7 +82,7 @@ public class Doctor_Main extends AppCompatActivity {
 
                     HashMap<String, String> doctor_registration = db.getUserDetails();
 
-                    String Doctor_ID = doctor_registration.get("Doctor_ID");
+                    Doctor_ID = doctor_registration.get("Doctor_ID");
                     Log.d("Doctor_ID", Doctor_ID);
                     Log.d("okk1", "before getid");
                     Log.d("Doctor_ID", Doctor_ID);
@@ -165,7 +166,7 @@ public class Doctor_Main extends AppCompatActivity {
 
                         // Error occurred in registration. Get the error
                         // message
-                        String errorMsg = jObj.getString("error_msg");
+                        String errorMsg = jObj.getString("message");
                         Toast.makeText(getApplicationContext(),errorMsg, Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {

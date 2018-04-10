@@ -80,11 +80,12 @@ public class Patient_SQLiteHandler extends SQLiteOpenHelper {
 	/**
 	 * Storing user details in database
 	 */
-	public void addUser( String Full_Name, String Mobile_Number, String DOB, String Email,
+	public void addUser(String Patient_ID, String Full_Name, String Mobile_Number, String DOB, String Email,
 						 String Address,String Blood_Group, String Password) {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
+		values.put(KEY_Patient_ID,Patient_ID);
 		values.put(KEY_Full_Name,Full_Name);
 		values.put(KEY_Mobile_Number,Mobile_Number);
 		values.put(KEY_DOB,DOB);
@@ -95,11 +96,9 @@ public class Patient_SQLiteHandler extends SQLiteOpenHelper {
 
 
 		// Inserting Row
-		String Patient_ID =Long.toString(db.insert(TABLE_USER,null,values));
-		//String Patient_ID = String.valueOf(db.insert(TABLE_USER, null, values));
+		long id = db.insert(TABLE_USER,null,values);
 		db.close(); // Closing database connection
-
-		Log.d(TAG, "New Patient inserted into sqlite: " + Patient_ID);
+		Log.d(TAG, "New Patient inserted into sqlite: " + id);
 	}
 
 
@@ -107,7 +106,7 @@ public class Patient_SQLiteHandler extends SQLiteOpenHelper {
 	 * Getting user data from database
 	 */
 	public HashMap<String, String> getUserDetails() {
-		HashMap<String, String> patient_registration = new HashMap<String, String>();
+		HashMap<String, String> patient = new HashMap<String, String>();
 		String selectQuery = "SELECT  Patient_ID, Full_Name, Mobile_Number, DOB, Address, Blood_Group FROM " + TABLE_USER;
 
 		SQLiteDatabase db = this.getReadableDatabase();
@@ -115,22 +114,22 @@ public class Patient_SQLiteHandler extends SQLiteOpenHelper {
 		// Move to first row
 		cursor.moveToFirst();
 		if (cursor.getCount() > 0) {
-			patient_registration.put("Patient_ID",cursor.getString(0));
-			patient_registration.put("Full_Name", cursor.getString(1));
-			patient_registration.put("Mobile_Number", cursor.getString(2));
-			patient_registration.put("DOB", cursor.getString(3));
-		//	patient_registration.put("Email", cursor.getString(5));
-			patient_registration.put("Address", cursor.getString(4));
-			patient_registration.put("Blood_Group", cursor.getString(5));
-//     		patient_registration.put("Password", cursor.getString(8));
+			patient.put("Patient_ID",cursor.getString(0));
+			patient.put("Full_Name", cursor.getString(1));
+			patient.put("Mobile_Number", cursor.getString(2));
+			patient.put("DOB", cursor.getString(3));
+		//	patient.put("Email", cursor.getString(5));
+			patient.put("Address", cursor.getString(4));
+			patient.put("Blood_Group", cursor.getString(5));
+//     		patient.put("Password", cursor.getString(8));
 
 		}
+
 		cursor.close();
 		db.close();
-		// return user
-		Log.d(TAG, "Fetching Patient data from Sqlite: " + patient_registration.toString());
+		Log.d(TAG, "Fetching Patient data from Sqlite: " + patient.toString());
 
-		return patient_registration;
+		return patient;
 	}
 
 	/**

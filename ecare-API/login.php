@@ -28,8 +28,8 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
     if ($patient_registration != false) {
         // user is found
           $response["error"] = FALSE;
-         $response["USER_TYPE"] = $USER_TYPE1;
-      //  $response["Patient_ID"] = $patient_registration["Patient_ID"];
+          $response["USER_TYPE"] = $USER_TYPE1;
+          $response["patient_registration"]["Patient_ID"] = $patient_registration["Patient_ID"];
           $response["patient_registration"]["Full_Name"] = $patient_registration["Full_Name"];
           $response["patient_registration"]["Mobile_Number"] = $patient_registration["Mobile_Number"];
           $response["patient_registration"]["DOB"] = $patient_registration["DOB"];
@@ -81,6 +81,7 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
         // use is found
             $response["error"] = FALSE;
             $response["USER_TYPE"] = $USER_TYPE3;
+            $response["pathologist_registration"]["Pathologist_ID"] = $pathologist_registration["Pathologist_ID"];
             $response["pathologist_registration"]["Full_Name"] = $pathologist_registration["Full_Name"];
             $response["pathologist_registration"]["Mobile_Number"] = $pathologist_registration["Mobile_Number"];
             $response["pathologist_registration"]["DOB"] = $pathologist_registration["DOB"];
@@ -103,6 +104,7 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
         // use is found
             $response["error"] = FALSE;
             $response["USER_TYPE"] = $USER_TYPE4;
+            $response["pharmacist_registration"]["Pharmacist_ID"] = $pathologist_registration["Pharmacist_ID"];
             $response["pharmacist_registration"]["Full_Name"] = $pharmacist_registration["Full_Name"];
             $response["pharmacist_registration"]["Mobile_Number"] = $pharmacist_registration["Mobile_Number"];
             $response["pharmacist_registration"]["DOB"] = $pharmacist_registration["DOB"];

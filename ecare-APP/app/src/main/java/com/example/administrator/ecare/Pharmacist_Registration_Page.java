@@ -200,6 +200,8 @@ Psw.requestFocus();
 
                         // User successfully stored in MySQL
                         JSONObject pharmacist_registration = jObj.getJSONObject("pharmacist_registration");
+
+                        String Pharmacist_ID = pharmacist_registration.getString("Pharmacist_ID");
                         String Full_Name= pharmacist_registration.getString("Full_Name");
                         String Mobile_Number = pharmacist_registration.getString("Mobile_Number");
                         String DOB = pharmacist_registration.getString("DOB");
@@ -210,7 +212,7 @@ Psw.requestFocus();
                         String Password = pharmacist_registration.getString("Password");
 
 
-                       db.addUser(Full_Name,Mobile_Number,DOB,Email,Qualification,Address,Blood_Group,Password);
+                       db.addUser(Pharmacist_ID,Full_Name,Mobile_Number,DOB,Email,Qualification,Address,Blood_Group,Password);
 
                         Toast.makeText(Pharmacist_Registration_Page.this, "User successfully registered. Try login now!",Toast.LENGTH_SHORT).show();
 
@@ -220,7 +222,7 @@ Psw.requestFocus();
 
                     } else {
 
-// Error occurred in registration. Get the error
+                        // Error occurred in registration. Get the error
                         // message
                         String errorMsg = jObj.getString("error_msg");
                         Toast.makeText(getApplicationContext(),errorMsg, Toast.LENGTH_LONG).show();

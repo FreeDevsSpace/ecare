@@ -120,10 +120,9 @@ public class Doctor_SQLiteHandler extends SQLiteOpenHelper {
 
 		// Inserting Row
 
-		//String Doctor_ID = Long.toString(db.insert(TABLE_DOCTOR, null, values));
+		long id = db.insert(TABLE_DOCTOR, null, values);
 		db.close(); // Closing database connection
-
-		Log.d(TAG, "New Doctor inserted into sqlite: " + Doctor_ID);
+		Log.d(TAG, "New Doctor inserted into sqlite: " + id);
 	}
 
 

@@ -42,8 +42,8 @@ public class Consult_Patient extends AppCompatActivity {
         suggetion=(TextView)findViewById(R.id.tVSuggetion_Consult_Patient);
       //  medicine=(TextView)findViewById(R.id.tVMedicine_Consult_Patient);
         ppatient_id=(TextView)findViewById(R.id.tVPPatient_ID_Consult_Patient);
-        pproblem=(TextView)findViewById(R.id.tVConsult_ID);
-        Consultation_ID=(TextView)findViewById(R.id.tVPProble_Consult_Patient);
+        Consultation_ID=(TextView)findViewById(R.id.tVPConsultation_ID);
+        pproblem=(TextView)findViewById(R.id.tVPProble_Consult_Patient);
         write_suggetion=(EditText)findViewById(R.id.eTSuggetion_Consult_Patient);
         prescribe_medicine=(EditText)findViewById(R.id.eTMedicine_Consult_Patient);
 

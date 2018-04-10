@@ -90,11 +90,11 @@ public class Pharmacist_SQLiteHandler extends SQLiteOpenHelper {
 
 
 
-	public void addUser( String Full_Name, String Mobile_Number, String DOB, String Email,String Qualification,String Address, String Blood_Group, String Password) {
+	public void addUser(String Pharmacist_ID, String Full_Name, String Mobile_Number, String DOB, String Email,String Qualification,String Address, String Blood_Group, String Password) {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
-//values.put(KEY_Patient_ID,Patient_ID);
+		values.put(KEY_Pharmacist_ID,Pharmacist_ID);
 		values.put(KEY_Full_Name,Full_Name);
 		values.put(KEY_Mobile_Number,Mobile_Number);
 		values.put(KEY_DOB,DOB);
@@ -105,13 +105,9 @@ public class Pharmacist_SQLiteHandler extends SQLiteOpenHelper {
 		values.put(KEY_Password, Password);
 
 
-		String Pharmacist_ID = Long.toString(db.insert(TABLE_PHARMACIST, null, values));
-
-
+		long id =db.insert(TABLE_PHARMACIST, null, values);
 		db.close(); // Closing database connection
-
-		Log.d(TAG, "New Pharmacist inserted into sqlite: " + Pharmacist_ID);
-
+		Log.d(TAG, "New Pharmacist inserted into sqlite: " + id);
 
 	}
 

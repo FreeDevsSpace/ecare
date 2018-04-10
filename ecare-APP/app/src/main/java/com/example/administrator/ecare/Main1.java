@@ -153,6 +153,7 @@ public class Main1 extends AppCompatActivity {
                         if (usertype.equals("Patient"))
                         {
                                 JSONObject patient_registration = jObj.getJSONObject("patient_registration");
+                                String Patient_ID = String.valueOf(patient_registration.getInt("Patient_ID"));
                                 String Full_Name= patient_registration.getString("Full_Name");
                                 String Mobile_Number = patient_registration.getString("Mobile_Number");
                                 String DOB = patient_registration.getString("DOB");
@@ -161,15 +162,15 @@ public class Main1 extends AppCompatActivity {
                                 String Blood_Group = patient_registration.getString("Blood_Group");
                                 String Password = patient_registration.getString("PSW");
 
-                                patientsqLiteHandler.addUser(Full_Name, Mobile_Number, DOB, Email, Address, Blood_Group, Password);
+                                patientsqLiteHandler.addUser(Patient_ID,Full_Name, Mobile_Number, DOB, Email, Address, Blood_Group, Password);
                                 Intent   intent1 = new Intent(Main1.this, Patient_Main.class);
                                 startActivity(intent1);
                                 finish();
 
                         }else if(usertype.equals("Doctor")){
                                 JSONObject doctor_registration = jObj.getJSONObject("doctor_registration");
-                                int Doctor_Id  = doctor_registration.getInt("Doctor_ID");
-                                String Doctor_ID = String.valueOf(Doctor_Id);
+
+                                String Doctor_ID = String.valueOf(doctor_registration.getInt("Doctor_ID"));
                                 String Full_Name = doctor_registration.getString("Full_Name");
                                 String Mobile_Number = doctor_registration.getString("Mobile_Number");
                                 String DOB = doctor_registration.getString("DOB");
@@ -190,6 +191,8 @@ public class Main1 extends AppCompatActivity {
 
                         }else if (usertype.equals("Pathologist")){
                             JSONObject pathologist_registration = jObj.getJSONObject("pathologist_registration");
+
+                                String Pathologist_ID = String.valueOf(pathologist_registration.getInt("Pathologist_ID"));
                                 String Full_Name = pathologist_registration.getString("Full_Name");
                                 String Mobile_Number = pathologist_registration.getString("Mobile_Number");
                                 String DOB = pathologist_registration.getString("DOB");
@@ -199,7 +202,7 @@ public class Main1 extends AppCompatActivity {
                                 String Email = pathologist_registration.getString("Email");
                                 String Password = pathologist_registration.getString("Password");
 
-                                pathologistSqLiteHandler.addUser(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
+                                pathologistSqLiteHandler.addUser(Pathologist_ID,Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
                                 Intent  intent3  = new Intent(Main1.this, Pathologist_Main.class);
                                 startActivity(intent3);
                                 finish();
@@ -207,6 +210,8 @@ public class Main1 extends AppCompatActivity {
                             }
                             else if (usertype.equals("Pharmacist")){
                             JSONObject pharmacist_registration = jObj.getJSONObject("pharmacist_registration");
+
+                                String Pharmacist_ID = String.valueOf(pharmacist_registration.getInt("Pharmacist_ID"));
                                 String Full_Name = pharmacist_registration.getString("Full_Name");
                                 String Mobile_Number = pharmacist_registration.getString("Mobile_Number");
                                 String DOB = pharmacist_registration.getString("DOB");
@@ -216,7 +221,7 @@ public class Main1 extends AppCompatActivity {
                                 String Email = pharmacist_registration.getString("Email");
                                 String Password = pharmacist_registration.getString("Password");
 
-                                pharmacistsqLiteHandler.addUser(Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
+                                pharmacistsqLiteHandler.addUser(Pharmacist_ID,Full_Name,Mobile_Number,DOB,Qualification,Address,Blood_Group,Email,Password);
                                 Intent  intent4  = new Intent(Main1.this, Pharmacist_Main.class);
                                 startActivity(intent4);
                                 finish();

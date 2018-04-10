@@ -32,15 +32,12 @@ public class Pathologist_SQLiteHandler extends SQLiteOpenHelper {
 
 	//private static final String TABLE_DOCTOR = "doctor_registration";
 	private static final String TABLE_PATHOLOGIST = "pathologist_registration";
-	//private static final String TABLE_PHARMACIST = "pharmacist_registration";
 
 
 
 	// Login Table Columns names
 	//private static final String KEY_ID="id";
 	private  static final String KEY_Pathologist_ID="Pathologist_ID";
-	//private  static final String KEY_Pharmacist_ID="Pharmacist_ID";
-	//private static final String KEY_Patient_ID = "Patient_ID";
 	private static final String KEY_Full_Name = "Full_Name";
 	private static final String KEY_Email = "Email";
 	private static final String KEY_Address = "Address";
@@ -94,11 +91,11 @@ public class Pathologist_SQLiteHandler extends SQLiteOpenHelper {
 	}
 
 
-	public void addUser( String Full_Name, String Mobile_Number, String DOB,String Qualification,String Address, String Blood_Group, String Email, String Password) {
+	public void addUser(String Pathologist_ID, String Full_Name, String Mobile_Number, String DOB,String Qualification,String Address, String Blood_Group, String Email, String Password) {
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
-//values.put(KEY_Pathologist_ID,Pathologist_ID);
+        values.put(KEY_Pathologist_ID,Pathologist_ID);
 		values.put(KEY_Full_Name,Full_Name);
 		values.put(KEY_Mobile_Number,Mobile_Number);
 		values.put(KEY_DOB,DOB);
@@ -108,11 +105,10 @@ public class Pathologist_SQLiteHandler extends SQLiteOpenHelper {
 		values.put(KEY_Email,Email);
 		values.put(KEY_Password, Password);
 
-		String Pathologist_ID = Long.toString(db.insert(TABLE_PATHOLOGIST, null, values));
 
+		long id = db.insert(TABLE_PATHOLOGIST, null, values);
 		db.close(); // Closing database connection
-
-		Log.d(TAG, "New Pathologist inserted into sqlite: " + Pathologist_ID);
+		Log.d(TAG, "New Pathologist inserted into sqlite: " + id);
 
 
 	}
@@ -121,7 +117,7 @@ public class Pathologist_SQLiteHandler extends SQLiteOpenHelper {
 
 
 	public HashMap<String, String>getUserDetails() {
-		HashMap<String, String>pathologist_registration = new HashMap<String, String>();
+		HashMap<String, String> pathologist = new HashMap<String, String>();
 		String selectQuery = "SELECT  * FROM " + TABLE_PATHOLOGIST;
 
 		SQLiteDatabase db = this.getReadableDatabase();
@@ -129,22 +125,22 @@ public class Pathologist_SQLiteHandler extends SQLiteOpenHelper {
 // Move to first row
 		cursor.moveToFirst();
 		if (cursor.getCount() >0) {
-			pathologist_registration.put("Pathologist_ID", cursor.getString(0));
-			pathologist_registration.put("Full_Name", cursor.getString(1));
-			pathologist_registration.put("Mobile_Number", cursor.getString(2));
-			pathologist_registration.put("DOB", cursor.getString(3));
-			pathologist_registration.put("Qualification", cursor.getString(4));
-			pathologist_registration.put("Address", cursor.getString(5));
-			pathologist_registration.put("Blood_Group", cursor.getString(6));
-			pathologist_registration.put("Email", cursor.getString(7));
-			pathologist_registration.put("Password", cursor.getString(8));
+			pathologist.put("Pathologist_ID", cursor.getString(0));
+			pathologist.put("Full_Name", cursor.getString(1));
+			pathologist.put("Mobile_Number", cursor.getString(2));
+			pathologist.put("DOB", cursor.getString(3));
+			pathologist.put("Qualification", cursor.getString(4));
+			pathologist.put("Address", cursor.getString(5));
+			pathologist.put("Blood_Group", cursor.getString(6));
+			pathologist.put("Email", cursor.getString(7));
+			pathologist.put("Password", cursor.getString(8));
 		}
 		cursor.close();
 		db.close();
 // return user
-		Log.d(TAG, "Fetching user from Sqlite: " + pathologist_registration.toString());
+		Log.d(TAG, "Fetching user from Sqlite: " + pathologist.toString());
 
-		return pathologist_registration;
+		return pathologist;
 	}
 
 
