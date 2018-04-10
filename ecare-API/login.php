@@ -52,7 +52,8 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
          if($doctor_registration != false) {
         // use is found
             $response["error"] = FALSE;
-             $response["USER_TYPE"] = $USER_TYPE2;
+            $response["USER_TYPE"] = $USER_TYPE2;
+            $response["doctor_registration"]["Doctor_ID"] = $doctor_registration["Doctor_ID"];
             $response["doctor_registration"]["Full_Name"] = $doctor_registration["Full_Name"];
             $response["doctor_registration"]["Mobile_Number"] = $doctor_registration["Mobile_Number"];
             $response["doctor_registration"]["DOB"] = $doctor_registration["DOB"];

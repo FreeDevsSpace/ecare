@@ -82,7 +82,9 @@ public class Doctor_Main extends AppCompatActivity {
                     HashMap<String, String> doctor_registration = db.getUserDetails();
 
                     String Doctor_ID = doctor_registration.get("Doctor_ID");
+                    Log.d("Doctor_ID", Doctor_ID);
                     Log.d("okk1", "before getid");
+                    Log.d("Doctor_ID", Doctor_ID);
                     getid(Doctor_ID);
 
                 }
@@ -149,7 +151,7 @@ public class Doctor_Main extends AppCompatActivity {
 
                     JSONObject jObj = new JSONObject(response);
 
-                    boolean error = jObj.getBoolean("error");
+                       boolean error = jObj.getBoolean("error");
                     if (!error) {
                         String obj = jObj.toString();
 

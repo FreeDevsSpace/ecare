@@ -168,6 +168,8 @@ public class Main1 extends AppCompatActivity {
 
                         }else if(usertype.equals("Doctor")){
                                 JSONObject doctor_registration = jObj.getJSONObject("doctor_registration");
+                                int Doctor_Id  = doctor_registration.getInt("Doctor_ID");
+                                String Doctor_ID = String.valueOf(Doctor_Id);
                                 String Full_Name = doctor_registration.getString("Full_Name");
                                 String Mobile_Number = doctor_registration.getString("Mobile_Number");
                                 String DOB = doctor_registration.getString("DOB");
@@ -181,7 +183,7 @@ public class Main1 extends AppCompatActivity {
                                 String Hospital_Address = doctor_registration.getString("Hospital_Address");
                                 String Fees = doctor_registration.getString("Fees");
 
-                                doctorSqLiteHandler.addUser(Full_Name,Mobile_Number,DOB,Address,City,Email,Password,Qualification,Specialization,Hospital_Name,Hospital_Address,Fees);
+                                doctorSqLiteHandler.addUser(Doctor_ID,Full_Name,Mobile_Number,DOB,Address,City,Email,Password,Qualification,Specialization,Hospital_Name,Hospital_Address,Fees);
                                 Intent  intent2  = new Intent(Main1.this, Doctor_Main.class);
                                 startActivity(intent2);
                                 finish();

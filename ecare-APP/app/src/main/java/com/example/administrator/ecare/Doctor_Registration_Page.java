@@ -179,6 +179,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
                         // String Patient_ID = jObj.getString("Patient_ID");
 
                         JSONObject doctor_registration = jObj.getJSONObject("doctor_registration");
+                        String Doctor_ID = doctor_registration.getString("Doctor_ID");
                         String Full_Name = doctor_registration.getString("Full_Name");
                         String Mobile_Number = doctor_registration.getString("Mobile_Number");
                         String DOB = doctor_registration.getString("DOB");
@@ -195,7 +196,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
                        // db1.addDoctor(Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
                          //       Qualification, Specialization, Hospital_Name, Hospital_Address,Fees);
 
-                        db1.addUser(Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
+                        db1.addUser(Doctor_ID,Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
                                 Qualification, Specialization, Hospital_Name, Hospital_Address,Fees);
                         Toast.makeText(Doctor_Registration_Page.this, "User successfully registered. Try login now!", Toast.LENGTH_SHORT).show();
 

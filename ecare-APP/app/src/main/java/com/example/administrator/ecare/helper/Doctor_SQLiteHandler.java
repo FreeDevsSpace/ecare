@@ -37,15 +37,11 @@ public class Doctor_SQLiteHandler extends SQLiteOpenHelper {
 
 	// Login Table Columns names
 	//private static final String KEY_ID="id";
-	private  static final String KEY_Pathologist_ID="Pathologist_ID";
-	private  static final String KEY_Pharmacist_ID="Pharmacist_ID";
-	private static final String KEY_Patient_ID = "Patient_ID";
 	private static final String KEY_Full_Name = "Full_Name";
 	private static final String KEY_Email = "Email";
 	private static final String KEY_Address = "Address";
 	private static final String KEY_City = "City";
 	private static final String KEY_DOB = "DOB";
-	private static final String KEY_Blood_Group = "Blood_Group";
 	private static final String KEY_Mobile_Number = "Mobile_Number";
 	private static final String KEY_Password = "Password";
 	private static final String KEY_Doctor_ID = "Doctor_ID";
@@ -100,13 +96,14 @@ public class Doctor_SQLiteHandler extends SQLiteOpenHelper {
 	}
 
 
-	public void addUser( String Full_Name, String Mobile_Number, String DOB, String Address,String City,
+	public void addUser(String Doctor_ID,String Full_Name, String Mobile_Number, String DOB, String Address,String City,
 						String Email,String Password, String Qualification,String Specialization,String Hospital_Name,String Hospital_Address,String Fees) {
 
 
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
+		values.put(KEY_Doctor_ID,Doctor_ID);
 		values.put(KEY_Full_Name,Full_Name);
 		values.put(KEY_Mobile_Number,Mobile_Number);
 		values.put(KEY_DOB,DOB);
@@ -123,7 +120,7 @@ public class Doctor_SQLiteHandler extends SQLiteOpenHelper {
 
 		// Inserting Row
 
-		String Doctor_ID = Long.toString(db.insert(TABLE_DOCTOR, null, values));
+		//String Doctor_ID = Long.toString(db.insert(TABLE_DOCTOR, null, values));
 		db.close(); // Closing database connection
 
 		Log.d(TAG, "New Doctor inserted into sqlite: " + Doctor_ID);

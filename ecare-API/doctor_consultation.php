@@ -21,8 +21,8 @@ $response = array("error" => FALSE);
 if(isset($_POST['Doctor_ID']))
 {
   
-  $Doctor_ID= $_POST['Doctor_ID'];
-    $query = "SELECT * FROM consultation WHERE Doctor_ID='".$Doctor_ID."' AND Status=0";
+  	$Doctor_ID=(int)$_POST['Doctor_ID'];
+    $query = "SELECT * FROM consultation WHERE Doctor_ID=".$Doctor_ID." AND Status=0";
 
     $result = mysqli_query($con,$query);
     
