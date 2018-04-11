@@ -32,7 +32,6 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.administrator.ecare.MainActivity"
@@ -61,7 +60,6 @@
         <activity android:name="com.example.administrator.ecare.Patient_Search_Doctor" />
         <activity android:name="com.example.administrator.ecare.Patient_Feedback_Rating" />
         <activity android:name="com.example.administrator.ecare.Patient_Search_List_Action" />
-        <activity android:name="com.example.administrator.ecare.Patient_Treatment_History" />
         <activity android:name="com.example.administrator.ecare.Patient_Thank_You" />
         <activity android:name="com.example.administrator.ecare.Pathologist_Search_Patient" />
         <activity android:name="com.example.administrator.ecare.Pathologist_Patient_History" />
@@ -75,10 +73,6 @@
         <activity android:name="com.example.administrator.ecare.View_Appointment_List" />
         <activity android:name="com.example.administrator.ecare.Shedule_For_Today" />
         <activity android:name="com.example.administrator.ecare.Patient_Tretment_From_Doctor" />
-        <activity android:name="com.example.administrator.ecare.Connect_To_Other_Doctor" />
-        <activity android:name="com.example.administrator.ecare.Search_Doctor_To_Connect" />
-        <activity android:name="com.example.administrator.ecare.List_Of_Search_Doctor_To_Connect_Doctor" />
-        <activity android:name="com.example.administrator.ecare.Patient_Treatment_With_Connected_Doctor" />
         <activity android:name="com.example.administrator.ecare.Request_To_Connect_Doctor" />
         <activity android:name="com.example.administrator.ecare.Patient_Book_Appointment" />
         <activity android:name="com.example.administrator.ecare.Patient_Online_Consultation" />
@@ -89,6 +83,8 @@
         <activity android:name="com.example.administrator.ecare.Doctor_Profile" />
         <activity android:name="com.example.administrator.ecare.Pathologist_Profile" />
         <activity android:name="com.example.administrator.ecare.Pathologist_Main" />
+        <activity android:name="com.example.administrator.ecare.Patient_Appointment_Status" />
+        <activity android:name="com.example.administrator.ecare.Patient_Consultation_Status" />
 
         <meta-data
             android:name="android.support.VERSION"

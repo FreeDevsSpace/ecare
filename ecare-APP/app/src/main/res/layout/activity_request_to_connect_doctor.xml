@@ -51,7 +51,7 @@
         android:layout_below="@+id/IVProfile_Pic_Request_To_Connect_Doctor"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:text="Name"
         android:textColor="#000"
         android:textSize="22dp"/>
@@ -62,7 +62,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/tVSpecialization_Request_To_Connect_Doctor"
         android:layout_alignStart="@+id/tVSpecialization_Request_To_Connect_Doctor"
-        android:layout_marginBottom="13dp"
         android:gravity="center"
         android:text="Qualification"
         android:textColor="#000"
@@ -74,8 +73,9 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tVSpecialization1_Request_To_Connect_Doctor"
         android:layout_alignBottom="@+id/tVSpecialization1_Request_To_Connect_Doctor"
-        android:layout_alignStart="@+id/btOnline_Consultation_Request_To_Connect_Doctor"
+        android:layout_toEndOf="@+id/tVName_Request_To_Connect_Doctor"
         android:gravity="center"
+        android:layout_marginTop="12dp"
         android:text="Specialization"
         android:textColor="#000"
         android:textSize="18dp" />
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tVSpecialization_Request_To_Connect_Doctor"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="Hospital Name :"
         android:textColor="#000"
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tVHospital_Name_Request_To_Connect_Doctor"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="Hospital Address :"
         android:textColor="#000"
@@ -108,13 +108,13 @@
         android:id="@+id/tVPHospital_Name_Request_To_Connect_Doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVHospital_Name_Request_To_Connect_Doctor"
-        android:layout_alignBottom="@+id/tVHospital_Name_Request_To_Connect_Doctor"
-        android:layout_alignStart="@+id/tVPHospital_Address_Request_To_Connect_Doctor"
+        android:layout_above="@+id/tVHospital_Address_Request_To_Connect_Doctor"
+        android:layout_alignStart="@+id/tVSpecialization_Request_To_Connect_Doctor"
         android:gravity="center"
+        android:layout_marginTop="12dp"
         android:text="PHospital_Name"
         android:textColor="#000"
-        android:textSize="15dp" />
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/tVPHospital_Address_Request_To_Connect_Doctor"
@@ -123,20 +123,20 @@
         android:layout_alignBaseline="@+id/tVHospital_Address_Request_To_Connect_Doctor"
         android:layout_alignBottom="@+id/tVHospital_Address_Request_To_Connect_Doctor"
         android:layout_alignStart="@+id/tVSpecialization_Request_To_Connect_Doctor"
+        android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="PHospital_Address"
+        android:text="PH_Address"
         android:textColor="#000"
-        android:textSize="13dp" />
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/tVFees_Request_To_Connect_Doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btBook_Appointment_Request_To_Connect_Doctor"
-        android:layout_marginBottom="15dp"
-        android:layout_marginStart="13dp"
-
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVPHospital_Address_Request_To_Connect_Doctor"
         android:gravity="center"
+        android:layout_marginTop="12dp"
         android:text="Fees :"
         android:textColor="#000"
         android:textSize="18dp" />
@@ -145,11 +145,10 @@
         android:id="@+id/tVPFees_Request_To_Connect_Doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVFees_Request_To_Connect_Doctor"
-        android:layout_alignBottom="@+id/tVFees_Request_To_Connect_Doctor"
-        android:layout_alignStart="@+id/btOnline_Consultation_Request_To_Connect_Doctor"
-        android:layout_marginStart="15dp"
+        android:layout_below="@+id/tVPHospital_Address_Request_To_Connect_Doctor"
+        android:layout_toEndOf="@+id/tVName_Request_To_Connect_Doctor"
         android:gravity="center"
+        android:layout_marginTop="12dp"
         android:text="PFees"
         android:textColor="#000"
         android:textSize="18dp" />
@@ -158,11 +157,12 @@
         android:id="@+id/tVQualification1_Request_To_Connect_Doctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVQualification_Request_To_Connect_Doctor"
         android:layout_alignBottom="@+id/tVQualification_Request_To_Connect_Doctor"
         android:layout_alignParentStart="true"
         android:text="Qualification :"
         android:textColor="#000"
-        android:textSize="18dp"/>
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/tVSpecialization1_Request_To_Connect_Doctor"
@@ -170,7 +170,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tVName_Request_To_Connect_Doctor"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="60dp"
         android:text="Specialization :"
         android:textColor="#000"
         android:textSize="18dp" />

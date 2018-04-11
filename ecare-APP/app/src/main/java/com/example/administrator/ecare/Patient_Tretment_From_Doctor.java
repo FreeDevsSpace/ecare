@@ -37,7 +37,7 @@ public class Patient_Tretment_From_Doctor extends AppCompatActivity {
         prescribe_medicine=(TextView)findViewById(R.id.tVPrescribe_Medicine_Image_Patient_Tretment_From_Doctor);
         upload_report=(TextView)findViewById(R.id.tVUpload_Report_Patient_Tretment_From_Doctor);
         upload_medicine_bill=(TextView)findViewById(R.id.tVUpload_Medicine_Bill_Patient_Tretment_From_Doctor);
-        connect_to_other_doctor=(TextView)findViewById(R.id.tVConnect_To_Other_Doctor_Patient_Tretment_From_Doctor);
+       // connect_to_other_doctor=(TextView)findViewById(R.id.tVConnect_To_Other_Doctor_Patient_Tretment_From_Doctor);
         upload_report_clickhere=(TextView)findViewById(R.id.tVClick_Here_Upload_Report_Patient_Tretment_From_Doctor);
         prescribe_medicine_clickhere=(TextView)findViewById(R.id.tVClick_Here_Prescribe_Medicine_Patient_Tretment_From_Doctor);
         upload_medicine_bill_clickhere=(TextView)findViewById(R.id.tVClick_Here_Upload_Medicine_Bill_Patient_Tretment_From_Doctor);
@@ -53,18 +53,18 @@ public class Patient_Tretment_From_Doctor extends AppCompatActivity {
         no=(RadioButton)findViewById(R.id.RadioButton_No_Patient_Tretment_From_Doctor);
 
 
-        connect_to_other_doctor.setOnClickListener(new View.OnClickListener() {
+      /*  connect_to_other_doctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i1= new Intent(Patient_Tretment_From_Doctor.this,Connect_To_Other_Doctor.class);
                 startActivity(i1);
             }
-        });
+        }); */
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i2=new Intent(Patient_Tretment_From_Doctor.this,Patient_Feedback_Rating.class);
+                Intent i2=new Intent(Patient_Tretment_From_Doctor.this,Doctor_Main.class);
                 startActivity(i2);
             }
         });

@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="15dp"
                 android:text="Patient_ID : "
                 android:textColor="#000"
                 android:textSize="18dp" />
@@ -33,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
                 android:layout_below="@+id/tVPatient_ID_Consult_Patient"
                 android:text="Consultation_ID :"
                 android:textColor="#000"
@@ -44,18 +45,41 @@
                 android:layout_width="137dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/tVPatient_ID_Consult_Patient"
-                android:layout_marginBottom="36dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/tVPConsultation_ID_txt"
                 android:text="Problem :"
                 android:textColor="#000"
                 android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tVTake_Any_Medicine_Consult_Patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tVPTake_Any_Medicine_Consult_Patient"
+                android:layout_alignBottom="@+id/tVPTake_Any_Medicine_Consult_Patient"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:text="Take any Medicine ?"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tVIs_Any_Allergy_Consult_Patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/tVTake_Any_Medicine_Consult_Patient"
+                android:text=" Is there any allergy ?"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/etsuggetion_consult_patient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tVProblem_Consult_Patient">
+                android:layout_below="@+id/tVProblem_Consult_Patient"
+                android:layout_marginTop="100dp">
 
                 <AutoCompleteTextView
                     android:id="@+id/eTSuggetion_Consult_Patient"
@@ -89,7 +113,8 @@
                 android:id="@+id/etmedicine_consult_patient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/etsuggetion_consult_patient">
+                android:layout_below="@+id/etsuggetion_consult_patient"
+                android:layout_marginTop="0dp">
 
                 <AutoCompleteTextView
                     android:id="@+id/eTMedicine_Consult_Patient"
@@ -110,9 +135,9 @@
                 android:id="@+id/tVPPatient_ID_Consult_Patient"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/tVPatient_ID_Consult_Patient"
-                android:layout_marginEnd="20dp"
+                android:layout_above="@+id/tVPConsultation_ID_txt"
+                android:layout_marginStart="43dp"
+                android:layout_toEndOf="@+id/tVIs_Any_Allergy_Consult_Patient"
                 android:text="PPatient_ID"
                 android:textColor="#000"
                 android:textSize="18dp" />
@@ -122,8 +147,9 @@
                 android:id="@+id/tVPProble_Consult_Patient"
                 android:layout_width="169dp"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/tVPPatient_ID_Consult_Patient"
-                android:layout_alignTop="@+id/tVProblem_Consult_Patient"
+                android:layout_marginTop="15dp"
+                android:layout_above="@+id/etsuggetion_consult_patient"
+                android:layout_alignStart="@+id/tVPConsultation_ID"
                 android:text="PProblem"
                 android:textColor="#000"
                 android:textSize="18dp" />
@@ -133,9 +159,32 @@
                 android:id="@+id/tVPConsultation_ID"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/tVPPatient_ID_Consult_Patient"
-                android:layout_below="@+id/tVPatient_ID_Consult_Patient"
+                android:layout_marginTop="15dp"
+                android:layout_alignStart="@+id/tVPPatient_ID_Consult_Patient"
+                android:layout_below="@+id/tVPPatient_ID_Consult_Patient"
                 android:text="PConsultation_ID"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tVPTake_Any_Medicine_Consult_Patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tVPProble_Consult_Patient"
+                android:layout_below="@+id/tVPProble_Consult_Patient"
+                android:layout_marginTop="17dp"
+                android:text="PTakemedicine"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tVPIs_Any_Allergy_Consult_Patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tVPTake_Any_Medicine_Consult_Patient"
+                android:layout_below="@+id/tVPTake_Any_Medicine_Consult_Patient"
+                android:layout_marginTop="15dp"
+                android:text="PIs there  allergy"
                 android:textColor="#000"
                 android:textSize="18dp" />
 

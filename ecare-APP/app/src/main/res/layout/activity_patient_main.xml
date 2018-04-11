@@ -12,26 +12,27 @@
         android:id="@+id/IVProfile_Patient_Main"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/tVLogOut_Patient_Main"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="64dp"
         app:srcCompat="@drawable/ic_account_circle_3x" />
 
     <ImageView
         android:id="@+id/IVSearch_Patient_Main"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignStart="@+id/IVProfile_Patient_Main"
-        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/IVProfile_Patient_Main"
+        android:layout_marginEnd="54dp"
         app:srcCompat="@drawable/ic_search_3x" />
 
     <ImageView
-        android:id="@+id/IVHistory_Patient_Main"
+        android:id="@+id/IVAppointment_Status_Patient_Main"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignStart="@+id/IVSearch_Patient_Main"
-        android:layout_below="@+id/tVSearch_Patient_Main"
-        android:layout_marginTop="28dp"
+        android:layout_above="@+id/tVAppointment_Status_Patient_Main"
+        android:layout_alignStart="@+id/IVProfile_Patient_Main"
         app:srcCompat="@drawable/ic_history_3x" />
 
     <TextView
@@ -48,10 +49,9 @@
         android:id="@+id/tVProfile_Patient_Main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/IVProfile_Patient_Main"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="31dp"
-        android:text="Profile"
+        android:layout_alignStart="@+id/IVProfile_Patient_Main"
+        android:layout_below="@+id/IVProfile_Patient_Main"
+        android:text="  Profile"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="24sp"
@@ -61,24 +61,48 @@
         android:id="@+id/tVSearch_Patient_Main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tVHistory_Patient_Main"
-        android:layout_below="@+id/IVSearch_Patient_Main"
-        android:text="Search"
+        android:layout_alignStart="@+id/IVSearch_Patient_Main"
+        android:layout_below="@+id/IVProfile_Patient_Main"
+        android:text="  Search"
         android:textAlignment="center"
-        android:textSize="24sp"
         android:textColor="#000"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tVHistory_Patient_Main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/IVHistory_Patient_Main"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/tVAppointment_Status_Patient_Main"
+        android:layout_width="150dp"
+        android:layout_height="71dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="89dp"
+        android:layout_marginStart="14dp"
+        android:text="Appointment Status"
+        android:textAlignment="center"
         android:textColor="#000"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="History" />
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/IVConsultation_Status_Patient_Main"
+        android:layout_width="103dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/tVAppointment_Status_Patient_Main"
+        android:layout_alignStart="@+id/IVSearch_Patient_Main"
+        app:srcCompat="@drawable/ic_live_help_3x" />
+
+    <TextView
+        android:id="@+id/tVConsultation_Status_Patient_Main"
+        android:layout_width="155dp"
+        android:layout_height="68dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tVAppointment_Status_Patient_Main"
+        android:layout_marginEnd="20dp"
+        android:text="Consultation Status"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

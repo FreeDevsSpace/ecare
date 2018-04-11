@@ -40,10 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/IVProfile_Icon_Doctor_Profile"
-        android:layout_marginTop="22dp"
-        android:text="ID:"
+        android:layout_marginTop="69dp"
+        android:text="Doctor ID:"
         android:textColor="#000"
-        android:textSize="15dp"/>
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tVName_Doctor_Profile"
@@ -53,7 +53,7 @@
         android:layout_below="@+id/tVDoctor_ID_Doctor_Profile"
         android:layout_marginTop="15dp"
         android:text="Name:"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textColor="#000"/>
 
     <TextView
@@ -64,7 +64,7 @@
         android:layout_below="@+id/tVName_Doctor_Profile"
         android:layout_marginTop="15dp"
         android:text="Mobile Number: "
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textColor="#000"/>
 
     <TextView
@@ -76,7 +76,7 @@
         android:layout_marginTop="15dp"
         android:text="Date Of Birth: "
         android:textColor="#000"
-        android:textSize="15dp"/>
+        android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/tVQualification_Doctor_Profile"
@@ -85,7 +85,7 @@
         android:layout_below="@+id/tVDOB_Doctor_Profile"
         android:layout_marginTop="15dp"
         android:text="Qualification:"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textColor="#000"/>
 
     <TextView
@@ -96,7 +96,7 @@
         android:layout_below="@+id/tVQualification_Doctor_Profile"
         android:layout_marginTop="17dp"
         android:text="Address:"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textColor="#000"/>
 
     <TextView
@@ -107,7 +107,7 @@
         android:layout_below="@+id/tVAddress_Doctor_Profile"
         android:layout_marginTop="50dp"
         android:text=" Blood Group:"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textColor="#000"/>
 
 

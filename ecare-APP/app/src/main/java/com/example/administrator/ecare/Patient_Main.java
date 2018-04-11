@@ -16,8 +16,8 @@ import java.util.HashMap;
 
 public class Patient_Main extends AppCompatActivity {
 
-    ImageView history, profile, search;
-    TextView logout,tvprofile,tvsearch,tvhistory;
+    ImageView  profile, search,appointment_status,consultation_status;
+    TextView logout,tvprofile,tvsearch,tvappointmentstatus,tvconsultationstatus;
     private Patient_SQLiteHandler db;
     private SessionManager session;
     private ProgressDialog pDialog;
@@ -30,11 +30,13 @@ public class Patient_Main extends AppCompatActivity {
 
         profile = (ImageView) findViewById(R.id.IVProfile_Patient_Main);
         search = (ImageView) findViewById(R.id.IVSearch_Patient_Main);
-        history = (ImageView) findViewById(R.id.IVHistory_Patient_Main);
+        appointment_status=(ImageView)findViewById(R.id.IVAppointment_Status_Patient_Main);
+        consultation_status=(ImageView)findViewById(R.id.IVConsultation_Status_Patient_Main);
         logout = (TextView) findViewById(R.id.tVLogOut_Patient_Main);
         tvprofile=(TextView)findViewById(R.id.tVProfile_Patient_Main);
         tvsearch=(TextView)findViewById(R.id.tVSearch_Patient_Main);
-        tvhistory=(TextView)findViewById(R.id.tVHistory_Patient_Main);
+        tvconsultationstatus=(TextView)findViewById(R.id.tVConsultation_Status_Patient_Main);
+        tvappointmentstatus=(TextView)findViewById(R.id.tVAppointment_Status_Patient_Main);
 
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
@@ -89,11 +91,19 @@ public class Patient_Main extends AppCompatActivity {
             }
         });
 
-        history.setOnClickListener(new View.OnClickListener() {
+        appointment_status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i3 = new Intent(Patient_Main.this, Patient_Treatment_History.class);
+                Intent i3 = new Intent(Patient_Main.this, Patient_Appointment_Status.class);
                 startActivity(i3);
+            }
+        });
+
+        consultation_status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i4=new Intent(Patient_Main.this,Patient_Consultation_Status.class);
+                startActivity(i4);
             }
         });
 

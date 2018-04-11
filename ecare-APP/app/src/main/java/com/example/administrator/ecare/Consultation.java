@@ -88,9 +88,9 @@ public class Consultation extends AppCompatActivity {
         }
 
 
-        CustomAdapter1 customAdapter1 = new CustomAdapter1(getApplicationContext(), patientnameArray,problemArray);
+        CustomAdapter1 customAdapter = new CustomAdapter1(getApplicationContext(), patientnameArray,problemArray);
         // specializationArray, hospital_addressArray, hospital_nameArray);
-        simpleList.setAdapter(customAdapter1);
+        simpleList.setAdapter(customAdapter);
 
 
         simpleList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

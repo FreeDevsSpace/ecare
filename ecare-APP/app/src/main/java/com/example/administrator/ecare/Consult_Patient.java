@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class Consult_Patient extends AppCompatActivity {
     private static final String TAG = Consult_Patient.class.getSimpleName();
-    TextView patient_id,problem,suggetion,medicine,ppatient_id,pproblem,Consultation_ID;
+    TextView patient_id,problem,suggetion,medicine,ppatient_id,pproblem,Consultation_ID,takeany_medicine,any_allegry,Ptakeany_medicine,Pany_allegry;
     EditText write_suggetion, prescribe_medicine;
     Button send;
     private ProgressDialog pDialog;
@@ -46,6 +46,10 @@ public class Consult_Patient extends AppCompatActivity {
         pproblem=(TextView)findViewById(R.id.tVPProble_Consult_Patient);
         write_suggetion=(EditText)findViewById(R.id.eTSuggetion_Consult_Patient);
         prescribe_medicine=(EditText)findViewById(R.id.eTMedicine_Consult_Patient);
+        takeany_medicine=(TextView)findViewById(R.id.tVPTake_Any_Medicine_Consult_Patient);
+        any_allegry=(TextView)findViewById(R.id.tVIs_Any_Allergy_Consult_Patient);
+        Ptakeany_medicine=(TextView)findViewById(R.id.tVPTake_Any_Medicine_Consult_Patient);
+        Pany_allegry=(TextView)findViewById(R.id.tVPIs_Any_Allergy_Consult_Patient);
 
         send=(Button)findViewById(R.id.btSend_Consult_Patient);//// on cick listner
 
@@ -65,6 +69,8 @@ public class Consult_Patient extends AppCompatActivity {
        ppatient_id.setText(pid);
        pproblem.setText(problem);
        Consultation_ID.setText(cid);
+        Ptakeany_medicine.setText(medicine);
+        Pany_allegry.setText(allergy);
 
 
        send.setOnClickListener(new View.OnClickListener() {

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/s"
     android:padding="10dp"
     tools:context="com.example.administrator.ecare.Patient_Tretment_From_Doctor">
     <ScrollView
@@ -199,17 +198,6 @@
         android:layout_marginBottom="22dp"
         android:layout_marginEnd="36dp"
         android:text="Save"/>
-
-    <TextView
-        android:id="@+id/tVConnect_To_Other_Doctor_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btSave_Patient_Tretment_From_Doctor"
-        android:layout_alignBottom="@+id/btSave_Patient_Tretment_From_Doctor"
-        android:layout_alignParentStart="true"
-        android:text="Connect to Other Doctor"
-        android:textSize="15dp"
-        android:textColor="#00f"/>
 
     <TextView
         android:id="@+id/tVPrescribe_Medicine_Image_Patient_Tretment_From_Doctor"
