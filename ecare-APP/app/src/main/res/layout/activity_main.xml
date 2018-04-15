@@ -13,24 +13,35 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/q"
+        android:background="@drawable/hh"
         android:cropToPadding="false"
         android:visibility="visible"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp"/>
 
+    <ImageView
+        android:id="@+id/ivLogo_Main_Page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tVMain_Quote"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="96dp"
+        android:src="@drawable/plus_logo" />
+
     <TextView
         android:id="@+id/tVMain_Quote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
+        android:layout_marginBottom="162dp"
         android:autoSizeTextType="uniform"
+        android:fontFamily="sans-serif"
         android:text='"YOUR BODY IS YOUR MOST PRICELESS POSSESSION.
-
-TAKE CARE OF IT."'
+               TAKE CARE OF IT."'
         android:textColor="#000"
         android:textSize="20dp"
-        android:fontFamily="sans-serif"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tVConsultation_ID_Listview_Consultation_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="37dp"
+        android:text="Consultation_ID :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPConsultation_ID_Listview_Consultation_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVConsultation_ID_Listview_Consultation_Status"
+        android:layout_alignBottom="@+id/tVConsultation_ID_Listview_Consultation_Status"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/tVConsultation_ID_Listview_Consultation_Status"
+        android:text="PCOnsultation_ID :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+</RelativeLayout>

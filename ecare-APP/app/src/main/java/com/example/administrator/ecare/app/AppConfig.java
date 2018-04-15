@@ -21,6 +21,13 @@ public class AppConfig {
 	public static  String URL_DOCTOR_SUGGETION="http://192.168.43.164/ecare/ecare-API/doctor_suggetion.php";
 
 	public static  String URL_DOCREGISTER="http://192.168.43.164/ecare/ecare-API/dregistration.php";
+	public static  String URL_GETAPPOINTMENT_DETAILS="http://192.168.43.164/ecare/ecare-API/getappointment_details.php";
+
+    public static String URL_BOOK_APPOINTMENT="http://192.168.43.164/ecare/ecare-API/book_appointment.php";
+	public static String URL_GETPATIENT_TREATMENT_DETAILS="http://192.168.43.164/ecare/ecare-API/getpatient_treatment_details.php";
+		public static  String URL_GETPATIENT_DETAILS="http://192.168.43.164/ecare/ecare-API/getpatient_details.php";
+	public static  String URL_PETIENT_CONSULTATION_STATUS="http://192.168.43.164/ecare/ecare-API/patient_consultation_status.php";
+
 
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////

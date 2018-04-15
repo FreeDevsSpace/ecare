@@ -201,7 +201,7 @@ Psw.requestFocus();
                         // User successfully stored in MySQL
                         JSONObject pharmacist_registration = jObj.getJSONObject("pharmacist_registration");
 
-                        String Pharmacist_ID = pharmacist_registration.getString("Pharmacist_ID");
+                        String Pharmacist_ID = jObj.getString("Pharmacist_ID");
                         String Full_Name= pharmacist_registration.getString("Full_Name");
                         String Mobile_Number = pharmacist_registration.getString("Mobile_Number");
                         String DOB = pharmacist_registration.getString("DOB");

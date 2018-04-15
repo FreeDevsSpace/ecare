@@ -154,9 +154,6 @@ public class Patient_Search_Doctor extends AppCompatActivity {
                     boolean error = jsonObject.getBoolean("error");
                     if (!error) {
 
-                       // jsonObject.getString(City);
-                        //jsonObject.getString(Qualification);
-                        //jsonObject.getString(Specialization);
                         String obj = jsonObject.toString();
 
                         Intent i = new Intent(Patient_Search_Doctor.this, Patient_Search_List_Action.class);

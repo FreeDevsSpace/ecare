@@ -84,20 +84,19 @@
 
 
     <string-array name="Appointment_Time">
-        <item>12:00</item>
-        <item>12:30</item>
-        <item>1:30</item>
-        <item>2:00</item>
-        <item>2:30</item>
-        <item>3:00</item>
-        <item>3:30</item>
-        <item>4:00</item>
-        <item>4:30</item>
-        <item>5:00</item>
-        <item>5:30</item>
-        <item>6:00</item>
-        <item>6:30</item>
-        <item>7:00</item>
+
+        <item>3:00 PM to 3:15 PM</item>
+        <item>3:15 PM to 3:30 PM</item>
+        <item>3:30 PM to 3:45 PM</item>
+        <item>3:45 PM to 4:00 PM</item>
+        <item>4:00 PM to 4:15 PM</item>
+        <item>4:15 PM to 4:30 PM</item>
+        <item>4:30 PM to 4:45 PM</item>
+        <item>4:45 PM to 5:00 PM</item>
+        <item>5:00 PM to 5:15 PM</item>
+        <item>5:15 PM to 5:30 PM</item>
+        <item>5:30 PM to 5:45 PM</item>
+        <item>5:45 PM to 6:00 PM</item>
     </string-array>
 
 

@@ -32,7 +32,6 @@ public class Patient_Search_List_Action extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String value = bundle.getString("data");
 
-        //  ArrayList<String[]> stringArray = new ArrayList<String[]>();
 
         final ArrayList<String> didArray = new ArrayList<String>();
         final ArrayList<String> nameArray = new ArrayList<String>();

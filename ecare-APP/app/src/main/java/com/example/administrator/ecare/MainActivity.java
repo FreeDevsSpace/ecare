@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
     TextView t1,t2;
-    ImageView i1;
+    ImageView i1,iv2;
     public ProgressDialog myDialog;
 
     @Override
@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
         t1=(TextView)findViewById(R.id.tVMain_Quote);
         //t2=(TextView)findViewById(R.id.tVClick_Hear);
         i1=(ImageView)findViewById(R.id.iVMain_Page);
+        iv2=(ImageView)findViewById(R.id.ivLogo_Main_Page);
 
 
        new Handler().postDelayed(new Runnable() {

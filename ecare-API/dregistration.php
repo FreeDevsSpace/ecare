@@ -39,6 +39,7 @@ if((isset($_POST['Full_Name'])) && isset($_POST['Mobile_Number']) && isset($_POS
         if ($doctor_registration) {
             // user stored successfully 
             $response["error"] = FALSE;
+          
             $response["Doctor_ID"] = $doctor_registration["Doctor_ID"];
             $response["doctor_registration"]["Full_Name"] = $doctor_registration["Full_Name"];
             $response["doctor_registration"]["Mobile_Number"] = $doctor_registration["Mobile_Number"];

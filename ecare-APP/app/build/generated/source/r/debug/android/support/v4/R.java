@@ -17,7 +17,7 @@ public final class R {
         public static final int fontWeight = 0x7f04009f;
     }
     public static final class id {
-        public static final int italic = 0x7f0900e7;
+        public static final int italic = 0x7f0900e6;
         public static final int normal = 0x7f0900f8;
     }
     public static final class styleable {

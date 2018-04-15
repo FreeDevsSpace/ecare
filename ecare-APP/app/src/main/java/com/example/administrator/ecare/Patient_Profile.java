@@ -40,7 +40,7 @@ public class Patient_Profile extends AppCompatActivity {
         tvaddress = (TextView) findViewById(R.id.tVAddress_Patient_Profile);
         tvblood_group = (TextView) findViewById(R.id.tVBlood_Group_Patient_Profile);
         tvpatient_id = (TextView) findViewById(R.id.tVPatient_ID_Patient_Profile);
-        iv1 = (ImageView) findViewById(R.id.IVProfile_icon_Patient_Profile);
+     //   iv1 = (ImageView) findViewById(R.id.IVProfile_icon_Patient_Profile);
         wpatient_id=(TextView)findViewById(R.id.tVWPatient_ID_Patient_Profile);
         wname=(TextView)findViewById(R.id.tVWPatient_Name_Patient_Profile);
         wmobile_number=(TextView)findViewById(R.id.tVWMobile_Number_Patient_Profile);

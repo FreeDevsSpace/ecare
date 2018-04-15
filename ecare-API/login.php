@@ -104,7 +104,7 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
         // use is found
             $response["error"] = FALSE;
             $response["USER_TYPE"] = $USER_TYPE4;
-            $response["pharmacist_registration"]["Pharmacist_ID"] = $pathologist_registration["Pharmacist_ID"];
+            $response["pharmacist_registration"]["Pharmacist_ID"] = $pharmacist_registration["Pharmacist_ID"];
             $response["pharmacist_registration"]["Full_Name"] = $pharmacist_registration["Full_Name"];
             $response["pharmacist_registration"]["Mobile_Number"] = $pharmacist_registration["Mobile_Number"];
             $response["pharmacist_registration"]["DOB"] = $pharmacist_registration["DOB"];

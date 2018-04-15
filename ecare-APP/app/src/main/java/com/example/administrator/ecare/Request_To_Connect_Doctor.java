@@ -66,7 +66,12 @@ public class Request_To_Connect_Doctor extends AppCompatActivity {
         book_appointment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                HashMap<String, String> patient_registration = db.getUserDetails();
                 Intent i1= new Intent(Request_To_Connect_Doctor.this,Patient_Book_Appointment.class);
+                String Patient_ID = patient_registration.get("Patient_ID");
+                i1.putExtra("Patient_ID",Patient_ID);
+                i1.putExtra("Doctor_ID",did);
                 startActivity(i1);
             }
         });
@@ -75,12 +80,10 @@ public class Request_To_Connect_Doctor extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 HashMap<String, String> patient_registration = db.getUserDetails();
-            //    HashMap<String,String> doctor_registration = db1.getDoctorDetails();
-               Intent i2=new Intent(Request_To_Connect_Doctor.this,Patient_Online_Consultation.class);
-                //String Doctor_ID = doctor_registration.get("Doctor_ID");
-               String Patient_ID = patient_registration.get("Patient_ID");
+                Intent i2=new Intent(Request_To_Connect_Doctor.this,Patient_Online_Consultation.class);
+                String Patient_ID = patient_registration.get("Patient_ID");
 
-                //i2.putExtra("Doctor_ID",Doctor_ID);
+
                 i2.putExtra("Patient_ID",Patient_ID);
                 i2.putExtra("Doctor_ID",did);
 

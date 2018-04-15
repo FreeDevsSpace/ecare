@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.ecare.Appointment_Accept_Reject">
+
+    <TextView
+        android:id="@+id/tVPatient_ID_Appointment_Accept_Reject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="69dp"
+        android:text="Patient_ID :"
+        android:textSize="18dp"
+        android:textColor="#000"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"/>
+
+    <TextView
+        android:id="@+id/tVPPatient_ID_Appointment_Accept_Reject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVPatient_ID_Appointment_Accept_Reject"
+        android:layout_alignBottom="@+id/tVPatient_ID_Appointment_Accept_Reject"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@+id/tVPatient_ID_Appointment_Accept_Reject"
+        android:text="PPatient_ID"
+        android:textColor="#000"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/tVDate_Appointment_Accept_Reject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVPatient_ID_Appointment_Accept_Reject"
+        android:layout_below="@+id/tVPatient_ID_Appointment_Accept_Reject"
+        android:layout_marginTop="28dp"
+        android:text="Date :"
+        android:textSize="18dp"
+        android:textColor="#000"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <TextView
+        android:id="@+id/tVPDate_Appointment_Accept_Reject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVDate_Appointment_Accept_Reject"
+        android:layout_alignBottom="@+id/tVDate_Appointment_Accept_Reject"
+        android:layout_alignStart="@+id/tVPPatient_ID_Appointment_Accept_Reject"
+        android:text="PDate"
+        android:textSize="18dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tVTimeslote_Appointment_Accept_Reject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVDate_Appointment_Accept_Reject"
+        android:layout_below="@+id/tVDate_Appointment_Accept_Reject"
+        android:layout_marginTop="28dp"
+        android:text="Timeslote :"
+        android:textSize="18dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tVPTimeslote_Appointment_Accept_Reject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tVTimeslote_Appointment_Accept_Reject"
+        android:layout_alignStart="@+id/tVPDate_Appointment_Accept_Reject"
+        android:text="PTimeslote"
+        android:textSize="18dp"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btAccept_Appointment_Accept_Reject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVTimeslote_Appointment_Accept_Reject"
+        android:layout_marginTop="33dp"
+        android:background="@color/colorPrimary"
+        android:text="Accept"
+        android:textColor="#FFF"
+        android:textSize="15dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btReject_Appointment_Accept_Reject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btAccept_Appointment_Accept_Reject"
+        android:layout_marginTop="34dp"
+        android:background="@color/colorPrimary"
+        android:text="Reject"
+        android:textColor="#FFF"
+        android:textSize="15dp"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tVPatient_ID_Appointment_Listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:text="Patient ID :"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tVPPatient_ID_Appointment_Listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVPatient_ID_Appointment_Listview"
+        android:layout_alignBottom="@+id/tVPatient_ID_Appointment_Listview"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/tVPatient_ID_Appointment_Listview"
+        android:text="PAID"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tVDate_Appointment_Listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVPatient_ID_Appointment_Listview"
+        android:text="Date :"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tVPDate_Appointment_Listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVPPatient_ID_Appointment_Listview"
+        android:layout_below="@+id/tVPPatient_ID_Appointment_Listview"
+        android:text="PDate"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tVTimeslote_Appointment_Listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVDate_Appointment_Listview"
+        android:text="Timeslote:"
+        android:textColor="#000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tVPTimeslote_Appointment_Listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tVTimeslote_Appointment_Listview"
+        android:layout_alignStart="@+id/tVPDate_Appointment_Listview"
+        android:layout_marginTop="15dp"
+        android:text="PTimeslate"
+        android:textColor="#000"
+        android:textSize="15dp"/>
+</RelativeLayout>

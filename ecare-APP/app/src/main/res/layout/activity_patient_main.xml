@@ -28,12 +28,12 @@
         app:srcCompat="@drawable/ic_search_3x" />
 
     <ImageView
-        android:id="@+id/IVAppointment_Status_Patient_Main"
+        android:id="@+id/IVPayment_Patient_Main"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_above="@+id/tVAppointment_Status_Patient_Main"
-        android:layout_alignStart="@+id/IVProfile_Patient_Main"
-        app:srcCompat="@drawable/ic_history_3x" />
+        android:layout_above="@+id/tVPayment_Patient_Main"
+        android:layout_alignStart="@+id/tVProfile_Patient_Main"
+        android:src="@drawable/payment4" />
 
     <TextView
         android:id="@+id/tVLogOut_Patient_Main"
@@ -70,14 +70,14 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tVAppointment_Status_Patient_Main"
+        android:id="@+id/tVPayment_Patient_Main"
         android:layout_width="150dp"
         android:layout_height="71dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="89dp"
         android:layout_marginStart="14dp"
-        android:text="Appointment Status"
+        android:text="Payment"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="24sp"
@@ -87,7 +87,7 @@
         android:id="@+id/IVConsultation_Status_Patient_Main"
         android:layout_width="103dp"
         android:layout_height="100dp"
-        android:layout_above="@+id/tVAppointment_Status_Patient_Main"
+        android:layout_above="@+id/tVPayment_Patient_Main"
         android:layout_alignStart="@+id/IVSearch_Patient_Main"
         app:srcCompat="@drawable/ic_live_help_3x" />
 
@@ -96,7 +96,7 @@
         android:layout_width="155dp"
         android:layout_height="68dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/tVAppointment_Status_Patient_Main"
+        android:layout_alignTop="@+id/tVPayment_Patient_Main"
         android:layout_marginEnd="20dp"
         android:text="Consultation Status"
         android:textAlignment="center"

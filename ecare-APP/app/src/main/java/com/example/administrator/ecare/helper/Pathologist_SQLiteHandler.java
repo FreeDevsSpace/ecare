@@ -63,7 +63,7 @@ public class Pathologist_SQLiteHandler extends SQLiteOpenHelper {
 				+ KEY_Full_Name + " TEXT ,"
 				+ KEY_Mobile_Number + " TEXT,"
 				+ KEY_DOB + " TEXT,"
-				+ KEY_Qualification + "TEXT,"
+				+ KEY_Qualification + " TEXT,"
 				+ KEY_Address + " TEXT,"
 				+ KEY_Blood_Group + " TEXT,"
 				+ KEY_Email + " TEXT,"
@@ -112,8 +112,6 @@ public class Pathologist_SQLiteHandler extends SQLiteOpenHelper {
 
 
 	}
-
-
 
 
 	public HashMap<String, String>getUserDetails() {

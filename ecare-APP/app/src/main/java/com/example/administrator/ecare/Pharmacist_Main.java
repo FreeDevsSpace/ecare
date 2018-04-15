@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.example.administrator.ecare.helper.Pharmacist_SQLiteHandler;
 import com.example.administrator.ecare.helper.SessionManager;
 
+import java.util.HashMap;
+
 public class Pharmacist_Main extends AppCompatActivity {
     ImageView profile,search_patient,patient_history;
     TextView logout,tvprofile,tvhistory,tvsearch;
@@ -27,9 +29,9 @@ public class Pharmacist_Main extends AppCompatActivity {
 
         profile=(ImageView)findViewById(R.id.IVProfile_Pharmacist_Main);
         search_patient=(ImageView)findViewById(R.id.IVSearch_Pharmacist_Main);
-        patient_history=(ImageView)findViewById(R.id.IVHistory_Pharmacist_Main);
+      //  patient_history=(ImageView)findViewById(R.id.IVHistory_Pharmacist_Main);
         logout=(TextView)findViewById(R.id.tVLogout_Pharmacist_Main);
-        tvhistory=(TextView)findViewById(R.id.tVHistory_Pharmacist_Main);
+       // tvhistory=(TextView)findViewById(R.id.tVHistory_Pharmacist_Main);
         tvprofile=(TextView)findViewById(R.id.tVProfile_Pharmacist_Main);
         tvsearch=(TextView)findViewById(R.id.tVSearch_Pharmacist_Main);
         pDialog = new ProgressDialog(this);
@@ -49,7 +51,24 @@ public class Pharmacist_Main extends AppCompatActivity {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                HashMap<String, String> pharmacist_registration = db.getUserDetails();
+                String Pharmacist_ID = pharmacist_registration.get("Pharmacist_ID");
+                String Full_name = pharmacist_registration.get("Full_Name");
+                String Mobile_Number = pharmacist_registration.get("Mobile_Number");
+                String DOB = pharmacist_registration.get("DOB");
+                String Qualification = pharmacist_registration.get("Qualification");
+                String Address = pharmacist_registration.get("Address");
+                String Blood_Group = pharmacist_registration.get("Blood_Group");
+
                 Intent i1= new Intent(Pharmacist_Main.this,Pharmacist_Profile.class);
+
+                i1.putExtra("Pharmacist_ID", Pharmacist_ID);
+                i1.putExtra("Full_Name", Full_name);
+                i1.putExtra("Mobile_Number", Mobile_Number);
+                i1.putExtra("DOB", DOB);
+                i1.putExtra("Qualification", Qualification);
+                i1.putExtra("Address", Address);
+                i1.putExtra("Blood_Group", Blood_Group);
                 startActivity(i1);
             }
         });
@@ -62,13 +81,13 @@ public class Pharmacist_Main extends AppCompatActivity {
             }
         });
 
-        patient_history.setOnClickListener(new View.OnClickListener() {
+    /*    patient_history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i3 = new Intent(Pharmacist_Main.this,Pharmacist_Patient_History.class);
                 startActivity(i3);
             }
-        });
+        }); */
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -169,7 +169,6 @@ public class Main1 extends AppCompatActivity {
 
                         }else if(usertype.equals("Doctor")){
                                 JSONObject doctor_registration = jObj.getJSONObject("doctor_registration");
-
                                 String Doctor_ID = String.valueOf(doctor_registration.getInt("Doctor_ID"));
                                 String Full_Name = doctor_registration.getString("Full_Name");
                                 String Mobile_Number = doctor_registration.getString("Mobile_Number");
@@ -191,7 +190,6 @@ public class Main1 extends AppCompatActivity {
 
                         }else if (usertype.equals("Pathologist")){
                             JSONObject pathologist_registration = jObj.getJSONObject("pathologist_registration");
-
                                 String Pathologist_ID = String.valueOf(pathologist_registration.getInt("Pathologist_ID"));
                                 String Full_Name = pathologist_registration.getString("Full_Name");
                                 String Mobile_Number = pathologist_registration.getString("Mobile_Number");
@@ -210,7 +208,6 @@ public class Main1 extends AppCompatActivity {
                             }
                             else if (usertype.equals("Pharmacist")){
                             JSONObject pharmacist_registration = jObj.getJSONObject("pharmacist_registration");
-
                                 String Pharmacist_ID = String.valueOf(pharmacist_registration.getInt("Pharmacist_ID"));
                                 String Full_Name = pharmacist_registration.getString("Full_Name");
                                 String Mobile_Number = pharmacist_registration.getString("Mobile_Number");

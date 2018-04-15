@@ -33,7 +33,7 @@ import java.util.Map;
 public class Doctor_Registration_Page extends AppCompatActivity {
 
     private static final String TAG = Doctor_Registration_Page.class.getSimpleName();
-    EditText name,mobile_number,city,password,hospital_name,hospital_address,email,fees;
+    EditText name,mobile_number,city,password,hospital_name,hospital_address,email,fees,address1;
     TextView date_of_birth,tvdob;
     TextView address,specialization,qualification,workplace;
     Button b1;
@@ -41,7 +41,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
     boolean invalid = false;
     private ProgressDialog pDialog;
     private SessionManager session;
-    private Doctor_SQLiteHandler db1;
+    private Doctor_SQLiteHandler db;
 
 
     private int mYear, mMonth, mDay;
@@ -58,7 +58,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
         password=(EditText)findViewById(R.id.eTPassword_Doctor_Registration_Page);
         date_of_birth=(TextView) findViewById(R.id.eTDate_Of_Birth_Doctor_Registration_Page);
         email=(EditText)findViewById(R.id.eTEmail_Doctor_Registration_Page);
-      //  address=(TextView)findViewById(R.id.tVAddress_Doctor_Registration_Page);
+       // address=(TextView)findViewById(R.id.tVAddress_Doctor_Registration_Page);
         city=(EditText)findViewById(R.id.eTCity_Doctor_Registration_Page);
         specialization=(TextView)findViewById(R.id.tVSpecialization_Doctor_Registration_Page);
        // workplace=(TextView)findViewById(R.id.tVWorkplace_Doctor_Registration_Page);
@@ -70,6 +70,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
         hospital_address=(EditText)findViewById(R.id.eTHospital_Address_Doctor_Registration_page);
         fees=(EditText)findViewById(R.id.eTFees_Doctor_Registration_Page);
         tvdob=(TextView)findViewById(R.id.tVDOB_Doctor_Registration_Page);
+        address1=(EditText)findViewById(R.id.eTPostal_Address_Doctor_Registration_Page);
 
 
         date_of_birth.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +110,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
         session = new SessionManager(getApplicationContext());
 
         // SQLite database handler
-        db1 = new Doctor_SQLiteHandler(getApplicationContext());
+        db = new Doctor_SQLiteHandler(getApplicationContext());
 
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
@@ -128,7 +129,7 @@ public class Doctor_Registration_Page extends AppCompatActivity {
                 String Full_Name = name.getText().toString();
                 String Mobile_Number = mobile_number.getText().toString();
                 String DOB = date_of_birth.getText().toString();
-                String Address = address.getText().toString();
+                String Address = address1.getText().toString();
                 String City = city.getText().toString();
                 String Email = email.getText().toString();
                 String Password = password.getText().toString();
@@ -176,10 +177,10 @@ public class Doctor_Registration_Page extends AppCompatActivity {
                     if (!error) {
                         // User successfully stored in MySQL
                         // Now store the user in sqlite
-                        // String Patient_ID = jObj.getString("Patient_ID");
 
                         JSONObject doctor_registration = jObj.getJSONObject("doctor_registration");
-                        String Doctor_ID = doctor_registration.getString("Doctor_ID");
+
+                        String Doctor_ID = jObj.getString("Doctor_ID");
                         String Full_Name = doctor_registration.getString("Full_Name");
                         String Mobile_Number = doctor_registration.getString("Mobile_Number");
                         String DOB = doctor_registration.getString("DOB");
@@ -193,10 +194,8 @@ public class Doctor_Registration_Page extends AppCompatActivity {
                         String Hospital_Address = doctor_registration.getString("Hospital_Address");
                         String Fees = doctor_registration.getString("Fees");
 
-                       // db1.addDoctor(Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
-                         //       Qualification, Specialization, Hospital_Name, Hospital_Address,Fees);
 
-                        db1.addUser(Doctor_ID,Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
+                        db.addUser(Doctor_ID,Full_Name, Mobile_Number, DOB, Address,City, Email, Password,
                                 Qualification, Specialization, Hospital_Name, Hospital_Address,Fees);
                         Toast.makeText(Doctor_Registration_Page.this, "User successfully registered. Try login now!", Toast.LENGTH_SHORT).show();
 

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true">
+
+    <TextView
+        android:id="@+id/tVConsultation_ID_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/tVDoctor_Name_Listview_Consultation_Status_Store"
+        android:layout_marginTop="48dp"
+        android:text="Consultation_ID :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPConsultation_ID_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVConsultation_ID_Listview_Consultation_Status_Store"
+        android:layout_alignBottom="@+id/tVConsultation_ID_Listview_Consultation_Status_Store"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/tVAdditional_Info_Medicine_Listview_Consultation_Status_Store"
+        android:text="PCOnsultation_ID :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVDoctor_Name_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVProblem_Listview_Consultation_Status"
+        android:layout_below="@+id/tVConsultation_ID_Listview_Consultation_Status_Store"
+        android:layout_marginTop="12dp"
+        android:text="Doctor Name :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPDoctor_Name_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVDoctor_Name_Listview_Consultation_Status_Store"
+        android:layout_alignBottom="@+id/tVDoctor_Name_Listview_Consultation_Status_Store"
+        android:layout_alignStart="@+id/tVPConsultation_ID_Listview_Consultation_Status_Store"
+        android:text="PDoctor Name "
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVProblem_Listview_Consultation_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVPProblem_Listview_Consultation_Status"
+        android:layout_alignBottom="@+id/tVPProblem_Listview_Consultation_Status"
+        android:layout_alignParentStart="true"
+        android:text="Problem :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPProblem_Listview_Consultation_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVPDoctor_Name_Listview_Consultation_Status_Store"
+        android:layout_below="@+id/tVPDoctor_Name_Listview_Consultation_Status_Store"
+        android:layout_marginTop="16dp"
+        android:text="PProblem"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVAdditional_Info_Medicine_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tVProblem_Listview_Consultation_Status"
+        android:layout_marginTop="18dp"
+        android:text="Take any Medicine ?"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPAdditional_Info_Medicine_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVAdditional_Info_Medicine_Listview_Consultation_Status_Store"
+        android:layout_alignBottom="@+id/tVAdditional_Info_Medicine_Listview_Consultation_Status_Store"
+        android:layout_alignStart="@+id/tVPProblem_Listview_Consultation_Status"
+        android:text="PAnyMedicine :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVAdditional_Info_Allergy_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVAdditional_Info_Medicine_Listview_Consultation_Status_Store"
+        android:layout_below="@+id/tVAdditional_Info_Medicine_Listview_Consultation_Status_Store"
+        android:layout_marginTop="15dp"
+        android:text="Any Allergy ?"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPAdditional_Info_Allergy_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVAdditional_Info_Allergy_Listview_Consultation_Status_Store"
+        android:layout_alignBottom="@+id/tVAdditional_Info_Allergy_Listview_Consultation_Status_Store"
+        android:layout_alignStart="@+id/tVPAdditional_Info_Medicine_Listview_Consultation_Status_Store"
+        android:layout_marginTop="15dp"
+        android:text="PAny Allergy"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVSuggetion_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVAdditional_Info_Allergy_Listview_Consultation_Status_Store"
+        android:layout_below="@+id/tVAdditional_Info_Allergy_Listview_Consultation_Status_Store"
+        android:layout_marginTop="15dp"
+        android:text="Suggetion :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPSuggetion_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVSuggetion_Listview_Consultation_Status_Store"
+        android:layout_alignBottom="@+id/tVSuggetion_Listview_Consultation_Status_Store"
+        android:layout_alignStart="@+id/tVPAdditional_Info_Allergy_Listview_Consultation_Status_Store"
+        android:layout_marginTop="15dp"
+        android:text="PSuggetion "
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPrescribe_Medicine_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tVSuggetion_Listview_Consultation_Status_Store"
+        android:layout_below="@+id/tVSuggetion_Listview_Consultation_Status_Store"
+        android:layout_marginTop="15dp"
+        android:text="Prescribe Medicine :"
+        android:textColor="#000"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tVPPrescribe_Medicine_Listview_Consultation_Status_Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tVPrescribe_Medicine_Listview_Consultation_Status_Store"
+        android:layout_alignStart="@+id/tVPSuggetion_Listview_Consultation_Status_Store"
+        android:layout_marginTop="15dp"
+        android:text="PPreMedicine"
+        android:textColor="#000"
+        android:textSize="18dp" />
+</RelativeLayout>

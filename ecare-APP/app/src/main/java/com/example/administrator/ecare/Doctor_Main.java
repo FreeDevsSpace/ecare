@@ -40,18 +40,18 @@ public class Doctor_Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_main);
         profile = (ImageView) findViewById(R.id.IVProfile_Doctor_Main);
-        shedule = (ImageView) findViewById(R.id.IVShedule_Doctor_Main);
+      //  shedule = (ImageView) findViewById(R.id.IVShedule_Doctor_Main);
         search = (ImageView) findViewById(R.id.IVSearch_Doctor_Main);
         consultation = (ImageView) findViewById(R.id.IVConsultation_Doctor_Main);
         appointment = (ImageView) findViewById(R.id.IVAppointment_Doctor_Main);
-        history = (ImageView) findViewById(R.id.IVHistory_Doctor_Main);
+       // history = (ImageView) findViewById(R.id.IVHistory_Doctor_Main);
 
         logout = (TextView) findViewById(R.id.tVLogOut_Doctor_Main);
         tvprofile=(TextView)findViewById(R.id.tVProfile_Doctor_Main);
         tvsearch=(TextView)findViewById(R.id.tVSearch_Doctor_Main);
         tvappointment=(TextView)findViewById(R.id.tVAppointment_Doctor_Main);
-        tvhistory=(TextView)findViewById(R.id.tVHistory_Doctor_Main);
-        tvshedule=(TextView)findViewById(R.id.tVSchedule_Doctor_Main);
+       // tvhistory=(TextView)findViewById(R.id.tVHistory_Doctor_Main);
+       // tvshedule=(TextView)findViewById(R.id.tVSchedule_Doctor_Main);
         tvconsultation=(TextView)findViewById(R.id.tVConsultion_Doctor_Main);
 
 
@@ -71,7 +71,26 @@ public class Doctor_Main extends AppCompatActivity {
             profile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    HashMap<String, String> doctor_registration = db.getUserDetails();
+
+                    String Doctor_ID = doctor_registration.get("Doctor_ID");
+                    String Full_name = doctor_registration.get("Full_Name");
+                    String Mobile_Number = doctor_registration.get("Mobile_Number");
+                    String DOB = doctor_registration.get("DOB");
+                    String Qualification = doctor_registration.get("Qualification");
+                    String Address = doctor_registration.get("Address");
+                    String Blood_Group = doctor_registration.get("Blood_Group");
+
                     Intent i1 = new Intent(Doctor_Main.this, Doctor_Profile.class);
+
+                    i1.putExtra("Doctor_ID", Doctor_ID);
+                    i1.putExtra("Full_Name", Full_name);
+                    i1.putExtra("Mobile_Number", Mobile_Number);
+                    i1.putExtra("DOB", DOB);
+                    i1.putExtra("Qualification", Qualification);
+                    i1.putExtra("Address", Address);
+                    i1.putExtra("Blood_Group", Blood_Group);
+
                     startActivity(i1);
                 }
             });
@@ -82,7 +101,7 @@ public class Doctor_Main extends AppCompatActivity {
 
                     HashMap<String, String> doctor_registration = db.getUserDetails();
 
-                    Doctor_ID = doctor_registration.get("Doctor_ID");
+                  String  Doctor_ID = doctor_registration.get("Doctor_ID");
                     Log.d("Doctor_ID", Doctor_ID);
                     Log.d("okk1", "before getid");
                     Log.d("Doctor_ID", Doctor_ID);
@@ -91,13 +110,6 @@ public class Doctor_Main extends AppCompatActivity {
                 }
             });
 
-            history.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent i3 = new Intent(Doctor_Main.this, Patient_Treatment_History.class);
-                    startActivity(i3);
-                }
-            });
 
             search.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -110,19 +122,18 @@ public class Doctor_Main extends AppCompatActivity {
             appointment.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i5 = new Intent(Doctor_Main.this, Appointment_list.class);
-                    startActivity(i5);
+                    HashMap<String, String> doctor_registration = db.getUserDetails();
+
+                    Doctor_ID = doctor_registration.get("Doctor_ID");
+                    Log.d("Doctor_ID", Doctor_ID);
+                    Log.d("okk1", "before getid");
+                    Log.d("Doctor_ID", Doctor_ID);
+                    getappointment(Doctor_ID);
+
                 }
             });
 
 
-            shedule.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent i7 = new Intent(Doctor_Main.this, Shedule_For_Today.class);
-                    startActivity(i7);
-                }
-            });
             logout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -133,6 +144,71 @@ public class Doctor_Main extends AppCompatActivity {
 
         }
 
+    private void getappointment(final String Doctor_ID) {
+        String tag_string_req = "req_login";
+        pDialog.setMessage("Loading  ...");
+        showDialog();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                AppConfig.URL_GETAPPOINTMENT_DETAILS, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.d(TAG, "Register Response: " + response.toString());
+                hideDialog();
+
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean error = jsonObject.getBoolean("error");
+
+                    if (!error) {
+
+                        String obj = jsonObject.toString();
+                     //   String obj = jsonObject.getString(response);
+
+                        Intent i = new Intent(Doctor_Main.this, Appointment_list.class);
+
+                        i.putExtra("key",obj);
+                      //  i.putExtra("Doctor_ID",Doctor_ID);
+
+                        startActivity(i);
+                    }else {
+                        String errorMsg = jsonObject.getString("error_msg");
+                        Toast.makeText(getApplicationContext(),
+                                errorMsg, Toast.LENGTH_LONG).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        } ,  new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e(TAG, "Login Error: " + error.getMessage());
+                Toast.makeText(getApplicationContext(),
+                        error.getMessage(), Toast.LENGTH_LONG).show();
+                //  hideDialog();
+            }
+
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+                // map method signature
+                Map<String, String> params = new HashMap<>();
+                params.put("Doctor_ID", Doctor_ID);
+                return params;
+            }
+
+        };
+
+
+        AppController.getInstance().addToRequestQueue(tag_string_req, stringRequest);
+
+    }
 
 
     private void getid(final String Doctor_ID) {

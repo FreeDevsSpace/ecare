@@ -7,8 +7,6 @@
     android:visibility="visible"
     android:padding="5dp"
     tools:context="com.example.administrator.ecare.Doctor_Registration_Page">
-
-
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -21,11 +19,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etname_doctor_registration_page">
+
                 <AutoCompleteTextView
                     android:id="@+id/eTName_Doctor_Registration_Page"
                     android:layout_width="match_parent"
@@ -33,8 +31,8 @@
                     android:hint="Enter Full Name"
                     android:inputType="textPersonName"
                     android:textColorHint="#000"
-                    android:textSize="18sp"
-                    android:visibility="visible"/>
+                    android:textSize="16dp"
+                    android:visibility="visible" />
             </android.support.design.widget.TextInputLayout>
             <!--android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
@@ -46,16 +44,17 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/etmobilenumber_doctor_registration_page"
                 android:layout_below="@+id/etname_doctor_registration_page">
+
                 <AutoCompleteTextView
                     android:id="@+id/eTMobile_Number_Doctor_Registration_Page"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter Mobile Number"
                     android:inputType="number"
-                    android:visibility="visible"
-                    android:textSize="18sp"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textSize="16dp"
+                    android:visibility="visible" />
             </android.support.design.widget.TextInputLayout>
 
             <TextView
@@ -66,7 +65,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:text="BirthDate:"
-                android:textSize="17dp" />
+                android:textSize="16dp" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -80,7 +79,7 @@
                     android:hint="Date Of Birth(DD/MM/YYYY)"
                     android:inputType="date"
                     android:visibility="visible"
-                    android:textSize="17dp"
+                    android:textSize="16dp"
                     android:maxLines="1"
                     android:singleLine="true"/>
             </android.support.design.widget.TextInputLayout>
@@ -102,7 +101,7 @@
                     android:maxLines="1"
                     android:singleLine="true"
                     android:textColorHint="#000"
-                    android:textSize="18sp" />
+                    android:textSize="16dp" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -119,7 +118,7 @@
                     android:hint="Enter City"
                     android:inputType="text"
                     android:textColorHint="#000"
-                    android:textSize="18sp"
+                    android:textSize="16dp"
                     android:maxLines="1"
                     android:singleLine="true"
                     />
@@ -138,7 +137,7 @@
                     android:hint="Enter Email ID"
                     android:inputType="textEmailAddress"
                     android:textColorHint="#000"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:maxLines="1"
                     android:singleLine="true"/>
             </android.support.design.widget.TextInputLayout>
@@ -157,7 +156,7 @@
                     android:hint="Enter Password"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:textSize="18sp"
+                    android:textSize="16dp"
                     android:singleLine="true"
                     android:textColorHint="#000"
                     android:visibility="visible" />
@@ -171,7 +170,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Qualification:"
-                android:textSize="17dp" />
+                android:textSize="16dp" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -197,7 +196,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Specialization:"
-                android:textSize="17dp" />
+                android:textSize="16dp" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/spinner_specialization_doctor_registration_page"
@@ -213,7 +212,7 @@
                     android:entries="@array/Specialization"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:textSize="18sp"
+                    android:textSize="16dp"
                     android:visibility="visible" />
             </android.support.design.widget.TextInputLayout>
 
@@ -229,7 +228,7 @@
                     android:hint="Enter Hospital Name"
                     android:inputType="textPersonName"
                     android:textColorHint="#000"
-                    android:textSize="18sp"
+                    android:textSize="16dp"
                     android:maxLines="1"
                     android:singleLine="true"/>
             </android.support.design.widget.TextInputLayout>
@@ -248,7 +247,7 @@
                     android:hint="Enter Hospital Address"
                     android:inputType="textPersonName"
                     android:textColorHint="#000"
-                    android:textSize="18sp"
+                    android:textSize="16dp"
                     android:maxLines="1"
                     android:singleLine="true"/>
             </android.support.design.widget.TextInputLayout>
@@ -264,7 +263,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Enter Fees"
                     android:inputType="number"
-                    android:textSize="18sp"
+                    android:textSize="16dp"
                     android:textColorHint="#000"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -272,12 +271,13 @@
                 android:id="@+id/bnRegister_Doctor_Registration_Page"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/etfees_doctor_registration_page"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:text="Register"
                 android:background="@color/colorPrimary"
                 android:textColor="#FFF"
-                android:textSize="15dp"
+                android:textSize="16dp"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:visibility="visible"/>
@@ -286,7 +286,6 @@
         </RelativeLayout>
 
     </ScrollView>
-
 
 </RelativeLayout>
 

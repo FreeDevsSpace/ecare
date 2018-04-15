@@ -196,7 +196,8 @@ Psw.requestFocus();
                         // Now store the user in sqlite
 
                         JSONObject pathologist_registration = jObj.getJSONObject("pathologist_registration");
-                        String Pathologist_ID = pathologist_registration.getString("Pathologist_ID");
+
+                        String Pathologist_ID = jObj.getString("Pathologist_ID");
                         String Full_Name= pathologist_registration.getString("Full_Name");
                         String Mobile_Number = pathologist_registration.getString("Mobile_Number");
                         String DOB = pathologist_registration.getString("DOB");

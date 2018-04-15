@@ -34,8 +34,8 @@ public final class R {
         public static final int item_touch_helper_swipe_escape_velocity = 0x7f070083;
     }
     public static final class id {
-        public static final int italic = 0x7f0900e7;
-        public static final int item_touch_helper_previous_elevation = 0x7f0900e8;
+        public static final int italic = 0x7f0900e6;
+        public static final int item_touch_helper_previous_elevation = 0x7f0900e7;
         public static final int normal = 0x7f0900f8;
     }
     public static final class styleable {

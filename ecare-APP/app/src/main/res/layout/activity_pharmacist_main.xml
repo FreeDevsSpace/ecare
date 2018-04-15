@@ -25,15 +25,6 @@
         android:layout_centerVertical="true"
         app:srcCompat="@drawable/ic_search_3x" />
 
-    <ImageView
-        android:id="@+id/IVHistory_Pharmacist_Main"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignBottom="@+id/tVHistory_Pharmacist_Main"
-        android:layout_alignStart="@+id/IVSearch_Pharmacist_Main"
-        android:layout_marginBottom="25dp"
-        app:srcCompat="@drawable/ic_history_3x" />
-
     <TextView
         android:id="@+id/tVLogout_Pharmacist_Main"
         android:layout_width="wrap_content"
@@ -52,18 +43,6 @@
         android:layout_centerHorizontal="true"
         android:text="Search"
         android:textAlignment="center"
-        android:textColor="#000"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tVHistory_Pharmacist_Main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/tVProfile_Pharmacist_Main"
-        android:layout_marginBottom="20dp"
-        android:text="History"
         android:textColor="#000"
         android:textSize="24sp"
         android:textStyle="bold" />

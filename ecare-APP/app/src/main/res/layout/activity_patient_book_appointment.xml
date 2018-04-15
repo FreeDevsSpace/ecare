@@ -110,4 +110,15 @@
         android:textSize="15dp"
        />
 
+    <TextView
+        android:id="@+id/tVPPatient_ID_Patient_Book_Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tVPatient_ID_Patient_Book_Appointment"
+        android:layout_alignBottom="@+id/tVPatient_ID_Patient_Book_Appointment"
+        android:layout_alignEnd="@+id/tVAppointment_Patient_Book_Appointment"
+        android:text="PPID"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
 </RelativeLayout>

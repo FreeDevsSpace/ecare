@@ -27,11 +27,12 @@
         android:allowBackup="true"
         android:debuggable="true"
         android:hardwareAccelerated="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_icon"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.administrator.ecare.MainActivity"
@@ -83,8 +84,11 @@
         <activity android:name="com.example.administrator.ecare.Doctor_Profile" />
         <activity android:name="com.example.administrator.ecare.Pathologist_Profile" />
         <activity android:name="com.example.administrator.ecare.Pathologist_Main" />
-        <activity android:name="com.example.administrator.ecare.Patient_Appointment_Status" />
+        <activity android:name="com.example.administrator.ecare.Payment" />
         <activity android:name="com.example.administrator.ecare.Patient_Consultation_Status" />
+        <activity android:name="com.example.administrator.ecare.Doctor_Treatment_History" />
+        <activity android:name="com.example.administrator.ecare.Appointment_Accept_Reject" />
+        <activity android:name="com.example.administrator.ecare.Patient_Consultation_Status_Store" />
 
         <meta-data
             android:name="android.support.VERSION"

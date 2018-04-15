@@ -6,256 +6,166 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     tools:context="com.example.administrator.ecare.Patient_Tretment_From_Doctor">
+
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></RelativeLayout>
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tVPatient_ID_Patient_Tretment_From_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="P_ID :"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tVPatient_Name_Patient_Tretment_From_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVPatient_ID_Patient_Tretment_From_Doctor"
+                android:layout_marginTop="10dp"
+                android:text="Patient Name :"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+
+            <TextView
+                android:id="@+id/tVBlood_Group_Patient_Tretment_From_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tVPatient_Name_Patient_Tretment_From_Doctor"
+                android:layout_marginTop="10dp"
+                android:text="Blood Group :"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+
+
+            <TextView
+                android:id="@+id/tVP_Patient_ID_Patient_Treatment_From_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tVPatient_ID_Patient_Tretment_From_Doctor"
+                android:layout_marginStart="34dp"
+                android:layout_toEndOf="@+id/tVPatient_Name_Patient_Tretment_From_Doctor"
+                android:text="PPatientid"
+                android:textColor="#000"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tVP_Patient_Name_Patient_Treatment_From_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tVPatient_Name_Patient_Tretment_From_Doctor"
+                android:layout_alignStart="@+id/tVP_Patient_ID_Patient_Treatment_From_Doctor"
+                android:text="PPatientName"
+                android:textColor="#000"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/tVP_Blood_Group_Patient_Treatment_From_Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/etsymptoms_patient_treatment_from_doctor"
+                android:layout_alignStart="@+id/tVP_Patient_Name_Patient_Treatment_From_Doctor"
+                android:text="PBlood_Group"
+                android:textColor="#000"
+                android:textSize="18dp"/>
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etsymptoms_patient_treatment_from_doctor"
+                android:layout_below="@+id/tVBlood_Group_Patient_Tretment_From_Doctor">
+
+                <AutoCompleteTextView
+                    android:id="@+id/eTSymptoms_Patient_Tretment_From_Doctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=" Write Symptoms  Here"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/etmedicine_prescribe_patient_tretment_from_doctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etsymptoms_patient_treatment_from_doctor">
+                <AutoCompleteTextView
+                    android:id="@+id/eTMedicine_Prescribe_Patient_Tretment_From_Doctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etSymptoms_patient_treatment_from_doctor"
+                    android:ems="10"
+                    android:hint="Medicine Prescribe Here"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etwrite_report_patient_tretment_from_doctor"
+                android:layout_below="@+id/etmedicine_prescribe_patient_tretment_from_doctor">
+                <AutoCompleteTextView
+                    android:id="@+id/eTWrite_Report_Patient_Tretment_From_Doctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Write Report Here  "
+                    android:inputType="textPersonName"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etwrite_suggetions_ptient_tretment_from_doctor"
+                android:layout_below="@+id/etwrite_report_patient_tretment_from_doctor">
+                <AutoCompleteTextView
+                    android:id="@+id/eTWrite_Suggetions_Patient_Tretment_From_Doctor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write Suggetion Here"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#000"
+                    android:textSize="18sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btSave_Patient_Tretment_From_Doctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etwrite_suggetions_ptient_tretment_from_doctor"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:text="Save"
+                android:textColor="#FFF"
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
     </ScrollView>
 
-    <TextView
-        android:id="@+id/tVPatient_ID_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:text="P_ID :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <TextView
-        android:id="@+id/tVPatient_Name_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tVPatient_ID_Patient_Tretment_From_Doctor"
-        android:text="Patient Name :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <TextView
-        android:id="@+id/tVMobile_Number_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tVPatient_Name_Patient_Tretment_From_Doctor"
-        android:text="Mobile Number :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <TextView
-        android:id="@+id/tVBlood_Group_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tVMobile_Number_Patient_Tretment_From_Doctor"
-        android:text="Blood Group :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <TextView
-        android:id="@+id/tVDoctor_Name_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tVBlood_Group_Patient_Tretment_From_Doctor"
-        android:text="Doctor's Name :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <TextView
-        android:id="@+id/tVSymptoms_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tVDoctor_Name_Patient_Tretment_From_Doctor"
-        android:layout_marginTop="12dp"
-        android:text="Symptoms :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <EditText
-        android:id="@+id/eTSymptoms_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_alignBaseline="@+id/tVSymptoms_Patient_Tretment_From_Doctor"
-        android:layout_alignBottom="@+id/tVSymptoms_Patient_Tretment_From_Doctor"
-        android:layout_toEndOf="@+id/tVSymptoms_Patient_Tretment_From_Doctor"
-        android:ems="10"
-        android:hint="Write Here"
-        android:inputType="textMultiLine"
-        android:textColorHint="#000"
-        android:textSize="18dp"/>
-
-    <TextView
-        android:id="@+id/tVMedicine_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/eTMedicine_Prescribe_Patient_Tretment_From_Doctor"
-        android:layout_alignBottom="@+id/eTMedicine_Prescribe_Patient_Tretment_From_Doctor"
-        android:layout_alignParentStart="true"
-        android:text="Medicine :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <EditText
-        android:id="@+id/eTMedicine_Prescribe_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/eTSymptoms_Patient_Tretment_From_Doctor"
-        android:layout_below="@+id/eTSymptoms_Patient_Tretment_From_Doctor"
-        android:ems="10"
-        android:hint="Prescribe Here "
-        android:inputType="textPersonName"
-        android:textColorHint="#000"
-        android:textSize="18dp"/>
-
-    <TextView
-        android:id="@+id/tVReport_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/eTMedicine_Prescribe_Patient_Tretment_From_Doctor"
-        android:layout_marginTop="13dp"
-        android:text="Report :"
-        android:textColor="#000"
-        android:textSize="18dp"/>
-
-    <RadioGroup
-        android:id="@+id/RadioGroup_Patient_Tretment_From_Doctor"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/RadioButton_Yes_Patient_Tretment_From_Doctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="220dp"
-            android:checked="false"
-            android:text="Yes"/>
-
-        <RadioButton
-            android:id="@+id/RadioButton_No_Patient_Tretment_From_Doctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="220dp"
-            android:checked="false"
-            android:text="No"/>
-    </RadioGroup>
-
-    <EditText
-        android:id="@+id/eTWrite_Report_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/eTMedicine_Prescribe_Patient_Tretment_From_Doctor"
-        android:layout_below="@+id/tVReport_Patient_Tretment_From_Doctor"
-        android:ems="10"
-        android:hint="Write Report Here  "
-        android:textColorHint="#000"
-        android:textSize="17dp"
-        android:inputType="textPersonName"/>
-
-    <TextView
-        android:id="@+id/tVSuggetions_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/eTWrite_Report_Patient_Tretment_From_Doctor"
-        android:layout_marginTop="13dp"
-        android:text="Suggetions :"
-        android:textColor="#000"
-        android:textSize="17dp"/>
-
-    <EditText
-        android:id="@+id/eTWrite_Suggetions_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVSuggetions_Patient_Tretment_From_Doctor"
-        android:layout_alignBottom="@+id/tVSuggetions_Patient_Tretment_From_Doctor"
-        android:layout_alignStart="@+id/eTWrite_Report_Patient_Tretment_From_Doctor"
-        android:ems="10"
-        android:hint="Write Suggetion Here"
-        android:inputType="textPersonName"
-        android:textColorHint="#000"
-        android:textSize="17dp"/>
-
-    <Button
-        android:id="@+id/btSave_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:textColor="#FFF"
-        android:textSize="15dp"
-        android:layout_alignEnd="@+id/eTWrite_Suggetions_Patient_Tretment_From_Doctor"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="22dp"
-        android:layout_marginEnd="36dp"
-        android:text="Save"/>
-
-    <TextView
-        android:id="@+id/tVPrescribe_Medicine_Image_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tVUpload_Report_Patient_Tretment_From_Doctor"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp"
-        android:text="Prescribe Medicine :"
-        android:textColor="#000"/>
-
-    <TextView
-        android:id="@+id/tVUpload_Report_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tVUpload_Medicine_Bill_Patient_Tretment_From_Doctor"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp"
-        android:text="Upload Report :"
-        android:textColor="#000"/>
-
-    <TextView
-        android:id="@+id/tVUpload_Medicine_Bill_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btSave_Patient_Tretment_From_Doctor"
-        android:layout_alignStart="@+id/tVUpload_Report_Patient_Tretment_From_Doctor"
-        android:layout_marginBottom="12dp"
-        android:layout_marginTop="12dp"
-        android:text="Upload Medicine Bill :"
-        android:textColor="#000"/>
-
-    <TextView
-        android:id="@+id/tVClick_Here_Prescribe_Medicine_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tVPrescribe_Medicine_Image_Patient_Tretment_From_Doctor"
-        android:layout_alignBottom="@+id/tVPrescribe_Medicine_Image_Patient_Tretment_From_Doctor"
-        android:layout_toEndOf="@+id/tVMobile_Number_Patient_Tretment_From_Doctor"
-        android:text="Click Here"
-        android:textColor="#00f"/>
-
-    <TextView
-        android:id="@+id/tVClick_Here_Upload_Report_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/tVClick_Here_Prescribe_Medicine_Patient_Tretment_From_Doctor"
-        android:layout_alignTop="@+id/tVUpload_Report_Patient_Tretment_From_Doctor"
-        android:text="Click Here"
-        android:textColor="#00f"/>
-
-    <TextView
-        android:id="@+id/tVClick_Here_Upload_Medicine_Bill_Patient_Tretment_From_Doctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tVClick_Here_Upload_Report_Patient_Tretment_From_Doctor"
-        android:layout_alignTop="@+id/tVUpload_Medicine_Bill_Patient_Tretment_From_Doctor"
-        android:text="Click Here"
-        android:textColor="#00f"/>
-
 </RelativeLayout>
+
